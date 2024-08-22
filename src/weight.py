@@ -77,7 +77,7 @@ def weight(r_p, theta_p, phi_p, r_q, theta_q, phi_q):
 
     for i in range(0,2):
         for j in range(0,2):
-            result = result 
+            result = result + 0  
 
     # Return statement
     return result
