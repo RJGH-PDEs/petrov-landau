@@ -162,5 +162,25 @@ def hessian(r, t, p):
     a_31 = np.outer(phi, rad)
     a_32 = np.outer(phi,theta)
     a_33 = np.outer(phi,phi)
+
+    # Add the matrices
+    hess =          m_11(r,t,p)*a_11 + m_12(r,t,p)*a_12 + m_13(r,t,p)*a_31
+    hess = hess +   m_12(r,t,p)*a_12 + m_22(r,t,p)*a_22 + m_23(r,t,p)*a_23
+    hess = hess +   m_13(r,t,p)*a_31 + m_23(r,t,p)*a_32 + m_33(r,t,p)*a_33
     
-        
+    # Print the result 
+    print(hess) 
+    
+
+# The main function
+def main():
+    radius = 0
+    theta  = np.pi/2
+    phi    = -np.pi/2
+
+    # Compute the hessian
+    hessian(radius, theta, phi) 
+
+# Execute the main function    
+if __name__ == "__main__":
+    main()
