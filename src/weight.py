@@ -1,5 +1,5 @@
 # Import
-from spherical_grad import *
+from spherical_hess import *
 
 '''
 The following handles both the 
@@ -75,9 +75,26 @@ def weight(r_p, theta_p, phi_p, r_q, theta_q, phi_q):
     result = (ux)*(f_x_p - f_x_q) + (uy)*(f_y_p - f_y_q) + (uz)*(f_z_p - f_z_q)
     result = (-2)*result
 
+    # Now we compute the contraction
+    # of the hessians with the projection
+    hess = hessian(r_p,theta_p,phi_p) + hessian(r_q, theta_q, phi_q) # This part needs to be checked to see if it does what we want
+    '''
+    First we need to make sure that the 
+    previous is the correct way of computhing 
+    the sum of two hessians 
+    '''
+
+    contraction_result = 0
+    # Compute the contraction
     for i in range(0,2):
         for j in range(0,2):
-            result = result + 0  
+            contraction_result = contraction_result + projection(ux, uy, uz, i, j) * hess[i][j]
+
+    # Scale this part by 1/2
+    contraction_result = contraction_result/2
+
+    # Update result 
+    result = result + contraction_result
 
     # Return statement
     return result
