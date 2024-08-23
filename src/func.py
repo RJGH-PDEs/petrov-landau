@@ -1,7 +1,7 @@
 # File: func.py
 
 # Import
-import math
+import numpy as np
 
 """ 
     Here we will compile a bunch of functions that will be useful for
@@ -19,26 +19,26 @@ import math
 
 # x
 def x(r, t, p):
-    return r * math.cos(p) * math.sin(t)
+    return r * np.cos(p) * np.sin(t)
 
 # y
 def y(r, t, p):
-    return r * math.sin(p) * math.sin(t)
+    return r * np.sin(p) * np.sin(t)
 
-# z - no dependence on theta
+# z - no dependence on phi 
 def z(r,t,p):
-    return r * math.cos(p)
+    return r * np.cos(t)
 
 # Cartesian to polar
 
 # r
 def r(x,y,z):
-    return math.sqrt(x**2 + y**2 + z**2)
+    return np.sqrt(x**2 + y**2 + z**2)
 
 # theta
 def t(x,y,z):
-    # return math.atan(y/x) # This was before we realized the difficulty with atan
-    result = math.acos((x/math.sqrt(x**2 + y**2)))
+    # return np.atan(y/x) # This was before we realized the difficulty with atan
+    result = np.acos((x/np.sqrt(x**2 + y**2)))
     if y > 0:
         return result
     elif y < 0:
@@ -49,7 +49,7 @@ def t(x,y,z):
 
 # phi
 def p(x,y,z):
-    return math.acos(z/r(x,y,z))
+    return np.acos(z/r(x,y,z))
 
 """
 First partials of r
@@ -57,15 +57,15 @@ First partials of r
 
 # r_x 
 def r_x(r, t, p):
-   return math.sin(t) * math.cos(p)
+   return np.sin(t) * np.cos(p)
 
 # r_y
 def r_y(r, t, p):
-    return math.sin(t) * math.sin(p)
+    return np.sin(t) * np.sin(p)
 
 # r_z
 def r_z(r, t, p):
-    return math.cos(t)
+    return np.cos(t)
 
 """
 First partials of theta 
@@ -73,18 +73,18 @@ First partials of theta
 
 # theta_x
 def t_x(r, t, p):
-    #return (z(r,t,p)*x(r,t,p))/(math.sqrt(x**2+y**2)*(r**2))
-    return math.cos(t)*math.sin(p)/r
+    #return (z(r,t,p)*x(r,t,p))/(np.sqrt(x**2+y**2)*(r**2))
+    return np.cos(t)*np.sin(p)/r
 
 # theta_y
 def t_y(r,t,p):
-    #return (z(r,t,p)*y(r,t,p))/(math.sqrt(x**2+y**2)*(r**2))
-    return math.cos(t)*math.sin(p)/r
+    #return (z(r,t,p)*y(r,t,p))/(np.sqrt(x**2+y**2)*(r**2))
+    return np.cos(t)*np.sin(p)/r
 
 # theta_z
 def t_z(r,t,p):
-    #return (-1)*math.sqrt(x**2 + y**2)/r**2
-    return (-1)*math.sin(t)/r
+    #return (-1)*np.sqrt(x**2 + y**2)/r**2
+    return (-1)*np.sin(t)/r
 
 """
 First partials of phi

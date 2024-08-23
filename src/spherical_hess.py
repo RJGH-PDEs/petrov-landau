@@ -108,10 +108,10 @@ def m_12(r,t,p):
     return result
 
 '''
-(1/r \sin \theta) f_{\phi r} - (1/r^2 \sin \theta) f_{\theta}
+(1/r \sin \theta) f_{\phi r} - (1/r^2 \sin \theta) f_{\phi}
 '''
 def m_13(r,t,p):
-    result = 0
+    result = (-1)/(r*r*np.sin(t)*np.cos(p)*np.cos(p))
     return result 
 
 '''
@@ -125,14 +125,14 @@ def m_22(r,t,p):
 (1/(r^2 \sin \theta)) f_{\phi \theta} - (\cos \theta)/(r^2 \sin^2 \theta) f_{\phi}
 '''
 def m_23(r,t,p):
-    result = 0
+    result = (-1)*(np.cos(t))/(r*r*np.sin(t)**2*np.cos(p)**2)
     return result
 
 '''
 (1/(r^2 \sin^2 \theta))f_{\phi \phi} + (1/r) f_{r} + (\cot \theta)/(r^2)f_{\theta}
 '''
 def m_33(r,t,p):
-    result = 0
+    result = (2*np.sin(p))/(np.sin(t)**2*np.cos(p)**3*r**2)
     return result
 
 # Now we put everything together to form the Hessian
@@ -164,9 +164,15 @@ def hessian(r, t, p):
     a_33 = np.outer(phi,phi)
 
     # Add the matrices
-    hess =          m_11(r,t,p)*a_11 + m_12(r,t,p)*a_12 + m_13(r,t,p)*a_31
-    hess = hess +   m_12(r,t,p)*a_12 + m_22(r,t,p)*a_22 + m_23(r,t,p)*a_23
+    '''
+    hess =          m_11(r,t,p)*a_11 + m_12(r,t,p)*a_12 + m_13(r,t,p)*a_13
+    hess = hess +   m_12(r,t,p)*a_21 + m_22(r,t,p)*a_22 + m_23(r,t,p)*a_23
     hess = hess +   m_13(r,t,p)*a_31 + m_23(r,t,p)*a_32 + m_33(r,t,p)*a_33
+    '''
+    hess =          m_11(r,t,p)*a_11 + m_22(r,t,p)*a_22 + m_33(r,t,p)*a_33
+    hess = hess +   m_12(r,t,p)*(a_12 + a_21)
+    hess = hess +   m_13(r,t,p)*(a_13 + a_31)
+    hess = hess +   m_23(r,t,p)*(a_23 + a_32)
     
     # Print the result 
     print(hess) 
@@ -174,9 +180,14 @@ def hessian(r, t, p):
 
 # The main function
 def main():
-    radius = 0
+    radius = 1
     theta  = np.pi/2
-    phi    = -np.pi/2
+    phi    = 0
+    
+    # Compute the cartesian coordinates
+    print('x:', x(radius, theta, phi))
+    print('y:', y(radius, theta, phi))
+    print('z:', z(radius, theta, phi))
 
     # Compute the hessian
     hessian(radius, theta, phi) 
