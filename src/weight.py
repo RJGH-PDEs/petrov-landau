@@ -22,19 +22,19 @@ def projection(x,y,z,i,j):
         result = (x*x + y*y + z*z)
 
     # first component 
-    if   i == 1:
+    if   i == 0:
         zi = x
-    elif i == 2:
+    elif i == 1:
         zi = y
-    elif i == 3:
+    elif i == 2:
         zi = z
 
     # second component 
-    if  j  == 1:
+    if  j  == 0:
         zj = x
-    elif j == 2:
+    elif j == 1:
         zj = y
-    elif j == 3:
+    elif j == 2:
         zj = z
 
     # Add the second part of 
@@ -52,10 +52,22 @@ def weight(r_p, theta_p, phi_p, r_q, theta_q, phi_q):
     yp = y(r_p, theta_p, phi_p)
     zp = z(r_p, theta_p, phi_p)
     
-    xq = x(r_p, theta_p, phi_p)
-    yq = y(r_p, theta_p, phi_p)
-    zq = z(r_p, theta_p, phi_p)
+    xq = x(r_q, theta_q, phi_q)
+    yq = y(r_q, theta_q, phi_q)
+    zq = z(r_q, theta_q, phi_q)
 
+    # Print these 
+    print('p:')
+    print(xp)
+    print(yp)
+    print(zp)
+    print()
+    print('q:')
+    print(xq)
+    print(yq)
+    print(zq)
+    print()
+    
     # The relative position
     ux = xp - xq
     uy = yp - yq
@@ -71,13 +83,34 @@ def weight(r_p, theta_p, phi_p, r_q, theta_q, phi_q):
     f_y_q = f_y(r_q, theta_q, phi_q)
     f_z_q = f_z(r_q, theta_q, phi_q)
 
+    # Print these 
+    print('Gradient p:')
+    print(f_x_p)
+    print(f_y_p)
+    print(f_z_p)
+    print()
+    print('Gradient q:')
+    print(f_x_q)
+    print(f_y_q)
+    print(f_z_q)
+    print()
+    print('Relative position:')
+    print(ux)
+    print(uy)
+    print(uz)
+    print()
     # Compute the inner product 
+    result = 0
     result = (ux)*(f_x_p - f_x_q) + (uy)*(f_y_p - f_y_q) + (uz)*(f_z_p - f_z_q)
     result = (-2)*result
 
+    print('Partial result: ', result)
     # Now we compute the contraction
     # of the hessians with the projection
     hess = hessian(r_p,theta_p,phi_p) + hessian(r_q, theta_q, phi_q) # This part needs to be checked to see if it does what we want
+    hess = hess/2
+    print('hessian to be contracted: ')
+    print(hess)
     '''
     First we need to make sure that the 
     previous is the correct way of computhing 
@@ -85,13 +118,14 @@ def weight(r_p, theta_p, phi_p, r_q, theta_q, phi_q):
     '''
 
     contraction_result = 0
-    # Compute the contraction
-    for i in range(0,2):
-        for j in range(0,2):
+    # Compute the contraction -- this is wrong
+    for i in range(0,3):
+        for j in range(0,3):
             contraction_result = contraction_result + projection(ux, uy, uz, i, j) * hess[i][j]
 
     # Scale this part by 1/2
-    contraction_result = contraction_result/2
+    contraction_result = contraction_result
+    print('contraction result: ', contraction_result)
 
     # Update result 
     result = result + contraction_result
@@ -101,14 +135,17 @@ def weight(r_p, theta_p, phi_p, r_q, theta_q, phi_q):
 
 # The main function
 def main():
-# First, we define the two points in spherical
-    r_p = 0
+    # First, we define the two points in spherical
+    r_p = 100
     t_p = np.pi/2
-    p_p = -np.pi/2
+    p_p = 0
     
-    r_q = 0
+    r_q = 2
     t_q = np.pi/2
-    p_q = -np.pi/2
+    p_q = np.pi/2
+
+    # Compute the weight
+    print('weight: ', weight(r_p, t_p, p_p, r_q, t_q, p_q ))
 
 
 # Main function

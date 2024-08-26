@@ -97,7 +97,7 @@ the way the hessian requires them
 f_{rr}
 '''
 def m_11(r,t,p):
-    result = 0
+    result = 2
     return result
 
 '''
@@ -111,28 +111,28 @@ def m_12(r,t,p):
 (1/r \sin \theta) f_{\phi r} - (1/r^2 \sin \theta) f_{\phi}
 '''
 def m_13(r,t,p):
-    result = (-1)/(r*r*np.sin(t)*np.cos(p)*np.cos(p))
+    result = 0
     return result 
 
 '''
 (1/r^2) f_{\theta \theta} + (1/r) f_{r}
 '''
 def m_22(r,t,p):
-    result = 0 
+    result = 2
     return result
 
 '''
 (1/(r^2 \sin \theta)) f_{\phi \theta} - (\cos \theta)/(r^2 \sin^2 \theta) f_{\phi}
 '''
 def m_23(r,t,p):
-    result = (-1)*(np.cos(t))/(r*r*np.sin(t)**2*np.cos(p)**2)
+    result = 0
     return result
 
 '''
 (1/(r^2 \sin^2 \theta))f_{\phi \phi} + (1/r) f_{r} + (\cot \theta)/(r^2)f_{\theta}
 '''
 def m_33(r,t,p):
-    result = (2*np.sin(p))/(np.sin(t)**2*np.cos(p)**3*r**2)
+    result = 2
     return result
 
 # Now we put everything together to form the Hessian
@@ -175,13 +175,16 @@ def hessian(r, t, p):
     hess = hess +   m_23(r,t,p)*(a_23 + a_32)
     
     # Print the result 
-    print(hess) 
+    # print(hess) 
+
+    # Return the hessian
+    return hess
     
 
 # The main function
 def main():
     radius = 1
-    theta  = np.pi/2
+    theta  = 0
     phi    = 0
     
     # Compute the cartesian coordinates

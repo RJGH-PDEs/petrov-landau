@@ -110,7 +110,7 @@ with respect of the radial variables
 
 # Partial r
 def f_r(r,t,p):
-    partial = np.exp(-1*r**2)*(-2*r)
+    partial = 2*r
 
     # The result should be partial/1
     result = partial
@@ -134,15 +134,18 @@ def f_p(r,t,p):
 
 # The main function
 def main():
-    x = 1
-    y = 0
-    z = 2
-
-    radius = 0
+    radius = 1
     theta  = np.pi/2
-    phi    = -np.pi/2
+    phi    = np.pi
 
-    print(f_x(radius, theta, phi))
+    # Compute the cartesian coordinates
+    print('x:', x(radius, theta, phi))
+    print('y:', y(radius, theta, phi))
+    print('z:', z(radius, theta, phi))
 
+    # Compute the gradient in cartesian
+    print('f_x:', f_x(radius, theta, phi))
+    print('f_y:', f_y(radius, theta, phi))
+    print('f_z:', f_z(radius, theta, phi))
 if __name__ == "__main__":
     main()
