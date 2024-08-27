@@ -138,7 +138,7 @@ def main():
     # First, we define the two points in spherical
     r_p = 100
     t_p = np.pi/2
-    p_p = 0
+    p_p = np.pi/8
     
     r_q = 2
     t_q = np.pi/2
