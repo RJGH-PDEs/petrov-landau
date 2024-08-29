@@ -5,6 +5,9 @@ from scipy.special import lpmv
 
 # Play with Laguerre polynomial
 def laguerre_example():
+    """
+    Play with laguerre polynomial
+    """
     n       = 1
     alpha   = 0.5
     x       = 2
@@ -65,6 +68,19 @@ def Phi_r(l, k, r):
     # return
     return result 
 
+# Legendre polynomial
+def Leg(m, l, t):
+    """
+    Computes the Laguerre polynomial evaluated
+    at x = cos(theta)
+    """
+    result = 0
+
+    x = np.cos(t)
+    result = lpmv(m,l, x)
+
+    return result 
+
 # Derivative of a Leguerre polynomial
 def Leg_theta(m, l, t):
     """
@@ -93,10 +109,47 @@ def Leg_theta(m, l, t):
     # Second part
     result = result + (l + 1 - m)*lpmv(m, l + 1, x)
 
-    # Denumenator
+    # Divide by sin(theta)
     result = result/np.sin(t)
 
     return result
+
+# The constant for the spherical harmonic
+def spher_const(l,m):
+    """
+    The constant that goes in front of the Legendre polynomial to produce a spherical harmonic.
+    """
+    result = 0
+
+    result = 2*(l+1)/(4*np.pi)
+    if m == 0:
+        return np.sqrt(result)
+
+    result = result*np.math.factorial(l-np.ans(m))
+    result = result*np.math.factorial(l+np.abs(m))
+    return np.sqrt(result)
+
+# The part of the spherical harmonic that depend on phi (the azimuth)
+def azimuth(m, p):
+    """
+    the part of the spherical harmonic that depends on phi.
+    It should handle all possible cases wrt m
+    """
+    if m > 0:
+        return np.cos(m*p)
+    elif m == 0:
+        return 1
+    else:
+        return np.sin(np.abs(m)*p)
+
+# The derivative of azimuth
+def azim_p(m,p):
+    if m > 0:
+        return (-m)*(np.sin(p))
+    elif m == 0:
+        return 0
+    else:
+        return np.abs(m)*np.cos(np.abs(m)*p)
 
 # The main function
 def main():
