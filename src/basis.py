@@ -64,6 +64,29 @@ def Phi(l, k, r):
 
     return result
 
+# Phi(r)/r
+def Phi_over_r(l, k, r):
+    """
+    this computes Phi(r)/r, used for the gradient of
+    the test functions
+    """
+    # Handle the constant case
+    if l == 0:
+        return 1
+
+    # Otherwise
+    result  = 0
+
+    # Parametes for the Laguerre
+    x       = r**2
+    n       = k
+    alpha   = l + 1/2
+
+    result = genlaguerre(n, alpha)(x)*(r**(l-1)) # <-- where the division by r is taken care
+
+    return result
+
+
 # Legendre polynomial
 def Leg(m, l, t):
     """

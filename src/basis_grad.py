@@ -50,10 +50,10 @@ def Leg_t(m, l, t):
     x = np.cos(t)
 
     # First part
-    result = (-l-1)*lpmv(m, l, x)*x
+    result = (-l-1)*lpmv(np.abs(m), l, x)*x
 
     # Second part
-    result = result + (l + 1 - m)*lpmv(m, l + 1, x)
+    result = result + (l + 1 - m)*lpmv(np.abs(m), l + 1, x)
 
     # Divide by sin(theta)
     result = result/np.sin(t)
