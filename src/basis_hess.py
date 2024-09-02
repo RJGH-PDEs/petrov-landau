@@ -30,6 +30,30 @@ def Leg_tt(m, l, t):
     
     return result
 
+# Second derivative of the radial part
+def Phi_rr(l, k, r):
+    result = 0
+    x = r**2
+    
+    # Parameters
+    n       = k - 2
+    alpha   = l + 5/2
+    a = 4*(genlaguerre(n, alpha)(x))*r**(4)
+    
+    # Parameters
+    n       = k - 1
+    alpha   = l + 3/2
+    b = (-2)*(1+2*l)*r**(2)*(genlaguerre(n, alpha)(x))
+    
+    # Parameters
+    n       = k
+    alpha   = l + 1/2
+    c = (l-1)*l*(genlaguerre(n, alpha)(x))
+
+    # Compute the end result 
+    result = (a + b + c)*(r**(l-2)) 
+    return result
+
 # The main function
 def main():
     l = 3
