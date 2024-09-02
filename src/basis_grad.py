@@ -64,7 +64,7 @@ def Leg_t(m, l, t):
 def azim_p(m,p):
     if m > 0:
         return (-m)*(np.sin(p))
-    elif m == 0:
+    elif np.abs(m) == 0:
         return 0
     else:
         return np.abs(m)*np.cos(np.abs(m)*p)
