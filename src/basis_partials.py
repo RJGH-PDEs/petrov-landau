@@ -135,9 +135,15 @@ def h_22(k,l,m,r,t,p):
     a = 0
     a = spher_const(l,m) * Phi(l, k, r) * Leg_tt(m, l, t) * azimuth(m, p)
     a = a/(r*r)
+    print(a)
     # second term
     b = 0
     b = spher_const(l, m) * Phi_r(l, k, r) * Leg(m, l, t) * azimuth(m, p)
+    print("const ", spher_const(l,m))
+    print("phi ", Phi_r(l,k,r))
+    print("Leg ", Leg(m, l, t))
+    print("azi ", azimuth(m, p))
+    print(b)
     b = b/(r)
 
     return a + b
@@ -181,7 +187,7 @@ def h_33(k, l, m, r,t,p):
 
 # The main function
 def main():
-    k = 0
+    k = 1
     l = 0
     m = 0
 
