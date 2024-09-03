@@ -1,10 +1,9 @@
 from basis_grad import *
 
-
 # Second derivative of Legendre
 def Leg_tt(m, l, t):
     """
-    Computes the second derivative of ...
+    Compute the second derivative of ...
     """
     result = 0
 
@@ -32,35 +31,52 @@ def Leg_tt(m, l, t):
 
 # Second derivative of the radial part
 def Phi_rr(l, k, r):
+    """
+    Compute the second derivative of...
+    """
     result = 0
     x = r**2
     
-    # Parameters
-    n       = k - 2
-    alpha   = l + 5/2
-    a = 4*(genlaguerre(n, alpha)(x))*r**(4)
+    if (k >= 2):
+        # Parameters
+        n       = k - 2
+        alpha   = l + 5/2
+        result = result + 4*(genlaguerre(n, alpha)(x))*r**(l+2)
     
-    # Parameters
-    n       = k - 1
-    alpha   = l + 3/2
-    b = (-2)*(1+2*l)*r**(2)*(genlaguerre(n, alpha)(x))
+    if (k >= 1):
+        # Parameters
+        n       = k - 1
+        alpha   = l + 3/2
+        result = result + (-2)*(1+2*l)*(genlaguerre(n, alpha)(x))*r**(l)
     
-    # Parameters
-    n       = k
-    alpha   = l + 1/2
-    c = (l-1)*l*(genlaguerre(n, alpha)(x))
+    if (l >= 2):
+        # Parameters
+        n       = k
+        alpha   = l + 1/2
+        result = result + (l-1)*l*(genlaguerre(n, alpha)(x))*r**(l-2)
 
     # Compute the end result 
-    result = (a + b + c)*(r**(l-2)) 
     return result
+
+# Second derivative of the azimunth part
+def azim_pp(m, p):
+    """
+    Compute the second derivative of...
+    """
+    if m > 0:
+        return (-1)*(m*m)*np.cos(m*p)
+    elif np.abs(m) == 0:
+        return 0
+    else:
+        return (-1)*(m*m)*np.sin(np.abs(m)*p)
 
 # The main function
 def main():
     l = 3
-    k = 2
+    k = 1
     r = 1
     # Compute the derivative 
-    # print('Partial derivative:', Phi_r(l,k,r))
+    print('Partial derivative:', Phi_rr(l,k,r))
 
     # Legendre function
     # legendre_example()
@@ -71,7 +87,8 @@ def main():
     theta   = np.pi/5
 
     # Compute the derivative 
-    print('Partial derivative: ', Leg_tt(m,l,theta))
+    # print('Partial derivative: ', Leg_tt(m,l,theta))    
+
 
 # Main function
 if __name__ == "__main__":

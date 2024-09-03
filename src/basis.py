@@ -70,7 +70,7 @@ def Phi_over_r(l, k, r):
     this computes Phi(r)/r, used for the gradient of
     the test functions
     """
-    # Handle the constant case
+    # Handle the constant case 
     if l == 0:
         return 1
 
@@ -83,6 +83,29 @@ def Phi_over_r(l, k, r):
     alpha   = l + 1/2
 
     result = genlaguerre(n, alpha)(x)*(r**(l-1)) # <-- where the division by r is taken care
+
+    return result
+
+# Phi(r)/r^2
+def Phi_over_rsquared(l, k, r):
+    """
+    this computes Phi(r)/r^2, used for the hessian of
+    the test functions
+    """
+
+    # Handle the constants 
+    if l <= 1:
+        return 1
+    
+    # Otherwise
+    result  = 0
+
+    # Parametes for the Laguerre
+    x       = r**2
+    n       = k
+    alpha   = l + 1/2
+
+    result = genlaguerre(n, alpha)(x)*(r**(l-2)) # <-- where the division by r is taken care
 
     return result
 

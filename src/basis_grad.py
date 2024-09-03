@@ -61,9 +61,9 @@ def Leg_t(m, l, t):
     return result
 
 # The derivative of azimuth
-def azim_p(m,p):
+def azim_p(m, p):
     if m > 0:
-        return (-m)*(np.sin(p))
+        return (-m)*(np.sin(m*p))
     elif np.abs(m) == 0:
         return 0
     else:
