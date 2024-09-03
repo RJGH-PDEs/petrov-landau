@@ -161,6 +161,54 @@ def h_23(k,l,m,r,t,p):
 """
 (1/(r^2 \sin^2 \theta))f_{\phi \phi} + (1/r) f_{r} + (\cot \theta)/(r^2)f_{\theta}
 """
-def h_33(r,t,p):
-    result = 2
-    return result
+def h_33(k, l, m, r,t,p):
+    # first term
+    a = 0
+    a = spher_const(l,m) * Phi(l, k, r) * Leg_t(m, l, t) * azim_pp(m, p)
+    a = a/(r*r*np.sin(t)*np.sin(t))
+
+    # second term
+    b = 0
+    b = spher_const(l,m) * Phi_r(l, k, r) * Leg(m, l, t) * azimuth(m, p)
+    b = (np.cos(t))*b/(r*r*np.sin(t))
+
+    # third term
+    c = 0
+    c = spher_const(l,m) * Phi(l, k, r) * Leg_t(m, l, t) * azimuth(m, p)
+    c = (np.cos(t))*b/(r*r*np.sin(t))
+
+    return a + b + c
+
+# The main function
+def main():
+    k = 0
+    l = 0
+    m = 0
+
+    r = 1 
+    t = np.pi/2
+    p = 0
+    # Compute the derivative 
+    print('Partial derivative: 11 ', h_11(k, l, m, r, t, p))
+    print('Partial derivative: 12 ', h_12(k, l, m, r, t, p))
+    print('Partial derivative: 13 ', h_13(k, l, m, r, t, p))
+    print('Partial derivative: 22 ', h_22(k, l, m, r, t, p))
+    print('Partial derivative: 23 ', h_23(k, l, m, r, t, p))
+    print('Partial derivative: 33 ', h_33(k, l, m, r, t, p))
+
+
+    # Legendre function
+    # legendre_example()
+
+    # Partial derivative of the associated legendre
+    m       = 4
+    l       = 4
+    theta   = np.pi/5
+
+    # Compute the derivative 
+    # print('Partial derivative: ', Leg_tt(m,l,theta))    
+
+
+# Main function
+if __name__ == "__main__":
+    main()

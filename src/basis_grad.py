@@ -25,7 +25,37 @@ def Phi_r(l, k, r):
         result  = result + (l)*genlaguerre(n, alpha)(x)*(r**(l-1))
     
     # return
-    return result 
+    return result
+
+# Partial derivative w.r.t r
+def Phi_r_over_r(l, k, r):
+    """
+    this computes Phi(r)/r, used for the gradient of
+    the test functions
+    """
+    result  = 0
+    x       = r**2
+
+    # Handle the singularity case
+    if l <= 2:
+        return 1
+ 
+    if k >= 1:
+        # parameters
+        n       = k - 1
+        alpha   = l + 3/2
+
+        result  = (-2)*genlaguerre(n, alpha)(x)
+        result  = result*(r**l)
+
+    # parameters
+    n       = k 
+    alpha   = l + 1/2
+
+    result  = result + (l)*genlaguerre(n, alpha)(x)*(r**(l-2))
+    
+    # return
+    return result
 
 # Derivative of a Leguerre polynomial
 def Leg_t(m, l, t):

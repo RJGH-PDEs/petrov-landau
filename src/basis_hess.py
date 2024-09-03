@@ -37,6 +37,10 @@ def Phi_rr(l, k, r):
     result = 0
     x = r**2
     
+    # Handle the singularity case
+    if l <= 2:
+        return 1
+    
     if (k >= 2):
         # Parameters
         n       = k - 2
