@@ -37,10 +37,6 @@ def Phi_rr(l, k, r):
     result = 0
     x = r**2
     
-    # Handle the singularity case
-    if l <= 2:
-        return 1
-    
     if (k >= 2):
         # Parameters
         n       = k - 2
@@ -76,7 +72,7 @@ def azim_pp(m, p):
 
 # The main function
 def main():
-    l = 3
+    l = 0
     k = 1
     r = 1
     # Compute the derivative 

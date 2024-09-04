@@ -90,7 +90,7 @@ def h_11(k, l, m, r,t,p):
     result = result * Leg(m, l, t)
 
     # phi part
-    result = result * azim_p(m, p)
+    result = result * azimuth(m, p)
 
     # Constant
     result = result * spher_const(l, m)
@@ -107,7 +107,7 @@ def h_12(k, l, m, r,t,p):
     a = a/r
     # second term
     b = 0
-    b = spher_const(l, m) * Phi(l, k, r) * Leg_t(m, l, t) * azimuth(m, p)
+    b = (-1)*spher_const(l, m) * Phi(l, k, r) * Leg_t(m, l, t) * azimuth(m, p)
     b = b/(r*r)
 
     return a + b
@@ -134,16 +134,20 @@ def h_22(k,l,m,r,t,p):
     # first term
     a = 0
     a = spher_const(l,m) * Phi(l, k, r) * Leg_tt(m, l, t) * azimuth(m, p)
+    # print("const ", spher_const(l,m))
+    # print("phi ", Phi(l,k,r))
+    # print("Leg ", Leg_tt(m, l, t))
+    # print("azi ", azimuth(m, p))
     a = a/(r*r)
-    print(a)
+    # print(a)
     # second term
     b = 0
     b = spher_const(l, m) * Phi_r(l, k, r) * Leg(m, l, t) * azimuth(m, p)
-    print("const ", spher_const(l,m))
-    print("phi ", Phi_r(l,k,r))
-    print("Leg ", Leg(m, l, t))
-    print("azi ", azimuth(m, p))
-    print(b)
+    # print("const ", spher_const(l,m))
+    # print("phi ", Phi_r(l,k,r))
+    # print("Leg ", Leg(m, l, t))
+    # print("azi ", azimuth(m, p))
+    # print(b)
     b = b/(r)
 
     return a + b
@@ -170,13 +174,13 @@ def h_23(k,l,m,r,t,p):
 def h_33(k, l, m, r,t,p):
     # first term
     a = 0
-    a = spher_const(l,m) * Phi(l, k, r) * Leg_t(m, l, t) * azim_pp(m, p)
+    a = spher_const(l,m) * Phi(l, k, r) * Leg(m, l, t) * azim_pp(m, p)
     a = a/(r*r*np.sin(t)*np.sin(t))
 
     # second term
     b = 0
     b = spher_const(l,m) * Phi_r(l, k, r) * Leg(m, l, t) * azimuth(m, p)
-    b = (np.cos(t))*b/(r*r*np.sin(t))
+    b = b/r
 
     # third term
     c = 0
@@ -187,9 +191,9 @@ def h_33(k, l, m, r,t,p):
 
 # The main function
 def main():
-    k = 1
-    l = 0
-    m = 0
+    k = 0
+    l = 1
+    m =  1
 
     r = 1 
     t = np.pi/2
