@@ -185,7 +185,7 @@ def h_33(k, l, m, r,t,p):
     # third term
     c = 0
     c = spher_const(l,m) * Phi(l, k, r) * Leg_t(m, l, t) * azimuth(m, p)
-    c = (np.cos(t))*b/(r*r*np.sin(t))
+    c = (np.cos(t))*c/(r*r*np.sin(t))
 
     return a + b + c
 
@@ -196,12 +196,13 @@ def main():
     m =  0
 
     r = 1 
-    t = np.pi/2
+    t = np.pi/4
     p = 0
     # Compute the derivative 
     print("Partial der: f_r: ", partial_r(k, l, m, r, t, p))
     print("Partial der: f_t/r: ", partial_theta(k, l, m, r, t, p))
     print("Partial der: f_p/(r sint)", partial_phi(k,l,m,r,t,p))
+    print("")
     print('Partial derivative: 11 ', h_11(k, l, m, r, t, p))
     print('Partial derivative: 12 ', h_12(k, l, m, r, t, p))
     print('Partial derivative: 13 ', h_13(k, l, m, r, t, p))
