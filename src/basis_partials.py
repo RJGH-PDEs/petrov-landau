@@ -10,10 +10,10 @@ def partial_r(k, l, m, r, t, p):
     result = Phi_r(l, k, r)
 
     # theta part
-    result = result * Leg_t(m, l, t)
+    result = result * Leg(m, l, t)
 
     # phi part
-    result = result * azim_p(m, p)
+    result = result * azimuth(m, p)
 
     # constant
     result = result * spher_const(l, m)
@@ -62,7 +62,7 @@ def partial_phi(k, l, m, r, t ,p):
     result = result * azim_p(m, p)
 
     # Constant
-    result = spher_const(l, m)
+    result = result * spher_const(l, m)
 
     # divide by sin(theta)
     result = result/np.sin(t)
@@ -191,14 +191,17 @@ def h_33(k, l, m, r,t,p):
 
 # The main function
 def main():
-    k = 0
-    l = 1
-    m =  1
+    k = 1
+    l = 0
+    m =  0
 
     r = 1 
     t = np.pi/2
     p = 0
     # Compute the derivative 
+    print("Partial der: f_r: ", partial_r(k, l, m, r, t, p))
+    print("Partial der: f_t/r: ", partial_theta(k, l, m, r, t, p))
+    print("Partial der: f_p/(r sint)", partial_phi(k,l,m,r,t,p))
     print('Partial derivative: 11 ', h_11(k, l, m, r, t, p))
     print('Partial derivative: 12 ', h_12(k, l, m, r, t, p))
     print('Partial derivative: 13 ', h_13(k, l, m, r, t, p))
