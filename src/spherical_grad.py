@@ -1,5 +1,6 @@
 # Import
 from func import *
+from basis_partials import *
 import numpy as np
 
 """
@@ -88,54 +89,57 @@ with respect of x, y, z
 '''
 
 # Partial x
-def f_x(r,t,p):
-    result = r_1(r,t,p)*f_r(r,t,p) + t_1(r,t,p)*f_t(r,t,p) + p_1(r,t,p)*f_p(r,t,p)
+def f_x(k,l,m,r,t,p):
+    result = r_1(r,t,p)*f_r(k,l,m,r,t,p) + t_1(r,t,p)*f_t(k,l,m,r,t,p) + p_1(r,t,p)*f_p(k,l,m,r,t,p)
     return result
 
 # Partial y
-def f_y(r,t,p):
-    result = r_2(r,t,p)*f_r(r,t,p)+ t_2(r,t,p)*f_t(r,t,p) + p_2(r,t,p)*f_p(r,t,p)
+def f_y(k,l,m,r,t,p):
+    result = r_2(r,t,p)*f_r(k,l,m,r,t,p)+ t_2(r,t,p)*f_t(k,l,m,r,t,p) + p_2(r,t,p)*f_p(k,l,m,r,t,p)
     return result
 
 # Partial z
-def f_z(r,t,p):
-    result = r_3(r,t,p)*f_r(r,t,p) + t_3(r,t,p)*f_t(r,t,p) + p_3(r,t,p)*f_p(r,t,p)
+def f_z(k,l,m,r,t,p):
+    result = r_3(r,t,p)*f_r(k,l,m,r,t,p) + t_3(r,t,p)*f_t(k,l,m,r,t,p) + p_3(r,t,p)*f_p(k,l,m,r,t,p)
     return result
 
 '''
 Here we write functions defining the
 partial derivatives of the function
-with respect of the radial variables
+with respect of the radial variables 
+
+Now we are ready to start using the ones
+that are specific for our test functions
 '''
 
 # Partial r
-def f_r(r,t,p):
-    partial = 2*r
+def f_r(k,l,m,r,t,p):
+    result = partial_r(k,l,m,r,t,p)
 
     # The result should be partial/1
-    result = partial
     return result
 
 # Partial t
-def f_t(r,t,p):
-    partial = 0 
+def f_t(k,l,m,r,t,p):
+    result = partial_theta(k,l,m,r,t,p)
 
     # The result should be partial/r
-    result = 0
     return result
 
 # Partial p
-def f_p(r,t,p):
-    partial = 0
+def f_p(k,l,m,r,t,p):
+    result = partial_phi(k,l,m,r,t,p)
 
     # The result should be partial/(r sin(theta))
-    result = 0
     return result
 
 # The main function
 def main():
-    radius = 1
-    theta  = np.pi/2
+    k = 0
+    l = 1
+    m = 0
+    radius = 22
+    theta  = np.pi/5
     phi    = np.pi
 
     # Compute the cartesian coordinates
@@ -144,8 +148,10 @@ def main():
     print('z:', z(radius, theta, phi))
 
     # Compute the gradient in cartesian
-    print('f_x:', f_x(radius, theta, phi))
-    print('f_y:', f_y(radius, theta, phi))
-    print('f_z:', f_z(radius, theta, phi))
+    print('f_x:', f_x(k, l, m, radius, theta, phi))
+    print('f_y:', f_y(k, l, m, radius, theta, phi))
+    print('f_z:', f_z(k, l, m, radius, theta, phi))
+
+
 if __name__ == "__main__":
     main()

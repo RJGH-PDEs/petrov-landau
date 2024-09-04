@@ -1,6 +1,7 @@
 # Import
 import numpy as np
 from spherical_grad import *
+from basis_partials import *
 
 '''
 Here we wrtie the different 
@@ -96,47 +97,47 @@ the way the hessian requires them
 '''
 f_{rr}
 '''
-def m_11(r,t,p):
-    result = 2
+def m_11(k,l,m,r,t,p):
+    result = h_11(k,l,m,r,t,p)
     return result
 
 '''
 (1/r) f_{r \theta} - (1/r^2) f_{\theta}
 '''
-def m_12(r,t,p):
-    result = 0
+def m_12(k,l,m,r,t,p):
+    result = h_12(k,l,m,r,t,p)
     return result
 
 '''
 (1/r \sin \theta) f_{\phi r} - (1/r^2 \sin \theta) f_{\phi}
 '''
-def m_13(r,t,p):
-    result = 0
+def m_13(k,l,m,r,t,p):
+    result = h_13(k,l,m,r,t,p)
     return result 
 
 '''
 (1/r^2) f_{\theta \theta} + (1/r) f_{r}
 '''
-def m_22(r,t,p):
-    result = 2
+def m_22(k,l,m,r,t,p):
+    result = h_22(k,l,m,r,t,p)
     return result
 
 '''
 (1/(r^2 \sin \theta)) f_{\phi \theta} - (\cos \theta)/(r^2 \sin^2 \theta) f_{\phi}
 '''
-def m_23(r,t,p):
-    result = 0
+def m_23(k,l,m,r,t,p):
+    result = h_23(k,l,m,r,t,p)
     return result
 
 '''
 (1/(r^2 \sin^2 \theta))f_{\phi \phi} + (1/r) f_{r} + (\cot \theta)/(r^2)f_{\theta}
 '''
-def m_33(r,t,p):
-    result = 2
+def m_33(k,l,m,r,t,p):
+    result = h_33(k,l,m,r,t,p)
     return result
 
 # Now we put everything together to form the Hessian
-def hessian(r, t, p):
+def hessian(k,l,m,r, t, p):
     '''
     We start by building the 
     basis vectors.
@@ -169,10 +170,10 @@ def hessian(r, t, p):
     hess = hess +   m_12(r,t,p)*a_21 + m_22(r,t,p)*a_22 + m_23(r,t,p)*a_23
     hess = hess +   m_13(r,t,p)*a_31 + m_23(r,t,p)*a_32 + m_33(r,t,p)*a_33
     '''
-    hess =          m_11(r,t,p)*a_11 + m_22(r,t,p)*a_22 + m_33(r,t,p)*a_33
-    hess = hess +   m_12(r,t,p)*(a_12 + a_21)
-    hess = hess +   m_13(r,t,p)*(a_13 + a_31)
-    hess = hess +   m_23(r,t,p)*(a_23 + a_32)
+    hess =          m_11(k,l,m,r,t,p)*a_11 + m_22(k,l,m,r,t,p)*a_22 + m_33(k,l,m,r,t,p)*a_33
+    hess = hess +   m_12(k,l,m,r,t,p)*(a_12 + a_21)
+    hess = hess +   m_13(k,l,m,r,t,p)*(a_13 + a_31)
+    hess = hess +   m_23(k,l,m,r,t,p)*(a_23 + a_32)
     
     # Print the result 
     # print(hess) 
@@ -183,9 +184,13 @@ def hessian(r, t, p):
 
 # The main function
 def main():
-    radius = 1
-    theta  = 0
-    phi    = 0
+    k = 0
+    l = 1
+    m = -1
+
+    radius = 3
+    theta  = np.pi/2
+    phi    = np.pi/2
     
     # Compute the cartesian coordinates
     print('x:', x(radius, theta, phi))
@@ -193,7 +198,7 @@ def main():
     print('z:', z(radius, theta, phi))
 
     # Compute the hessian
-    hessian(radius, theta, phi) 
+    print(hessian(k,l,m,radius, theta, phi))
 
 # Execute the main function    
 if __name__ == "__main__":

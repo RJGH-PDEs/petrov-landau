@@ -1,4 +1,5 @@
 from basis import *
+from scipy.special import genlaguerre
 
 # Partial derivative w.r.t r
 def Phi_r(l, k, r):
@@ -83,7 +84,7 @@ def Leg_t(m, l, t):
     result = (-l-1)*lpmv(np.abs(m), l, x)*x
 
     # Second part
-    result = result + (l + 1 - m)*lpmv(np.abs(m), l + 1, x)
+    result = result + (l + 1 - np.abs(m))*lpmv(np.abs(m), l + 1, x)
 
     # Divide by sin(theta)
     result = result/np.sin(t)

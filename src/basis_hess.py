@@ -1,4 +1,6 @@
 from basis_grad import *
+from basis import *
+from scipy.special import genlaguerre
 
 # Second derivative of Legendre
 def Leg_tt(m, l, t):
@@ -19,7 +21,7 @@ def Leg_tt(m, l, t):
 
     # Second part
     par_result = 2*(2+l)*x*lpmv(np.abs(m), l+1, x) + (-2 -l + m)*lpmv(np.abs(m), l+2, x)
-    par_result = (-2)*(1+l-m)*par_result
+    par_result = (-2)*(1+l-np.abs(m))*par_result
 
     # Add them
     result = result + par_result

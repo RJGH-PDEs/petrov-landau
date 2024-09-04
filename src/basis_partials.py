@@ -10,7 +10,7 @@ def partial_r(k, l, m, r, t, p):
     result = Phi_r(l, k, r)
 
     # theta part
-    result = result * Leg(m, l, t)
+    result = result * Leg(np.abs(m), l, t)
 
     # phi part
     result = result * azimuth(m, p)
@@ -33,7 +33,7 @@ def partial_theta(k, l, m, r, t ,p):
     result = Phi_over_r(l, k, r)
 
     # theta part 
-    result = result * Leg_t(m, l, t)
+    result = result * Leg_t(np.abs(m), l, t)
 
     # phi part
     result = result * azimuth(m, p)
@@ -56,7 +56,7 @@ def partial_phi(k, l, m, r, t ,p):
     result = Phi_over_r(l, k, r)
 
     # theta part 
-    result = result * Leg(m, l, t)
+    result = result * Leg(np.abs(m), l, t)
 
     # phi part
     result = result * azim_p(m, p)
@@ -87,7 +87,7 @@ def h_11(k, l, m, r,t,p):
     result = Phi_rr(l, k, r)
 
     # theta part 
-    result = result * Leg(m, l, t)
+    result = result * Leg(np.abs(m), l, t)
 
     # phi part
     result = result * azimuth(m, p)
@@ -103,11 +103,11 @@ def h_11(k, l, m, r,t,p):
 def h_12(k, l, m, r,t,p):
     # first term
     a = 0
-    a = spher_const(l,m) * Phi_r(l, k, r) * Leg_t(m, l, t) * azimuth(m, p)
+    a = spher_const(l,m) * Phi_r(l, k, r) * Leg_t(np.abs(m), l, t) * azimuth(m, p)
     a = a/r
     # second term
     b = 0
-    b = (-1)*spher_const(l, m) * Phi(l, k, r) * Leg_t(m, l, t) * azimuth(m, p)
+    b = (-1)*spher_const(l, m) * Phi(l, k, r) * Leg_t(np.abs(m), l, t) * azimuth(m, p)
     b = b/(r*r)
 
     return a + b
@@ -118,11 +118,11 @@ def h_12(k, l, m, r,t,p):
 def h_13(k,l,m,r,t,p):
     # first term
     a = 0
-    a = spher_const(l,m) * Phi_r(l, k, r) * Leg(m, l, t) * azim_p(m, p)
+    a = spher_const(l,m) * Phi_r(l, k, r) * Leg(np.abs(m), l, t) * azim_p(m, p)
     a = a/(r*np.sin(t))
     # second term
     b = 0
-    b = spher_const(l, m) * Phi(l, k, r) * Leg(m, l, t) * azim_p(m, p)
+    b = spher_const(l, m) * Phi(l, k, r) * Leg(np.abs(m), l, t) * azim_p(m, p)
     b = (-1)*b/(r*r*np.sin(t))
 
     return a + b
@@ -133,21 +133,11 @@ def h_13(k,l,m,r,t,p):
 def h_22(k,l,m,r,t,p):
     # first term
     a = 0
-    a = spher_const(l,m) * Phi(l, k, r) * Leg_tt(m, l, t) * azimuth(m, p)
-    # print("const ", spher_const(l,m))
-    # print("phi ", Phi(l,k,r))
-    # print("Leg ", Leg_tt(m, l, t))
-    # print("azi ", azimuth(m, p))
+    a = spher_const(l,m) * Phi(l, k, r) * Leg_tt(np.abs(m), l, t) * azimuth(m, p)
     a = a/(r*r)
-    # print(a)
     # second term
     b = 0
-    b = spher_const(l, m) * Phi_r(l, k, r) * Leg(m, l, t) * azimuth(m, p)
-    # print("const ", spher_const(l,m))
-    # print("phi ", Phi_r(l,k,r))
-    # print("Leg ", Leg(m, l, t))
-    # print("azi ", azimuth(m, p))
-    # print(b)
+    b = spher_const(l, m) * Phi_r(l, k, r) * Leg(np.abs(m), l, t) * azimuth(m, p)
     b = b/(r)
 
     return a + b
@@ -158,13 +148,12 @@ def h_22(k,l,m,r,t,p):
 def h_23(k,l,m,r,t,p):
     # first term
     a = 0
-    a = spher_const(l,m) * Phi(l, k, r) * Leg_t(m, l, t) * azim_p(m, p)
+    a = spher_const(l,m) * Phi(l, k, r) * Leg_t(np.abs(m), l, t) * azim_p(m, p)
     a = a/(r*r*np.sin(t))
     # second term
     b = 0
-    b = spher_const(l,m) * Phi(l, k, r) * Leg(m, l, t) * azim_p(m, p)
+    b = spher_const(l,m) * Phi(l, k, r) * Leg(np.abs(m), l, t) * azim_p(m, p)
     b = (-1*np.cos(t))*b/(r*r*np.sin(t)*np.sin(t))
-
     return a + b
 
 
@@ -174,25 +163,25 @@ def h_23(k,l,m,r,t,p):
 def h_33(k, l, m, r,t,p):
     # first term
     a = 0
-    a = spher_const(l,m) * Phi(l, k, r) * Leg(m, l, t) * azim_pp(m, p)
+    a = spher_const(l,m) * Phi(l, k, r) * Leg(np.abs(m), l, t) * azim_pp(m, p)
     a = a/(r*r*np.sin(t)*np.sin(t))
 
     # second term
     b = 0
-    b = spher_const(l,m) * Phi_r(l, k, r) * Leg(m, l, t) * azimuth(m, p)
+    b = spher_const(l,m) * Phi_r(l, k, r) * Leg(np.abs(m), l, t) * azimuth(m, p)
     b = b/r
 
     # third term
     c = 0
-    c = spher_const(l,m) * Phi(l, k, r) * Leg_t(m, l, t) * azimuth(m, p)
+    c = spher_const(l,m) * Phi(l, k, r) * Leg_t(np.abs(m), l, t) * azimuth(m, p)
     c = (np.cos(t))*c/(r*r*np.sin(t))
 
     return a + b + c
 
 # The main function
 def main():
-    k = 1
-    l = 0
+    k = 0
+    l = 1
     m =  0
 
     r = 1 
@@ -202,6 +191,7 @@ def main():
     print("Partial der: f_r: ", partial_r(k, l, m, r, t, p))
     print("Partial der: f_t/r: ", partial_theta(k, l, m, r, t, p))
     print("Partial der: f_p/(r sint)", partial_phi(k,l,m,r,t,p))
+    print("")
     print("")
     print('Partial derivative: 11 ', h_11(k, l, m, r, t, p))
     print('Partial derivative: 12 ', h_12(k, l, m, r, t, p))

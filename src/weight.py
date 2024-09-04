@@ -1,5 +1,6 @@
 # Import
 from spherical_hess import *
+# from basis_partials import *
 
 '''
 The following handles both the 
@@ -45,7 +46,7 @@ def projection(x,y,z,i,j):
     return result
 
 # Compute the weight
-def weight(r_p, theta_p, phi_p, r_q, theta_q, phi_q):
+def weight(k,l,m, r_p, theta_p, phi_p, r_q, theta_q, phi_q):
     # We start by computhing the 
     # components of the cartesian coordinates
     xp = x(r_p, theta_p, phi_p)
@@ -75,13 +76,13 @@ def weight(r_p, theta_p, phi_p, r_q, theta_q, phi_q):
 
     # Now we compute the components of the 
     # gradient on the two locations and q
-    f_x_p = f_x(r_p, theta_p, phi_p)
-    f_y_p = f_y(r_p, theta_p, phi_p)
-    f_z_p = f_z(r_p, theta_p, phi_p)
+    f_x_p = f_x(k,l,m,r_p, theta_p, phi_p)
+    f_y_p = f_y(k,l,m,r_p, theta_p, phi_p)
+    f_z_p = f_z(k,l,m,r_p, theta_p, phi_p)
     
-    f_x_q = f_x(r_q, theta_q, phi_q)
-    f_y_q = f_y(r_q, theta_q, phi_q)
-    f_z_q = f_z(r_q, theta_q, phi_q)
+    f_x_q = f_x(k,l,m,r_q, theta_q, phi_q)
+    f_y_q = f_y(k,l,m,r_q, theta_q, phi_q)
+    f_z_q = f_z(k,l,m,r_q, theta_q, phi_q)
 
     # Print these 
     print('Gradient p:')
@@ -107,7 +108,7 @@ def weight(r_p, theta_p, phi_p, r_q, theta_q, phi_q):
     print('Partial result: ', result)
     # Now we compute the contraction
     # of the hessians with the projection
-    hess = hessian(r_p,theta_p,phi_p) + hessian(r_q, theta_q, phi_q) # This part needs to be checked to see if it does what we want
+    hess = hessian(k,l,m,r_p,theta_p,phi_p) + hessian(k,l,m,r_q, theta_q, phi_q) # This part needs to be checked to see if it does what we want
     hess = hess/2
     print('hessian to be contracted: ')
     print(hess)
@@ -135,17 +136,20 @@ def weight(r_p, theta_p, phi_p, r_q, theta_q, phi_q):
 
 # The main function
 def main():
+    k = 0
+    l = 1
+    m = -1
     # First, we define the two points in spherical
-    r_p = 100
-    t_p = np.pi/2
-    p_p = np.pi/8
+    r_p = 28
+    t_p = np.pi/8
+    p_p = 0
     
-    r_q = 2
+    r_q = 0.5
     t_q = np.pi/2
-    p_q = np.pi/2
+    p_q = np.pi/7
 
     # Compute the weight
-    print('weight: ', weight(r_p, t_p, p_p, r_q, t_q, p_q ))
+    print('weight: ', weight(k,l,m,r_p, t_p, p_p, r_q, t_q, p_q))
 
 
 # Main function
