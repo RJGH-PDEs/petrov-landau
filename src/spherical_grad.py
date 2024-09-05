@@ -137,10 +137,10 @@ def f_p(k,l,m,r,t,p):
 def main():
     k = 0
     l = 1
-    m = 0
-    radius = 22
-    theta  = np.pi/5
-    phi    = np.pi
+    m = 1
+    radius = 0.5
+    theta  = np.pi/0.7
+    phi    = np.pi/7
 
     # Compute the cartesian coordinates
     print('x:', x(radius, theta, phi))

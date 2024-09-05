@@ -1,5 +1,6 @@
 # Import
 from spherical_hess import *
+import random
 # from basis_partials import *
 
 '''
@@ -138,15 +139,15 @@ def weight(k,l,m, r_p, theta_p, phi_p, r_q, theta_q, phi_q):
 def main():
     k = 0
     l = 1
-    m = -1
+    m = 1
     # First, we define the two points in spherical
-    r_p = 28
-    t_p = np.pi/8
-    p_p = 0
+    r_p = 10*random.random()
+    t_p = np.pi*random.uniform(0.1, 0.9)
+    p_p = 2*np.pi*random.random()
     
-    r_q = 0.5
-    t_q = np.pi/2
-    p_q = np.pi/7
+    r_q = 10*random.random()
+    t_q = np.pi*random.uniform(0.1, 0.9)
+    p_q = 2*np.pi*random.random()
 
     # Compute the weight
     print('weight: ', weight(k,l,m,r_p, t_p, p_p, r_q, t_q, p_q))
