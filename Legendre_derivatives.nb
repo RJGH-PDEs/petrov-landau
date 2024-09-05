@@ -1,0 +1,2674 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     95832,       2664]
+NotebookOptionsPosition[     83814,       2518]
+NotebookOutlinePosition[     84211,       2534]
+CellTagsIndexPosition[     84168,       2531]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"LegendreP", "[", 
+  RowBox[{"l", ",", "m", ",", " ", 
+   RowBox[{"Cos", "[", "x", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.934307948833043*^9, 3.934307967193605*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"64d76324-3305-4849-88b1-28f4795b049e"],
+
+Cell[BoxData[
+ RowBox[{"LegendreP", "[", 
+  RowBox[{"l", ",", "m", ",", 
+   RowBox[{"Cos", "[", "x", "]"}]}], "]"}]], "Output",
+ CellChangeTimes->{3.934307968637163*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"cd98085b-a4c3-475c-90cd-c98397040e10"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Simplify", "[", 
+   RowBox[{
+    RowBox[{"D", "[", 
+     RowBox[{
+      RowBox[{"LegendreP", "[", 
+       RowBox[{
+        RowBox[{"l", "=", "10"}], ",", 
+        RowBox[{"m", "=", "2"}], ",", 
+        RowBox[{"Cos", "[", "x", "]"}]}], "]"}], ",", "x"}], "]"}], ",", " ", 
+    
+    RowBox[{"Assumptions", "->", 
+     RowBox[{
+      RowBox[{"Sin", "[", "x", "]"}], ">", "0"}]}]}], "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.934307971781838*^9, 3.934308032501128*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"64c41372-489c-415d-9d4d-5201c4de35ba"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"495", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "1666"}], " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+     RowBox[{"13", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "208"}], " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"4", " ", "x"}], "]"}]}], "-", 
+        RowBox[{"171", " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"6", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"136", " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"8", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"1615", " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"10", " ", "x"}], "]"}]}]}], ")"}]}]}], ")"}]}], 
+  "32768"]], "Input",
+ CellChangeTimes->{3.9343203871619263`*^9},
+ CellLabel->"In[26]:=",ExpressionUUID->"adc10c7c-c4cb-437a-a885-07d0fd0d0770"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"495", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "1666"}], " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+     RowBox[{"13", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "208"}], " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"4", " ", "x"}], "]"}]}], "-", 
+        RowBox[{"171", " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"6", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"136", " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"8", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"1615", " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"10", " ", "x"}], "]"}]}]}], ")"}]}]}], ")"}]}], 
+  "32768"]], "Output",
+ CellChangeTimes->{3.9343203871977377`*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"551fd892-1bd3-40c6-8e76-35e5b4e88155"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sqrt", "[", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", "l"}], "+", "1"}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"2", "Pi"}], ")"}]}], ")"}], "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Factorial", "[", 
+      RowBox[{"l", "-", "m"}], "]"}], "/", 
+     RowBox[{"Factorial", "[", 
+      RowBox[{"l", "+", "m"}], "]"}]}], ")"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.934320389247652*^9, 3.934320535511936*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"e1f20ab9-3083-495a-ad1e-211cc2caffec"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "12"], " ", 
+  SqrtBox[
+   FractionBox["7", 
+    RowBox[{"55", " ", "\[Pi]"}]]]}]], "Output",
+ CellChangeTimes->{{3.934320402463719*^9, 3.9343204273310213`*^9}, {
+  3.934320505154335*^9, 3.934320538933687*^9}},
+ CellLabel->"Out[33]=",ExpressionUUID->"83e5b8a8-165b-489a-a602-4b86a5005b4d"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.934308068124346*^9, 
+  3.93430807016698*^9}},ExpressionUUID->"b7d4df3b-0c1c-4ca5-b624-\
+053fb981979b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"s", " ", "=", " ", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "0"}], ",", 
+   RowBox[{"i", "<=", "9"}], ",", 
+   RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"For", "[", 
+    RowBox[{
+     RowBox[{"j", "=", "0"}], ",", 
+     RowBox[{"j", "<=", "i"}], ",", 
+     RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Print", "[", 
+       RowBox[{"\"\<i = \>\"", ",", "i", ",", "\"\<, j = \>\"", ",", "j"}], 
+       "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Print", "[", 
+       RowBox[{"\"\<Derivative: \>\"", ",", " ", 
+        RowBox[{"Simplify", "[", 
+         RowBox[{
+          RowBox[{"D", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Sqrt", "[", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"2", "i"}], "+", "1"}], ")"}], "/", 
+                 RowBox[{"(", 
+                  RowBox[{"2", "Pi"}], ")"}]}], ")"}], "*", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"Factorial", "[", 
+                  RowBox[{"i", "-", "j"}], "]"}], "/", 
+                 RowBox[{"Factorial", "[", 
+                  RowBox[{"i", "+", "j"}], "]"}]}], ")"}]}], "]"}], 
+             RowBox[{"LegendreP", "[", 
+              RowBox[{"i", ",", "j", ",", 
+               RowBox[{"Cos", "[", "x", "]"}]}], "]"}]}], ",", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", "2"}], "}"}]}], "]"}], ",", " ", 
+          RowBox[{"Assumptions", "->", 
+           RowBox[{
+            RowBox[{"Sin", "[", "x", "]"}], ">", "0"}]}]}], "]"}]}], "]"}], 
+      ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"Print", "[", "s", "]"}], ";"}], "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"s", "=", " ", 
+       RowBox[{"s", " ", "+", "1"}]}], ";"}]}], "\[IndentingNewLine]", 
+    "]"}]}], "]"}], "\n"}], "Input",
+ CellChangeTimes->{{3.934308121046719*^9, 3.934308258195621*^9}, {
+   3.934308288680277*^9, 3.9343082887667847`*^9}, {3.934308366588331*^9, 
+   3.934308366952434*^9}, {3.934309014504044*^9, 3.9343090169051847`*^9}, {
+   3.934310186856185*^9, 3.934310189101678*^9}, {3.9343102820273027`*^9, 
+   3.934310309011541*^9}, 3.934319931302953*^9, {3.934320358072544*^9, 
+   3.93432038423525*^9}, 3.934320636194001*^9, {3.934320685752706*^9, 
+   3.934320699923427*^9}, {3.934320756329747*^9, 3.934320764428987*^9}, {
+   3.934320795388672*^9, 3.934320829214716*^9}, {3.934320885861565*^9, 
+   3.934320927869193*^9}},
+ CellLabel->"In[55]:=",ExpressionUUID->"a6a85041-5ad3-4fa4-ad62-110aa649f141"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["i = ", 0, ", j = ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287799463`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"2cb71109-f724-4ad1-b2d2-7231cd0ad8d9"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Derivative: ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928780446*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"24aea60b-5555-4448-bd78-f4e358ee8a7f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["i = ", 1, ", j = ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928780944*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"162b709c-c2db-4e23-8dec-8bc01c4556e1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     SqrtBox[
+      FractionBox["3", 
+       RowBox[{"2", " ", "\[Pi]"}]]]}], " ", 
+    RowBox[{"Cos", "[", "x", "]"}]}]}],
+  SequenceForm[
+  "Derivative: ", -(Rational[3, 2]/Pi)^Rational[1, 2] Cos[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287812977`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"329d03f3-66a2-4725-865d-0fe4a8b90f0f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "1"}],
+  SequenceForm["i = ", 1, ", j = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928781661*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"5a270cff-4703-44a3-9c16-028813a9bf8b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    SqrtBox[
+     FractionBox["3", "\[Pi]"]], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}],
+  SequenceForm[
+  "Derivative: ", Rational[1, 2] (3/Pi)^Rational[1, 2] Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287819977`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"495c2384-0985-4dba-8190-a7d84609a28a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["i = ", 2, ", j = ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928782323*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"3a33edf6-7556-4dff-a859-46ab944aac48"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "3"}], " ", 
+    SqrtBox[
+     FractionBox["5", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"2", " ", "x"}], "]"}]}]}],
+  SequenceForm[
+  "Derivative: ", (-3) (Rational[5, 2]/Pi)^Rational[1, 2] 
+   Cos[2 $CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928782669*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"d82072dc-0498-4ee5-8554-4f1b7d263d0d"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "1"}],
+  SequenceForm["i = ", 2, ", j = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928783*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"572696b7-13fa-4a30-a386-f095997eaa69"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    SqrtBox[
+     FractionBox["15", "\[Pi]"]], " ", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"2", " ", "x"}], "]"}]}]}],
+  SequenceForm["Derivative: ", (15/Pi)^Rational[1, 2] Sin[2 $CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928783347*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"e6025465-1dca-4968-9cf2-e04e676b9bbe"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "2"}],
+  SequenceForm["i = ", 2, ", j = ", 2],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287836933`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"9642a35f-19e7-4489-9437-9844dc02b702"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    SqrtBox[
+     FractionBox["15", "\[Pi]"]], " ", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"2", " ", "x"}], "]"}]}]}],
+  SequenceForm[
+  "Derivative: ", Rational[1, 2] (15/Pi)^Rational[1, 2] Cos[2 $CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928784054*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"42b53c19-e1c0-4933-b8ea-ad3e5e149cb6"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["i = ", 3, ", j = ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287843933`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"cde9e736-56b0-4da1-8ee7-9108e9283be9"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["3", "8"]}], " ", 
+    SqrtBox[
+     FractionBox["7", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Cos", "[", "x", "]"}], "+", 
+      RowBox[{"15", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "x"}], "]"}]}]}], ")"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-3, 8] (Rational[7, 2]/Pi)^Rational[1, 2] (Cos[$CellContext`x] + 
+    15 Cos[3 $CellContext`x])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928784779*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"d3bc905a-4c1c-4fd2-aaaa-642d41138b15"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "1"}],
+  SequenceForm["i = ", 3, ", j = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928785145*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"914a3cd3-a1f6-4370-9cfb-9aaa88ec6d6c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["1", "8"], " ", 
+    SqrtBox[
+     FractionBox["21", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{"23", "+", 
+      RowBox[{"45", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[1, 8] (Rational[21, 2]/Pi)^Rational[1, 2] (23 + 
+    45 Cos[2 $CellContext`x]) Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928785537*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"ca3d1860-62a4-46eb-a17b-8c87a6a89e6f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "2"}],
+  SequenceForm["i = ", 3, ", j = ", 2],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928785891*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"62ddc0da-5eb8-4535-96d5-5a0708e6367e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["1", "16"]}], " ", 
+    SqrtBox[
+     FractionBox["105", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Cos", "[", "x", "]"}], "-", 
+      RowBox[{"9", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "x"}], "]"}]}]}], ")"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-1, 16] (105/Pi)^Rational[1, 2] (Cos[$CellContext`x] - 9 
+    Cos[3 $CellContext`x])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928786248*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"c0749a3a-f493-4910-8ae0-40da0bf45451"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "3"}],
+  SequenceForm["i = ", 3, ", j = ", 3],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928786581*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"bf067b2b-ff0e-4a38-a1b9-cff5f76e66c8"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["3", "8"]}], " ", 
+    SqrtBox[
+     FractionBox["35", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"3", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-3, 8] (Rational[35, 2]/Pi)^Rational[1, 2] (1 + 
+    3 Cos[2 $CellContext`x]) Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928786934*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"db6d8fc0-dedd-4180-b720-6830abac6096"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["i = ", 4, ", j = ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.93432092878726*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"6fb0cb86-59a5-4b62-ada0-abbc8bf71038"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"15", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Cos", "[", 
+         RowBox[{"2", " ", "x"}], "]"}], "+", 
+        RowBox[{"7", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"4", " ", "x"}], "]"}]}]}], ")"}]}], 
+     RowBox[{"4", " ", 
+      SqrtBox[
+       RowBox[{"2", " ", "\[Pi]"}]]}]]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-15, 4] (2 Pi)^Rational[-1, 2] (Cos[2 $CellContext`x] + 
+    7 Cos[4 $CellContext`x])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.93432092878761*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"0fe2723b-87d2-41bf-a474-488e7d7b16e0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "1"}],
+  SequenceForm["i = ", 4, ", j = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.93432092878794*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"769fc0d3-499b-4e5d-a825-78dc7b985fed"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["3", "2"], " ", 
+    SqrtBox[
+     FractionBox["5", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"15", " ", 
+       RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+      RowBox[{"14", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 2] (Rational[5, 2]/Pi)^Rational[1, 2] (15 Cos[$CellContext`x] + 
+    14 Cos[3 $CellContext`x]) Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287883053`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"b2b5e581-8253-4398-a359-ac4a8a860775"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "2"}],
+  SequenceForm["i = ", 4, ", j = ", 2],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287886457`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"b9a5f823-5f88-4560-8e97-b4991f5da4a9"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["3", "4"]}], " ", 
+    SqrtBox[
+     FractionBox["5", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Cos", "[", 
+       RowBox[{"2", " ", "x"}], "]"}], "-", 
+      RowBox[{"7", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"4", " ", "x"}], "]"}]}]}], ")"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-3, 4] (5/Pi)^Rational[1, 2] (Cos[2 $CellContext`x] - 7 
+    Cos[4 $CellContext`x])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287890253`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"88bc6245-05cf-4537-8681-b3008de442a7"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "3"}],
+  SequenceForm["i = ", 4, ", j = ", 3],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287893553`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"0505d719-4bc0-4696-93c8-f8b0ed7f095f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["3", "2"]}], " ", 
+    SqrtBox[
+     FractionBox["35", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Cos", "[", "x", "]"}], "+", 
+      RowBox[{"2", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-3, 2] (Rational[35, 2]/Pi)^Rational[1, 2] (Cos[$CellContext`x] + 
+    2 Cos[3 $CellContext`x]) Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928789711*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"bbe3e0de-4cb9-4b44-9ce4-28539e42722d"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "4"}],
+  SequenceForm["i = ", 4, ", j = ", 4],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928790041*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"3b64b4c8-0c3a-4631-9449-0fad98ea864d"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["3", "4"], " ", 
+    SqrtBox[
+     FractionBox["35", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"2", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "2"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 4] (35/Pi)^Rational[1, 2] (1 + 2 Cos[2 $CellContext`x]) 
+   Sin[$CellContext`x]^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928790402*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"2a2b32fb-b0c5-4600-8cf3-4f9ef8ecf3de"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "5", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["i = ", 5, ", j = ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928790745*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"7b53482f-9a65-416d-8a5d-1f45d03fdd55"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["15", "128"]}], " ", 
+    SqrtBox[
+     FractionBox["11", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", " ", 
+       RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+      RowBox[{"21", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Cos", "[", 
+          RowBox[{"3", " ", "x"}], "]"}], "+", 
+         RowBox[{"5", " ", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"5", " ", "x"}], "]"}]}]}], ")"}]}]}], ")"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-15, 128] (Rational[11, 2]/Pi)^Rational[1, 2] (
+    2 Cos[$CellContext`x] + 
+    21 (Cos[3 $CellContext`x] + 5 Cos[5 $CellContext`x]))],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928791127*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"c90dae0c-acfc-44af-a032-02e8318187d0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "5", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "1"}],
+  SequenceForm["i = ", 5, ", j = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287914762`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"6e5a8201-4a64-478e-b916-c320b4b62ddf"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["1", "128"], " ", 
+    SqrtBox[
+     FractionBox["165", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{"295", "+", 
+      RowBox[{"588", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"525", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"4", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[1, 128] (165/Pi)^Rational[1, 2] (295 + 588 Cos[2 $CellContext`x] + 
+    525 Cos[4 $CellContext`x]) Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928791861*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"4a86ca93-3bd3-4ebe-8390-640de7611e73"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "5", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "2"}],
+  SequenceForm["i = ", 5, ", j = ", 2],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287922087`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"a3fbe7fe-bf3a-4cc6-a39d-de432b713852"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["1", "128"], " ", 
+    SqrtBox[
+     FractionBox["1155", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "2"}], " ", 
+       RowBox[{"Cos", "[", "x", "]"}]}], "-", 
+      RowBox[{"9", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"75", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"5", " ", "x"}], "]"}]}]}], ")"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[1, 128] (1155/Pi)^Rational[1, 2] ((-2) Cos[$CellContext`x] - 9 
+    Cos[3 $CellContext`x] + 75 Cos[5 $CellContext`x])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928792603*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"47c3fc1d-7fd2-41dd-ac44-e0495af3bed1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "5", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "3"}],
+  SequenceForm["i = ", 5, ", j = ", 3],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928792946*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"bd62dc68-887a-4108-9511-b48f4fc54095"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["3", "128"]}], " ", 
+    SqrtBox[
+     FractionBox["385", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{"17", "+", 
+      RowBox[{"36", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"75", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"4", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-3, 128] (Rational[385, 2]/Pi)^Rational[1, 2] (17 + 
+    36 Cos[2 $CellContext`x] + 75 Cos[4 $CellContext`x]) Sin[$CellContext`x]],
+  
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.93432092879331*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"d87ebaf4-a66a-4dcb-8457-6b392698fe09"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "5", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "4"}],
+  SequenceForm["i = ", 5, ", j = ", 4],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928793654*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"c3f2c09d-a0f7-4c33-95d5-bef3aec2966e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["3", "64"], " ", 
+    SqrtBox[
+     FractionBox["385", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"23", " ", 
+       RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+      RowBox[{"25", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "2"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 64] (385/Pi)^Rational[1, 2] (23 Cos[$CellContext`x] + 
+    25 Cos[3 $CellContext`x]) Sin[$CellContext`x]^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928794017*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"1c45ae46-2af2-4307-8458-6e92f2f15843"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "5", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "5"}],
+  SequenceForm["i = ", 5, ", j = ", 5],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287943687`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"4a0b5117-36c6-4d48-8f3e-999dccac9ab2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["15", "32"]}], " ", 
+    SqrtBox[
+     FractionBox["77", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{"3", "+", 
+      RowBox[{"5", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "3"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-15, 32] (Rational[77, 2]/Pi)^Rational[1, 2] (3 + 
+    5 Cos[2 $CellContext`x]) Sin[$CellContext`x]^3],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.93432092879473*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"22737a64-e3f3-4bb1-b0ab-e9372583e4f2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "6", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["i = ", 6, ", j = ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928795066*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"62cdcc98-9edf-452a-896c-aad3bd91ddad"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["21", "128"]}], " ", 
+    SqrtBox[
+     FractionBox["13", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"5", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"24", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"4", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"99", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"6", " ", "x"}], "]"}]}]}], ")"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-21, 128] (Rational[13, 2]/Pi)^Rational[1, 2] (
+    5 Cos[2 $CellContext`x] + 24 Cos[4 $CellContext`x] + 
+    99 Cos[6 $CellContext`x])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928795443*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"55d199bc-537d-4ead-bad3-bf4ece73692a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "6", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "1"}],
+  SequenceForm["i = ", 6, ", j = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928795793*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"cce914a4-7c27-4655-8908-9166fef8097a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["1", "64"], " ", 
+    SqrtBox[
+     FractionBox["273", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"350", " ", 
+       RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+      RowBox[{"345", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"297", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"5", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[1, 64] (273/Pi)^Rational[1, 2] (350 Cos[$CellContext`x] + 
+    345 Cos[3 $CellContext`x] + 297 Cos[5 $CellContext`x]) 
+   Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287961607`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"cc60f887-d826-4ab5-aed0-f969fe1c8a96"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "6", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "2"}],
+  SequenceForm["i = ", 6, ", j = ", 2],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287964973`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"3bc19595-5038-410d-9f07-3521315a856b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["1", "256"], " ", 
+    SqrtBox[
+     FractionBox["1365", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "17"}], " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}], "-", 
+      RowBox[{"24", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"4", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"297", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"6", " ", "x"}], "]"}]}]}], ")"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[1, 256] (Rational[1365, 2]/Pi)^
+    Rational[1, 2] ((-17) Cos[2 $CellContext`x] - 24 Cos[4 $CellContext`x] + 
+    297 Cos[6 $CellContext`x])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928796872*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"10aed1e7-54e9-4d51-8b7c-f1db73d2ebeb"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "6", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "3"}],
+  SequenceForm["i = ", 6, ", j = ", 3],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287972183`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"d40c13e8-acdd-4533-ae99-1a70a6946891"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["3", "64"]}], " ", 
+    SqrtBox[
+     FractionBox["1365", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"14", " ", 
+       RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+      RowBox[{"17", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"33", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"5", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-3, 64] (Rational[1365, 2]/Pi)^Rational[1, 2] (
+    14 Cos[$CellContext`x] + 17 Cos[3 $CellContext`x] + 
+    33 Cos[5 $CellContext`x]) Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928797614*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"e325302d-2e12-4a90-9146-3c114ffcb535"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "6", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "4"}],
+  SequenceForm["i = ", 6, ", j = ", 4],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287979813`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"bd96efaf-c517-4136-90e3-cb7119576483"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["3", "64"], " ", 
+    SqrtBox[
+     FractionBox["91", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{"47", "+", 
+      RowBox[{"94", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"99", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"4", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "2"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 64] (91/Pi)^Rational[1, 2] (47 + 94 Cos[2 $CellContext`x] + 
+    99 Cos[4 $CellContext`x]) Sin[$CellContext`x]^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928798369*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"f75566fc-7383-4eb8-a39d-71ffc5bb6353"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "6", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "5"}],
+  SequenceForm["i = ", 6, ", j = ", 5],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928798707*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"594a3482-56de-41b7-8503-5f0672cde62a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["3", "16"]}], " ", 
+    SqrtBox[
+     FractionBox["1001", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"11", " ", 
+       RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+      RowBox[{"9", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "3"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-3, 16] (Rational[1001, 2]/Pi)^Rational[1, 2] (
+    11 Cos[$CellContext`x] + 9 Cos[3 $CellContext`x]) Sin[$CellContext`x]^3],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209287990713`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"631c4531-6e45-4f5a-9ce1-489321b5888f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "6", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "6"}],
+  SequenceForm["i = ", 6, ", j = ", 6],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928799417*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"a64406c2-4894-4f36-b793-4eb2ff13f7c2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["3", "16"], " ", 
+    SqrtBox[
+     FractionBox["3003", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{"2", "+", 
+      RowBox[{"3", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "4"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 16] (Rational[3003, 2]/Pi)^Rational[1, 2] (2 + 
+    3 Cos[2 $CellContext`x]) Sin[$CellContext`x]^4],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928799777*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"bcdd5544-6972-476c-a617-863be4659111"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "7", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["i = ", 7, ", j = ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928800117*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"10a97977-d5bc-4cc1-bf39-a189f8c8fff8"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"7", " ", 
+      SqrtBox[
+       FractionBox["15", 
+        RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"25", " ", 
+         RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+        RowBox[{"243", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"3", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"825", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"5", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"3003", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"7", " ", "x"}], "]"}]}]}], ")"}]}], "1024"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-7, 1024] (Rational[15, 2]/Pi)^Rational[1, 2] (
+    25 Cos[$CellContext`x] + 243 Cos[3 $CellContext`x] + 
+    825 Cos[5 $CellContext`x] + 3003 Cos[7 $CellContext`x])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928800498*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"5f1cf106-68bf-416a-9d05-6a37e29ae516"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "7", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "1"}],
+  SequenceForm["i = ", 7, ", j = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928800865*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"8afe7cb9-2e7e-4394-81de-5a3faca92593"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{
+     SqrtBox[
+      FractionBox["105", "\[Pi]"]], " ", 
+     RowBox[{"(", 
+      RowBox[{"12950", "+", 
+       RowBox[{"25875", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+       RowBox[{"25146", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"4", " ", "x"}], "]"}]}], "+", 
+       RowBox[{"21021", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"6", " ", "x"}], "]"}]}]}], ")"}], " ", 
+     RowBox[{"Sin", "[", "x", "]"}]}], "2048"]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[1, 2048] (105/Pi)^Rational[1, 2] (12950 + 
+    25875 Cos[2 $CellContext`x] + 25146 Cos[4 $CellContext`x] + 
+    21021 Cos[6 $CellContext`x]) Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288012457`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"d0cc5fd1-6393-4e25-be1a-e6c7d13b01a2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "7", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "2"}],
+  SequenceForm["i = ", 7, ", j = ", 2],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928801598*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"c266cd46-59b6-4910-9346-d76a4261087a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"3", " ", 
+      SqrtBox[
+       FractionBox["35", 
+        RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"75", " ", 
+         RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+        RowBox[{"513", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"3", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"275", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"5", " ", "x"}], "]"}]}], "-", 
+        RowBox[{"7007", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"7", " ", "x"}], "]"}]}]}], ")"}]}], "2048"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-3, 2048] (Rational[35, 2]/Pi)^Rational[1, 2] (
+    75 Cos[$CellContext`x] + 513 Cos[3 $CellContext`x] + 
+    275 Cos[5 $CellContext`x] - 7007 Cos[7 $CellContext`x])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288019867`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"d7d258b4-a98a-46c7-9fb9-a0dbb5e97a90"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "7", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "3"}],
+  SequenceForm["i = ", 7, ", j = ", 3],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928802333*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"eea7784c-cad4-48d2-9121-9bc8220ea898"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"3", " ", 
+      SqrtBox[
+       FractionBox["35", "\[Pi]"]], " ", 
+      RowBox[{"(", 
+       RowBox[{"1442", "+", 
+        RowBox[{"2929", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"3982", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"4", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"7007", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"6", " ", "x"}], "]"}]}]}], ")"}], " ", 
+      RowBox[{"Sin", "[", "x", "]"}]}], "2048"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-3, 2048] (35/Pi)^Rational[1, 2] (1442 + 
+    2929 Cos[2 $CellContext`x] + 3982 Cos[4 $CellContext`x] + 
+    7007 Cos[6 $CellContext`x]) Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928802709*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"78cd19a7-605d-4012-b9e4-5d85258c0a24"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "7", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "4"}],
+  SequenceForm["i = ", 7, ", j = ", 4],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928803063*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"0f7334c3-60f8-4687-801b-df57ab5ef2b1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["3", "512"], " ", 
+    SqrtBox[
+     FractionBox["385", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"634", " ", 
+       RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+      RowBox[{"649", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"637", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"5", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "2"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 512] (385/Pi)^Rational[1, 2] (634 Cos[$CellContext`x] + 
+    649 Cos[3 $CellContext`x] + 637 Cos[5 $CellContext`x]) 
+   Sin[$CellContext`x]^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928803441*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"18ae5555-0709-4b07-a998-63c66fbc136d"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "7", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "5"}],
+  SequenceForm["i = ", 7, ", j = ", 5],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288037853`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"1098501f-b82f-450a-8650-5a47f2343cef"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["3", "512"]}], " ", 
+    SqrtBox[
+     FractionBox["385", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{"447", "+", 
+      RowBox[{"836", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"637", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"4", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "3"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-3, 512] (385/Pi)^Rational[1, 2] (447 + 836 Cos[2 $CellContext`x] + 
+    637 Cos[4 $CellContext`x]) Sin[$CellContext`x]^3],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.93432092880416*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"a891c6da-77cd-4560-9ca3-a49b634b8008"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "7", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "6"}],
+  SequenceForm["i = ", 7, ", j = ", 6],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288045073`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"d60b1c72-50cb-4d31-aa19-5d6eedb41d85"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["3", "128"], " ", 
+    SqrtBox[
+     FractionBox["5005", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"71", " ", 
+       RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+      RowBox[{"49", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "4"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 128] (Rational[5005, 2]/Pi)^Rational[1, 2] (
+    71 Cos[$CellContext`x] + 49 Cos[3 $CellContext`x]) Sin[$CellContext`x]^4],
+  
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928804878*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"d8ad758f-c3f7-4362-942c-eb739801f39f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "7", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "7"}],
+  SequenceForm["i = ", 7, ", j = ", 7],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928805214*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"da9e3f90-cdd2-4723-b8ed-c1a08eb5d9ba"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["21", "128"]}], " ", 
+    SqrtBox[
+     FractionBox["715", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{"5", "+", 
+      RowBox[{"7", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "5"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-21, 128] (715/Pi)^Rational[1, 2] (5 + 7 Cos[2 $CellContext`x]) 
+   Sin[$CellContext`x]^5],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928805566*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"993b5a5c-5cb5-4b19-b064-903ae027efa8"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "8", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["i = ", 8, ", j = ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288059*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"62fb89e6-a766-4a77-ab36-a6c06a87ce0a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["9", "512"]}], " ", 
+    SqrtBox[
+     FractionBox["17", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"35", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"154", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"4", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"429", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"6", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"1430", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"8", " ", "x"}], "]"}]}]}], ")"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-9, 512] (Rational[17, 2]/Pi)^Rational[1, 2] (
+    35 Cos[2 $CellContext`x] + 154 Cos[4 $CellContext`x] + 
+    429 Cos[6 $CellContext`x] + 1430 Cos[8 $CellContext`x])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928806286*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"955001c3-b956-40fe-bd0c-6318c5cb9e8d"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "8", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "1"}],
+  SequenceForm["i = ", 8, ", j = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928806634*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"dcc527be-dcbd-46d5-af31-f74260e97469"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["3", "512"], " ", 
+    SqrtBox[
+     FractionBox["17", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"7350", " ", 
+       RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+      RowBox[{"7315", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"7007", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"5", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"5720", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"7", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 512] (17/Pi)^Rational[1, 2] (7350 Cos[$CellContext`x] + 
+    7315 Cos[3 $CellContext`x] + 7007 Cos[5 $CellContext`x] + 
+    5720 Cos[7 $CellContext`x]) Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928807012*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"a6756768-af92-4def-8148-84bd6c90b093"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "8", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "2"}],
+  SequenceForm["i = ", 8, ", j = ", 2],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928807353*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"f138bc42-96ab-4028-b876-3c3870a1eed3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["3", "128"], " ", 
+    SqrtBox[
+     FractionBox["595", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "4"}], " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}], "-", 
+      RowBox[{"11", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"4", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"143", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"8", " ", "x"}], "]"}]}]}], ")"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 128] (Rational[595, 2]/Pi)^
+    Rational[1, 2] ((-4) Cos[2 $CellContext`x] - 11 Cos[4 $CellContext`x] + 
+    143 Cos[8 $CellContext`x])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928807729*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"6939f977-a53c-4b70-baa9-84912d54237a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "8", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "3"}],
+  SequenceForm["i = ", 8, ", j = ", 3],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928808075*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"c21d4049-1a21-4a27-9ee0-3373a6c54de4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["3", "512"]}], " ", 
+    SqrtBox[
+     FractionBox["19635", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"42", " ", 
+       RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+      RowBox[{"45", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"65", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"5", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"104", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"7", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-3, 512] (19635/Pi)^Rational[1, 2] (42 Cos[$CellContext`x] + 
+    45 Cos[3 $CellContext`x] + 65 Cos[5 $CellContext`x] + 
+    104 Cos[7 $CellContext`x]) Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928808461*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"58469115-6e2d-4cc8-baf3-9a1f9f3f0263"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "8", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "4"}],
+  SequenceForm["i = ", 8, ", j = ", 4],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928808814*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"9e888f59-3563-4729-9fb1-aa036df03279"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["3", "128"], " ", 
+    SqrtBox[
+     FractionBox["1309", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{"69", "+", 
+      RowBox[{"138", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"143", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"4", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"130", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"6", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "2"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 128] (1309/Pi)^Rational[1, 2] (69 + 138 Cos[2 $CellContext`x] + 
+    143 Cos[4 $CellContext`x] + 130 Cos[6 $CellContext`x]) 
+   Sin[$CellContext`x]^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288092127`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"f503fdde-1145-48dc-bb6f-293033894d81"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "8", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "5"}],
+  SequenceForm["i = ", 8, ", j = ", 5],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928809558*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"8e7fd221-39cc-46a2-ae08-0b216202255a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["3", "128"]}], " ", 
+    SqrtBox[
+     FractionBox["17017", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"63", " ", 
+       RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+      RowBox[{"57", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"40", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"5", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "3"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-3, 128] (17017/Pi)^Rational[1, 2] (63 Cos[$CellContext`x] + 
+    57 Cos[3 $CellContext`x] + 40 Cos[5 $CellContext`x]) 
+   Sin[$CellContext`x]^3],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288099413`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"3fd5dd17-bee5-4a84-9b5b-485b93d17b82"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "8", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "6"}],
+  SequenceForm["i = ", 8, ", j = ", 6],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288102827`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"33c8277a-2f66-40ce-8625-ae298bc0bb92"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["3", "16"], " ", 
+    SqrtBox[
+     FractionBox["7293", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{"9", "+", 
+      RowBox[{"16", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"10", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"4", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "4"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 16] (Rational[7293, 2]/Pi)^Rational[1, 2] (9 + 
+    16 Cos[2 $CellContext`x] + 10 Cos[4 $CellContext`x]) 
+   Sin[$CellContext`x]^4],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.93432092881066*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"48f9417c-9651-44c5-9258-aea851cdd08e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "8", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "7"}],
+  SequenceForm["i = ", 8, ", j = ", 7],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928811*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"6637e638-5d80-4a76-a81e-66426ea14a5a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["3", "32"]}], " ", 
+    SqrtBox[
+     FractionBox["12155", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"13", " ", 
+       RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+      RowBox[{"8", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "5"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-3, 32] (12155/Pi)^Rational[1, 2] (13 Cos[$CellContext`x] + 
+    8 Cos[3 $CellContext`x]) Sin[$CellContext`x]^5],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928811386*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"8c2c66ca-84cd-4a8c-9cd3-fe83b5501d39"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "8", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "8"}],
+  SequenceForm["i = ", 8, ", j = ", 8],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288117228`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"d3ce420a-259e-4d94-8f0b-22340280f622"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["3", "32"], " ", 
+    SqrtBox[
+     FractionBox["12155", "\[Pi]"]], " ", 
+    RowBox[{"(", 
+     RowBox[{"3", "+", 
+      RowBox[{"4", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "6"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 32] (12155/Pi)^Rational[1, 2] (3 + 4 Cos[2 $CellContext`x]) 
+   Sin[$CellContext`x]^6],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928812076*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"d88b60e7-2ce3-4dee-a11a-440ed4f6a4ca"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "9", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["i = ", 9, ", j = ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288124037`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"e6182206-b48a-4f3f-a54d-5bcc46eb7d8d"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"45", " ", 
+      SqrtBox[
+       FractionBox["19", 
+        RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"98", " ", 
+         RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+        RowBox[{"11", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"84", " ", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"3", " ", "x"}], "]"}]}], "+", 
+           RowBox[{"260", " ", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"5", " ", "x"}], "]"}]}], "+", 
+           RowBox[{"637", " ", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"7", " ", "x"}], "]"}]}], "+", 
+           RowBox[{"1989", " ", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"9", " ", "x"}], "]"}]}]}], ")"}]}]}], ")"}]}], 
+     "32768"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-45, 32768] (Rational[19, 2]/Pi)^Rational[1, 2] (
+    98 Cos[$CellContext`x] + 
+    11 (84 Cos[3 $CellContext`x] + 260 Cos[5 $CellContext`x] + 
+      637 Cos[7 $CellContext`x] + 1989 Cos[9 $CellContext`x]))],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288128023`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"7799e3fe-3431-4a4a-bc0d-55ea61650fe3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "9", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "1"}],
+  SequenceForm["i = ", 9, ", j = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928813157*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"4a8fe39e-b642-459d-8294-59735126104a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{"3", " ", 
+     SqrtBox[
+      FractionBox["95", "\[Pi]"]], " ", 
+     RowBox[{"(", 
+      RowBox[{"131565", "+", 
+       RowBox[{"263032", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+       RowBox[{"260260", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"4", " ", "x"}], "]"}]}], "+", 
+       RowBox[{"245960", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"6", " ", "x"}], "]"}]}], "+", 
+       RowBox[{"196911", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"8", " ", "x"}], "]"}]}]}], ")"}], " ", 
+     RowBox[{"Sin", "[", "x", "]"}]}], "32768"]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 32768] (95/Pi)^Rational[1, 2] (131565 + 
+    263032 Cos[2 $CellContext`x] + 260260 Cos[4 $CellContext`x] + 
+    245960 Cos[6 $CellContext`x] + 196911 Cos[8 $CellContext`x]) 
+   Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288135567`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"d9d59448-0d7e-475c-a9b0-3e098aff51e9"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "9", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "2"}],
+  SequenceForm["i = ", 9, ", j = ", 2],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928813911*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"dd47665f-918f-4d1c-bcd0-47c0d7790181"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{"3", " ", 
+     SqrtBox[
+      FractionBox["1045", 
+       RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "98"}], " ", 
+        RowBox[{"Cos", "[", "x", "]"}]}], "-", 
+       RowBox[{"756", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"3", " ", "x"}], "]"}]}], "-", 
+       RowBox[{"1300", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"5", " ", "x"}], "]"}]}], "+", 
+       RowBox[{"637", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"7", " ", "x"}], "]"}]}], "+", 
+       RowBox[{"17901", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"9", " ", "x"}], "]"}]}]}], ")"}]}], "16384"]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 16384] (Rational[1045, 2]/Pi)^
+    Rational[1, 2] ((-98) Cos[$CellContext`x] - 756 Cos[3 $CellContext`x] - 
+    1300 Cos[5 $CellContext`x] + 637 Cos[7 $CellContext`x] + 
+    17901 Cos[9 $CellContext`x])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928814314*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"10c71f14-eea6-48c1-9573-3f93292e13df"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "9", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "3"}],
+  SequenceForm["i = ", 9, ", j = ", 3],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928814682*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"ca7f3369-b2c5-4efc-8205-bf5a8e5f893c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"3", " ", 
+      SqrtBox[
+       FractionBox["21945", 
+        RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+      RowBox[{"(", 
+       RowBox[{"1197", "+", 
+        RowBox[{"2408", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"2756", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"4", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"4056", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"6", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"5967", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"8", " ", "x"}], "]"}]}]}], ")"}], " ", 
+      RowBox[{"Sin", "[", "x", "]"}]}], "16384"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-3, 16384] (Rational[21945, 2]/Pi)^Rational[1, 2] (1197 + 
+    2408 Cos[2 $CellContext`x] + 2756 Cos[4 $CellContext`x] + 
+    4056 Cos[6 $CellContext`x] + 5967 Cos[8 $CellContext`x]) 
+   Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928815084*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"86d1fa7f-5adf-4963-965c-3c8004ad74e5"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "9", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "4"}],
+  SequenceForm["i = ", 9, ", j = ", 4],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928815442*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"adc59f18-5a21-4c7d-b103-75e1695e6854"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{"3", " ", 
+     SqrtBox[
+      FractionBox["95095", "\[Pi]"]], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"1563", " ", 
+        RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+       RowBox[{"1577", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"3", " ", "x"}], "]"}]}], "+", 
+       RowBox[{"1627", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"5", " ", "x"}], "]"}]}], "+", 
+       RowBox[{"1377", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"7", " ", "x"}], "]"}]}]}], ")"}], " ", 
+     SuperscriptBox[
+      RowBox[{"Sin", "[", "x", "]"}], "2"]}], "8192"]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 8192] (95095/Pi)^Rational[1, 2] (1563 Cos[$CellContext`x] + 
+    1577 Cos[3 $CellContext`x] + 1627 Cos[5 $CellContext`x] + 
+    1377 Cos[7 $CellContext`x]) Sin[$CellContext`x]^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928815834*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"aed4a64e-7d64-4b83-a485-d56624ed5e28"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "9", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "5"}],
+  SequenceForm["i = ", 9, ", j = ", 5],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288161907`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"ac1539cc-fa5c-4d27-b3e3-221ff4d5bfa2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"15", " ", 
+      SqrtBox[
+       FractionBox["2717", 
+        RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+      RowBox[{"(", 
+       RowBox[{"1254", "+", 
+        RowBox[{"2415", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"2122", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"4", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"1377", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"6", " ", "x"}], "]"}]}]}], ")"}], " ", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", "x", "]"}], "3"]}], "4096"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-15, 4096] (Rational[2717, 2]/Pi)^Rational[1, 2] (1254 + 
+    2415 Cos[2 $CellContext`x] + 2122 Cos[4 $CellContext`x] + 
+    1377 Cos[6 $CellContext`x]) Sin[$CellContext`x]^3],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928816586*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"35953997-1f6d-485f-93ca-8b9fea30386e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "9", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "6"}],
+  SequenceForm["i = ", 9, ", j = ", 6],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928816938*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"55870519-3e2c-453a-bdcf-e9c109c01387"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{"3", " ", 
+     SqrtBox[
+      FractionBox["40755", 
+       RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"974", " ", 
+        RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+       RowBox[{"807", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"3", " ", "x"}], "]"}]}], "+", 
+       RowBox[{"459", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"5", " ", "x"}], "]"}]}]}], ")"}], " ", 
+     SuperscriptBox[
+      RowBox[{"Sin", "[", "x", "]"}], "4"]}], "1024"]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 1024] (Rational[40755, 2]/Pi)^Rational[1, 2] (
+    974 Cos[$CellContext`x] + 807 Cos[3 $CellContext`x] + 
+    459 Cos[5 $CellContext`x]) Sin[$CellContext`x]^4],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928817327*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"8db1101f-a8f5-47ee-851d-ad729d3fc493"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "9", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "7"}],
+  SequenceForm["i = ", 9, ", j = ", 7],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288176937`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"4c5762da-056e-48d1-af9b-6e3551614513"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"3", " ", 
+      SqrtBox[
+       FractionBox["13585", 
+        RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+      RowBox[{"(", 
+       RowBox[{"1475", "+", 
+        RowBox[{"2524", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"1377", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"4", " ", "x"}], "]"}]}]}], ")"}], " ", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", "x", "]"}], "5"]}], "2048"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-3, 2048] (Rational[13585, 2]/Pi)^Rational[1, 2] (1475 + 
+    2524 Cos[2 $CellContext`x] + 1377 Cos[4 $CellContext`x]) 
+   Sin[$CellContext`x]^5],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928818071*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"14a4acdb-13cb-4c98-9390-146428a048a7"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "9", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "8"}],
+  SequenceForm["i = ", 9, ", j = ", 8],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288184147`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"679241fa-82cb-495a-8f2c-3bedf39d8d5f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{"3", " ", 
+     SqrtBox[
+      FractionBox["230945", "\[Pi]"]], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"143", " ", 
+        RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+       RowBox[{"81", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"3", " ", "x"}], "]"}]}]}], ")"}], " ", 
+     SuperscriptBox[
+      RowBox[{"Sin", "[", "x", "]"}], "6"]}], "1024"]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[3, 1024] (230945/Pi)^Rational[1, 2] (143 Cos[$CellContext`x] + 
+    81 Cos[3 $CellContext`x]) Sin[$CellContext`x]^6],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928818788*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"80831ef3-34e2-451c-83e6-7678c86fb911"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"i = \"\>", "\[InvisibleSpace]", "9", 
+   "\[InvisibleSpace]", "\<\", j = \"\>", "\[InvisibleSpace]", "9"}],
+  SequenceForm["i = ", 9, ", j = ", 9],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.934320928819132*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"668f20b4-b18b-4403-a52d-e8374c2a80fc"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["9", "512"]}], " ", 
+    SqrtBox[
+     FractionBox["230945", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{"7", "+", 
+      RowBox[{"9", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "7"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-9, 512] (Rational[230945, 2]/Pi)^Rational[1, 2] (7 + 
+    9 Cos[2 $CellContext`x]) Sin[$CellContext`x]^7],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9343208309346046`*^9, {3.9343209019184303`*^9, 3.9343209288195143`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[55]:=",ExpressionUUID->"e6793559-42cb-4474-8937-613de35b5d0c"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\"\<Derivative: \>\"", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["9", "512"]}], " ", 
+    SqrtBox[
+     FractionBox["230945", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{"7", "+", 
+      RowBox[{"9", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "7"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-9, 512] (Rational[230945, 2]/Pi)^Rational[1, 2] (7 + 
+    9 Cos[2 $CellContext`x]) Sin[$CellContext`x]^7],
+  Editable->False]], "Input",
+ CellChangeTimes->{{3.9343211869289627`*^9, 
+  3.934321197406172*^9}},ExpressionUUID->"84716cba-1f88-44b3-a75b-\
+54b8043987b5"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["9", "512"]}], " ", 
+    SqrtBox[
+     FractionBox["230945", 
+      RowBox[{"2", " ", "\[Pi]"}]]], " ", 
+    RowBox[{"(", 
+     RowBox[{"7", "+", 
+      RowBox[{"9", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "x"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", "x", "]"}], "7"]}]}],
+  SequenceForm[
+  "Derivative: ", 
+   Rational[-9, 512] (Rational[230945, 2]/Pi)^Rational[1, 2] (7 + 
+    9 Cos[2 $CellContext`x]) Sin[$CellContext`x]^7],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.934321194656452*^9},
+ CellLabel->"Out[57]=",ExpressionUUID->"b276fcbd-5989-4d75-a1d2-a7185560cbfc"]
+}, Open  ]]
+},
+WindowSize->{Full, Full},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ce506daf-c12d-4889-bc9d-a407833f447f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 275, 5, 30, "Input",ExpressionUUID->"64d76324-3305-4849-88b1-28f4795b049e"],
+Cell[858, 29, 247, 5, 34, "Output",ExpressionUUID->"cd98085b-a4c3-475c-90cd-c98397040e10"]
+}, Open  ]],
+Cell[1120, 37, 603, 17, 52, "Input",ExpressionUUID->"64c41372-489c-415d-9d4d-5201c4de35ba"],
+Cell[CellGroupData[{
+Cell[1748, 58, 889, 27, 47, "Input",ExpressionUUID->"adc10c7c-c4cb-437a-a885-07d0fd0d0770"],
+Cell[2640, 87, 890, 27, 50, "Output",ExpressionUUID->"551fd892-1bd3-40c6-8e76-35e5b4e88155"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3567, 119, 580, 17, 30, "Input",ExpressionUUID->"e1f20ab9-3083-495a-ad1e-211cc2caffec"],
+Cell[4150, 138, 332, 8, 58, "Output",ExpressionUUID->"83e5b8a8-165b-489a-a602-4b86a5005b4d"]
+}, Open  ]],
+Cell[4497, 149, 151, 3, 30, "Input",ExpressionUUID->"b7d4df3b-0c1c-4ca5-b624-053fb981979b"],
+Cell[CellGroupData[{
+Cell[4673, 156, 2729, 64, 199, "Input",ExpressionUUID->"a6a85041-5ad3-4fa4-ad62-110aa649f141"],
+Cell[CellGroupData[{
+Cell[7427, 224, 428, 10, 24, "Print",ExpressionUUID->"2cb71109-f724-4ad1-b2d2-7231cd0ad8d9"],
+Cell[7858, 236, 360, 9, 24, "Print",ExpressionUUID->"24aea60b-5555-4448-bd78-f4e358ee8a7f"],
+Cell[8221, 247, 426, 10, 24, "Print",ExpressionUUID->"162b709c-c2db-4e23-8dec-8bc01c4556e1"],
+Cell[8650, 259, 567, 16, 46, "Print",ExpressionUUID->"329d03f3-66a2-4725-865d-0fe4a8b90f0f"],
+Cell[9220, 277, 426, 10, 24, "Print",ExpressionUUID->"5a270cff-4703-44a3-9c16-028813a9bf8b"],
+Cell[9649, 289, 551, 15, 46, "Print",ExpressionUUID->"495c2384-0985-4dba-8190-a7d84609a28a"],
+Cell[10203, 306, 426, 10, 24, "Print",ExpressionUUID->"3a33edf6-7556-4dff-a859-46ab944aac48"],
+Cell[10632, 318, 608, 18, 46, "Print",ExpressionUUID->"d82072dc-0498-4ee5-8554-4f1b7d263d0d"],
+Cell[11243, 338, 423, 10, 24, "Print",ExpressionUUID->"572696b7-13fa-4a30-a386-f095997eaa69"],
+Cell[11669, 350, 528, 14, 46, "Print",ExpressionUUID->"e6025465-1dca-4968-9cf2-e04e676b9bbe"],
+Cell[12200, 366, 428, 10, 24, "Print",ExpressionUUID->"9642a35f-19e7-4489-9437-9844dc02b702"],
+Cell[12631, 378, 579, 16, 46, "Print",ExpressionUUID->"42b53c19-e1c0-4933-b8ea-ad3e5e149cb6"],
+Cell[13213, 396, 428, 10, 24, "Print",ExpressionUUID->"cde9e736-56b0-4da1-8ee7-9108e9283be9"],
+Cell[13644, 408, 794, 24, 46, "Print",ExpressionUUID->"d3bc905a-4c1c-4fd2-aaaa-642d41138b15"],
+Cell[14441, 434, 426, 10, 24, "Print",ExpressionUUID->"914a3cd3-a1f6-4370-9cfb-9aaa88ec6d6c"],
+Cell[14870, 446, 786, 23, 46, "Print",ExpressionUUID->"ca3d1860-62a4-46eb-a17b-8c87a6a89e6f"],
+Cell[15659, 471, 426, 10, 24, "Print",ExpressionUUID->"62ddc0da-5eb8-4535-96d5-5a0708e6367e"],
+Cell[16088, 483, 758, 23, 46, "Print",ExpressionUUID->"c0749a3a-f493-4910-8ae0-40da0bf45451"],
+Cell[16849, 508, 426, 10, 24, "Print",ExpressionUUID->"bf067b2b-ff0e-4a38-a1b9-cff5f76e66c8"],
+Cell[17278, 520, 804, 24, 46, "Print",ExpressionUUID->"db6d8fc0-dedd-4180-b720-6830abac6096"],
+Cell[18085, 546, 425, 10, 24, "Print",ExpressionUUID->"6fb0cb86-59a5-4b62-ada0-abbc8bf71038"],
+Cell[18513, 558, 820, 25, 43, "Print",ExpressionUUID->"0fe2723b-87d2-41bf-a474-488e7d7b16e0"],
+Cell[19336, 585, 425, 10, 24, "Print",ExpressionUUID->"769fc0d3-499b-4e5d-a825-78dc7b985fed"],
+Cell[19764, 597, 868, 25, 46, "Print",ExpressionUUID->"b2b5e581-8253-4398-a359-ac4a8a860775"],
+Cell[20635, 624, 428, 10, 24, "Print",ExpressionUUID->"b9a5f823-5f88-4560-8e97-b4991f5da4a9"],
+Cell[21066, 636, 784, 24, 46, "Print",ExpressionUUID->"88bc6245-05cf-4537-8681-b3008de442a7"],
+Cell[21853, 662, 428, 10, 24, "Print",ExpressionUUID->"0505d719-4bc0-4696-93c8-f8b0ed7f095f"],
+Cell[22284, 674, 856, 25, 46, "Print",ExpressionUUID->"bbe3e0de-4cb9-4b44-9ce4-28539e42722d"],
+Cell[23143, 701, 426, 10, 24, "Print",ExpressionUUID->"3b64b4c8-0c3a-4631-9449-0fad98ea864d"],
+Cell[23572, 713, 770, 23, 46, "Print",ExpressionUUID->"2a2b32fb-b0c5-4600-8cf3-4f9ef8ecf3de"],
+Cell[24345, 738, 426, 10, 24, "Print",ExpressionUUID->"7b53482f-9a65-416d-8a5d-1f45d03fdd55"],
+Cell[24774, 750, 1026, 31, 46, "Print",ExpressionUUID->"c90dae0c-acfc-44af-a032-02e8318187d0"],
+Cell[25803, 783, 428, 10, 24, "Print",ExpressionUUID->"6e5a8201-4a64-478e-b916-c320b4b62ddf"],
+Cell[26234, 795, 887, 25, 46, "Print",ExpressionUUID->"4a86ca93-3bd3-4ebe-8390-640de7611e73"],
+Cell[27124, 822, 428, 10, 24, "Print",ExpressionUUID->"a3fbe7fe-bf3a-4cc6-a39d-de432b713852"],
+Cell[27555, 834, 925, 27, 46, "Print",ExpressionUUID->"47c3fc1d-7fd2-41dd-ac44-e0495af3bed1"],
+Cell[28483, 863, 426, 10, 24, "Print",ExpressionUUID->"bd62dc68-887a-4108-9511-b48f4fc54095"],
+Cell[28912, 875, 945, 28, 46, "Print",ExpressionUUID->"d87ebaf4-a66a-4dcb-8457-6b392698fe09"],
+Cell[29860, 905, 426, 10, 24, "Print",ExpressionUUID->"c3f2c09d-a0f7-4c33-95d5-bef3aec2966e"],
+Cell[30289, 917, 861, 25, 46, "Print",ExpressionUUID->"1c45ae46-2af2-4307-8458-6e92f2f15843"],
+Cell[31153, 944, 428, 10, 24, "Print",ExpressionUUID->"4a0b5117-36c6-4d48-8f3e-999dccac9ab2"],
+Cell[31584, 956, 836, 25, 46, "Print",ExpressionUUID->"22737a64-e3f3-4bb1-b0ab-e9372583e4f2"],
+Cell[32423, 983, 426, 10, 24, "Print",ExpressionUUID->"62cdcc98-9edf-452a-896c-aad3bd91ddad"],
+Cell[32852, 995, 997, 30, 46, "Print",ExpressionUUID->"55d199bc-537d-4ead-bad3-bf4ece73692a"],
+Cell[33852, 1027, 426, 10, 24, "Print",ExpressionUUID->"cce914a4-7c27-4655-8908-9166fef8097a"],
+Cell[34281, 1039, 973, 28, 46, "Print",ExpressionUUID->"cc60f887-d826-4ab5-aed0-f969fe1c8a96"],
+Cell[35257, 1069, 428, 10, 24, "Print",ExpressionUUID->"3bc19595-5038-410d-9f07-3521315a856b"],
+Cell[35688, 1081, 1007, 30, 46, "Print",ExpressionUUID->"10aed1e7-54e9-4d51-8b7c-f1db73d2ebeb"],
+Cell[36698, 1113, 428, 10, 24, "Print",ExpressionUUID->"d40c13e8-acdd-4533-ae99-1a70a6946891"],
+Cell[37129, 1125, 1030, 30, 46, "Print",ExpressionUUID->"e325302d-2e12-4a90-9146-3c114ffcb535"],
+Cell[38162, 1157, 428, 10, 24, "Print",ExpressionUUID->"bd96efaf-c517-4136-90e3-cb7119576483"],
+Cell[38593, 1169, 906, 26, 46, "Print",ExpressionUUID->"f75566fc-7383-4eb8-a39d-71ffc5bb6353"],
+Cell[39502, 1197, 426, 10, 24, "Print",ExpressionUUID->"594a3482-56de-41b7-8503-5f0672cde62a"],
+Cell[39931, 1209, 925, 27, 46, "Print",ExpressionUUID->"631c4531-6e45-4f5a-9ce1-489321b5888f"],
+Cell[40859, 1238, 426, 10, 24, "Print",ExpressionUUID->"a64406c2-4894-4f36-b793-4eb2ff13f7c2"],
+Cell[41288, 1250, 817, 24, 46, "Print",ExpressionUUID->"bcdd5544-6972-476c-a617-863be4659111"],
+Cell[42108, 1276, 426, 10, 24, "Print",ExpressionUUID->"10a97977-d5bc-4cc1-bf39-a189f8c8fff8"],
+Cell[42537, 1288, 1137, 32, 54, "Print",ExpressionUUID->"5f1cf106-68bf-416a-9d05-6a37e29ae516"],
+Cell[43677, 1322, 426, 10, 24, "Print",ExpressionUUID->"8afe7cb9-2e7e-4394-81de-5a3faca92593"],
+Cell[44106, 1334, 1047, 29, 54, "Print",ExpressionUUID->"d0cc5fd1-6393-4e25-be1a-e6c7d13b01a2"],
+Cell[45156, 1365, 426, 10, 24, "Print",ExpressionUUID->"c266cd46-59b6-4910-9346-d76a4261087a"],
+Cell[45585, 1377, 1139, 32, 54, "Print",ExpressionUUID->"d7d258b4-a98a-46c7-9fb9-a0dbb5e97a90"],
+Cell[46727, 1411, 426, 10, 24, "Print",ExpressionUUID->"eea7784c-cad4-48d2-9121-9bc8220ea898"],
+Cell[47156, 1423, 1081, 30, 54, "Print",ExpressionUUID->"78cd19a7-605d-4012-b9e4-5d85258c0a24"],
+Cell[48240, 1455, 426, 10, 24, "Print",ExpressionUUID->"0f7334c3-60f8-4687-801b-df57ab5ef2b1"],
+Cell[48669, 1467, 1002, 29, 46, "Print",ExpressionUUID->"18ae5555-0709-4b07-a998-63c66fbc136d"],
+Cell[49674, 1498, 428, 10, 24, "Print",ExpressionUUID->"1098501f-b82f-450a-8650-5a47f2343cef"],
+Cell[50105, 1510, 937, 27, 46, "Print",ExpressionUUID->"a891c6da-77cd-4560-9ca3-a49b634b8008"],
+Cell[51045, 1539, 428, 10, 24, "Print",ExpressionUUID->"d60b1c72-50cb-4d31-aa19-5d6eedb41d85"],
+Cell[51476, 1551, 908, 27, 46, "Print",ExpressionUUID->"d8ad758f-c3f7-4362-942c-eb739801f39f"],
+Cell[52387, 1580, 426, 10, 24, "Print",ExpressionUUID->"da9e3f90-cdd2-4723-b8ed-c1a08eb5d9ba"],
+Cell[52816, 1592, 800, 24, 46, "Print",ExpressionUUID->"993b5a5c-5cb5-4b19-b064-903ae027efa8"],
+Cell[53619, 1618, 424, 10, 24, "Print",ExpressionUUID->"62fb89e6-a766-4a77-ab36-a6c06a87ce0a"],
+Cell[54046, 1630, 1134, 33, 46, "Print",ExpressionUUID->"955001c3-b956-40fe-bd0c-6318c5cb9e8d"],
+Cell[55183, 1665, 426, 10, 24, "Print",ExpressionUUID->"dcc527be-dcbd-46d5-af31-f74260e97469"],
+Cell[55612, 1677, 1111, 31, 46, "Print",ExpressionUUID->"a6756768-af92-4def-8148-84bd6c90b093"],
+Cell[56726, 1710, 426, 10, 24, "Print",ExpressionUUID->"f138bc42-96ab-4028-b876-3c3870a1eed3"],
+Cell[57155, 1722, 1003, 30, 46, "Print",ExpressionUUID->"6939f977-a53c-4b70-baa9-84912d54237a"],
+Cell[58161, 1754, 426, 10, 24, "Print",ExpressionUUID->"c21d4049-1a21-4a27-9ee0-3373a6c54de4"],
+Cell[58590, 1766, 1125, 32, 46, "Print",ExpressionUUID->"58469115-6e2d-4cc8-baf3-9a1f9f3f0263"],
+Cell[59718, 1800, 426, 10, 24, "Print",ExpressionUUID->"9e888f59-3563-4729-9fb1-aa036df03279"],
+Cell[60147, 1812, 1053, 30, 46, "Print",ExpressionUUID->"f503fdde-1145-48dc-bb6f-293033894d81"],
+Cell[61203, 1844, 426, 10, 24, "Print",ExpressionUUID->"8e7fd221-39cc-46a2-ae08-0b216202255a"],
+Cell[61632, 1856, 1024, 30, 46, "Print",ExpressionUUID->"3fd5dd17-bee5-4a84-9b5b-485b93d17b82"],
+Cell[62659, 1888, 428, 10, 24, "Print",ExpressionUUID->"33c8277a-2f66-40ce-8625-ae298bc0bb92"],
+Cell[63090, 1900, 951, 28, 46, "Print",ExpressionUUID->"48f9417c-9651-44c5-9258-aea851cdd08e"],
+Cell[64044, 1930, 423, 10, 24, "Print",ExpressionUUID->"6637e638-5d80-4a76-a81e-66426ea14a5a"],
+Cell[64470, 1942, 885, 26, 46, "Print",ExpressionUUID->"8c2c66ca-84cd-4a8c-9cd3-fe83b5501d39"],
+Cell[65358, 1970, 428, 10, 24, "Print",ExpressionUUID->"d3ce420a-259e-4d94-8f0b-22340280f622"],
+Cell[65789, 1982, 778, 23, 46, "Print",ExpressionUUID->"d88b60e7-2ce3-4dee-a11a-440ed4f6a4ca"],
+Cell[66570, 2007, 428, 10, 24, "Print",ExpressionUUID->"e6182206-b48a-4f3f-a54d-5bcc46eb7d8d"],
+Cell[67001, 2019, 1413, 40, 54, "Print",ExpressionUUID->"7799e3fe-3431-4a4a-bc0d-55ea61650fe3"],
+Cell[68417, 2061, 426, 10, 24, "Print",ExpressionUUID->"4a8fe39e-b642-459d-8294-59735126104a"],
+Cell[68846, 2073, 1209, 33, 54, "Print",ExpressionUUID->"d9d59448-0d7e-475c-a9b0-3e098aff51e9"],
+Cell[70058, 2108, 426, 10, 24, "Print",ExpressionUUID->"dd47665f-918f-4d1c-bcd0-47c0d7790181"],
+Cell[70487, 2120, 1275, 36, 54, "Print",ExpressionUUID->"10c71f14-eea6-48c1-9573-3f93292e13df"],
+Cell[71765, 2158, 426, 10, 24, "Print",ExpressionUUID->"ca7f3369-b2c5-4efc-8205-bf5a8e5f893c"],
+Cell[72194, 2170, 1274, 35, 54, "Print",ExpressionUUID->"86d1fa7f-5adf-4963-965c-3c8004ad74e5"],
+Cell[73471, 2207, 426, 10, 24, "Print",ExpressionUUID->"adc59f18-5a21-4c7d-b103-75e1695e6854"],
+Cell[73900, 2219, 1165, 32, 54, "Print",ExpressionUUID->"aed4a64e-7d64-4b83-a485-d56624ed5e28"],
+Cell[75068, 2253, 428, 10, 24, "Print",ExpressionUUID->"ac1539cc-fa5c-4d27-b3e3-221ff4d5bfa2"],
+Cell[75499, 2265, 1160, 32, 54, "Print",ExpressionUUID->"35953997-1f6d-485f-93ca-8b9fea30386e"],
+Cell[76662, 2299, 426, 10, 24, "Print",ExpressionUUID->"55870519-3e2c-453a-bdcf-e9c109c01387"],
+Cell[77091, 2311, 1064, 30, 54, "Print",ExpressionUUID->"8db1101f-a8f5-47ee-851d-ad729d3fc493"],
+Cell[78158, 2343, 428, 10, 24, "Print",ExpressionUUID->"4c5762da-056e-48d1-af9b-6e3551614513"],
+Cell[78589, 2355, 1020, 29, 54, "Print",ExpressionUUID->"14a4acdb-13cb-4c98-9390-146428a048a7"],
+Cell[79612, 2386, 428, 10, 24, "Print",ExpressionUUID->"679241fa-82cb-495a-8f2c-3bedf39d8d5f"],
+Cell[80043, 2398, 884, 25, 54, "Print",ExpressionUUID->"80831ef3-34e2-451c-83e6-7678c86fb911"],
+Cell[80930, 2425, 426, 10, 24, "Print",ExpressionUUID->"668f20b4-b18b-4403-a52d-e8374c2a80fc"],
+Cell[81359, 2437, 847, 25, 46, "Print",ExpressionUUID->"e6793559-42cb-4474-8937-613de35b5d0c"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[82255, 2468, 773, 23, 57, "Input",ExpressionUUID->"84716cba-1f88-44b3-a75b-54b8043987b5"],
+Cell[83031, 2493, 767, 22, 58, "Output",ExpressionUUID->"b276fcbd-5989-4d75-a1d2-a7185560cbfc"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

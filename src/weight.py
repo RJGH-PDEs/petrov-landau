@@ -137,9 +137,9 @@ def weight(k,l,m, r_p, theta_p, phi_p, r_q, theta_q, phi_q):
 
 # The main function
 def main():
-    k = 0
-    l = 1
-    m = 1
+    k = 8
+    l = 8
+    m = 0
     # First, we define the two points in spherical
     r_p = 10*random.random()
     t_p = np.pi*random.uniform(0.1, 0.9)
