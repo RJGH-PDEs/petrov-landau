@@ -136,22 +136,24 @@ def f_p(k,l,m,r,t,p):
 # The main function
 def main():
     k = 1
-    l = 1
-    m = 1
+    l = 0
+    m = 0
 
-    radius = 1
-    theta  = np.pi/0.7
-    phi    = np.pi/7
+    radius = 3
+    theta  = np.pi/4
+    phi    = np.pi/5
 
     # Compute the cartesian coordinates
     print('x:', x(radius, theta, phi))
     print('y:', y(radius, theta, phi))
     print('z:', z(radius, theta, phi))
+    print(" ")
 
     # Compute the radial partials
     print("part r: ", f_r(k, l, m, radius, theta, phi))
-    print("part p: ", f_t(k, l, m, radius, theta, phi))   
+    print("part t: ", f_t(k, l, m, radius, theta, phi))   
     print("part p: ", f_p(k, l, m, radius, theta, phi))   
+    print(" ")
 
     # Compute the gradient in cartesian
     print('f_x:', f_x(k, l, m, radius, theta, phi))

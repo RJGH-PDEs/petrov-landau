@@ -96,6 +96,11 @@ def weight(k,l,m, r_p, theta_p, phi_p, r_q, theta_q, phi_q):
     print(f_y_q)
     print(f_z_q)
     print()
+    print("Gradient diefference: ")
+    print(f_x_p - f_x_q)
+    print(f_y_p - f_y_q)
+    print(f_z_p - f_z_q)
+    print()
     print('Relative position:')
     print(ux)
     print(uy)
@@ -137,17 +142,17 @@ def weight(k,l,m, r_p, theta_p, phi_p, r_q, theta_q, phi_q):
 
 # The main function
 def main():
-    k = 8
-    l = 8
+    k = 1
+    l = 0
     m = 0
     # First, we define the two points in spherical
-    r_p = 10*random.random()
-    t_p = np.pi*random.uniform(0.1, 0.9)
-    p_p = 2*np.pi*random.random()
+    r_p = 2
+    t_p = np.pi/4
+    p_p = np.pi
     
-    r_q = 10*random.random()
-    t_q = np.pi*random.uniform(0.1, 0.9)
-    p_q = 2*np.pi*random.random()
+    r_q = 4
+    t_q = np.pi/5
+    p_q = np.pi/3
 
     # Compute the weight
     print('weight: ', weight(k,l,m,r_p, t_p, p_p, r_q, t_q, p_q))
