@@ -114,6 +114,12 @@ def weight(k,l,m, r_p, theta_p, phi_p, r_q, theta_q, phi_q):
     print('Partial result: ', result)
     # Now we compute the contraction
     # of the hessians with the projection
+    print("")
+    print("hessian at p: ")
+    print(hessian(k,l,m,r_p,theta_p,phi_p))
+    print("hessian at q: ")
+    print(hessian(k,l,m,r_q,theta_q,phi_q))
+    print("")
     hess = hessian(k,l,m,r_p,theta_p,phi_p) + hessian(k,l,m,r_q, theta_q, phi_q) # This part needs to be checked to see if it does what we want
     hess = hess/2
     print('hessian to be contracted: ')
@@ -143,8 +149,8 @@ def weight(k,l,m, r_p, theta_p, phi_p, r_q, theta_q, phi_q):
 # The main function
 def main():
     k = 1
-    l = 0
-    m = 0
+    l = 1
+    m = 1
     # First, we define the two points in spherical
     r_p = 2
     t_p = np.pi/4
@@ -152,7 +158,7 @@ def main():
     
     r_q = 4
     t_q = np.pi/5
-    p_q = np.pi/3
+    p_q = np.pi/2
 
     # Compute the weight
     print('weight: ', weight(k,l,m,r_p, t_p, p_p, r_q, t_q, p_q))
