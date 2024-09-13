@@ -127,6 +127,7 @@ def m_22(k,l,m,r,t,p):
 '''
 def m_23(k,l,m,r,t,p):
     result = h_23(k,l,m,r,t,p)
+    print(result)
     return result
 
 '''
@@ -184,13 +185,13 @@ def hessian(k,l,m,r, t, p):
 
 # The main function
 def main():
-    k = 0
+    k = 2
     l = 1
-    m = -1
+    m = 1
 
-    radius = 3
-    theta  = np.pi/2
-    phi    = np.pi/2
+    radius = 8
+    theta  = np.pi/6
+    phi    = np.pi/1.1
     
     # Compute the cartesian coordinates
     print('x:', x(radius, theta, phi))
