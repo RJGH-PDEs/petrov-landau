@@ -107,7 +107,7 @@ def weight(rp, tp, pp, rq, tq, pq):
     gradq = np.array(arr)
     print("gradient in q: ", gradq)
 
-    # Difference in gradient
+    # Difference in gradientsy
     gradDiff = gradp - gradq
     print("Difference in gradient: ", gradDiff)
     # print(gradient.evalf(subs={r:rp, t:tp, p:pp}))
