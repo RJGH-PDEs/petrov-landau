@@ -1,5 +1,6 @@
 from scipy.special import roots_genlaguerre
 from scipy.special import genlaguerre
+from pylebedev import PyLebedev
 
 # play with Laguerre integration
 def genLaguerreInt():
@@ -22,6 +23,12 @@ def genLaguerreInt():
     print("Weights: ")
     print(w[0])
 
+# Play with Lebedev integration
+def lebedev_integration():
+    # build library
+    leblib = PyLebedev()
+    r,w = leblib.get_points_and_weights(5)
+
 # radial function to be integrated
 def integrand(s):
     # parameters
@@ -40,25 +47,32 @@ def integrand(s):
     # print(result)
     return result     
 
-# 
-def integrating_integrand():
+# integration
+def integration():
     # extract the coefficients
-    n = 6
     alpha = 1/2
-    x,w = roots_genlaguerre(n, alpha, False)
+    r,w_r = roots_genlaguerre(6, alpha, False)
 
+    # build library
+    leblib = PyLebedev()
+    s,w_spher = leblib.get_points_and_weights(5)
+
+    # now we have both weights and positions, we need to do a tensor product
     sum = 0
     i = 0
-    for node in x:
-        print(node)
-        sum = sum + w[i]*integrand(node)
-        i = i + 1
+    for radial_node in w_r:
+        for spherical_node in w_spher:
+    
+            print(radial_node)
+            print(spherical_node)
+        # sum = sum + w[i]*integrand(node)
+        # i = i + 1
 
     print("integration result: ", sum)
 
 # The main function
 def main():
-    integrating_integrand()
+    integration()
 
 if __name__ == "__main__":
     main()

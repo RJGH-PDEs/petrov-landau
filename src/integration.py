@@ -1,5 +1,4 @@
 # Import 
-from sympy import *
 
 def lag_weights_roots(n):
     x = Symbol("x")
