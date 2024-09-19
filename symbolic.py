@@ -1,6 +1,7 @@
 import sympy as sp
 import numpy as np
 from sympy.physics.quantum import TensorProduct
+import math
 
 # x
 def x(r, t, p):
@@ -33,9 +34,9 @@ def spher_const(l,m):
     if m == 0:
         return np.sqrt(result/2)
 
-    result = result*np.math.factorial(l-np.abs(m))
+    result = result*math.factorial(l-np.abs(m))
     # print(factorial(l-np.abs(m)))
-    result = result/np.math.factorial(l+np.abs(m))
+    result = result/math.factorial(l+np.abs(m))
     # print(factorial(l+np.abs(m)))
     return np.sqrt(result)
 
@@ -66,8 +67,6 @@ def weight(k, l, m, rp, tp, pp, rq, tq, pq):
 
     # the test function
     f = sphr*radial
-    # multiply by constant
-    # f = f*spher_const(l,m)
 
     # print the test function
     print("test function: ", f)
@@ -76,26 +75,26 @@ def weight(k, l, m, rp, tp, pp, rq, tq, pq):
 
     # compute first partials
     fr = sp.simplify(sp.diff(f, r))
-    print("fr: ", fr)
+    # print("fr: ", fr)
     ft = sp.simplify(sp.diff(f,t)/r)
-    print("ft: ", ft)
+    # print("ft: ", ft)
     fp = sp.simplify(sp.diff(f,p)/(r*sp.sin(t)))
-    print("fp: ", fp)
+    # print("fp: ", fp)
 
     # basis vectors
     v1 = sp.Matrix([sp.sin(t)*sp.cos(p), sp.sin(t)*sp.sin(p), sp.cos(t)])
     v2 = sp.Matrix([sp.cos(t)*sp.cos(p), sp.cos(t)*sp.sin(p), -sp.sin(t)])
     v3 = sp.Matrix([-sp.sin(p), sp.cos(p), 0 ]) 
 
-    print("v1: ", v1)
-    print("v2: ", v2)
-    print("v3: ", v3)
+    # print("v1: ", v1)
+    # print("v2: ", v2)
+    # print("v3: ", v3)
 
     # compute the gradient
     gradient = sp.simplify(fr*v1 + ft*v2 + fp*v3)
     # print it
-    print("gradient: ")
-    print(gradient)
+    # print("gradient: ")
+    # print(gradient)
 
     # evaluate the gradients
     values_p={"r":rp,"t":tp,"p":pp}
@@ -107,25 +106,25 @@ def weight(k, l, m, rp, tp, pp, rq, tq, pq):
     # Difference in gradients
     gradDiff = gradp - gradq
     gradDiff = (np.array(gradDiff).astype(np.float64)).ravel() # cast it to numpy 
-    print("Difference in gradient: ", gradDiff)
+    # print("Difference in gradient: ", gradDiff)
 
     # Partial result
     par_result = (-2)*np.dot(gradDiff, u)
-    print("partial result: ", par_result)
+    # print("partial result: ", par_result)
 
     # Now we need to compute the hessian entries
     a11 = sp.simplify(sp.diff(f, r, 2))
-    print("a11: ", a11)
+    # print("a11: ", a11)
     a12 = sp.simplify(sp.diff(f, t, r)/r - sp.diff(f, t)/(r**2))
-    print("a12: ", a12)
+    # print("a12: ", a12)
     a13 = sp.simplify(sp.diff(f, p, r)/(r*sp.sin(t)) - sp.diff(f,p)/(r*r*sp.sin(t)))
-    print("a13: ", a13)
+    # print("a13: ", a13)
     a22 = sp.simplify(sp.diff(f, t, 2)/(r*r) + sp.diff(f, r)/r)
-    print("a22: ", a22)
+    # print("a22: ", a22)
     a23 = sp.simplify(sp.diff(f, t, p)/(r*r*sp.sin(t)) - sp.cos(t)*sp.diff(f, p)/(r*r*sp.sin(t)*sp.sin(t)))
-    print("a23: ", a23)
+    # print("a23: ", a23)
     a33 = sp.simplify(sp.diff(f, p, 2)/(r*r*sp.sin(t)*sp.sin(t)) + sp.diff(f, r)/(r) + sp.cos(t)*sp.diff(f,t)/(r*r*sp.sin(t)))
-    print("a33: ", a33)
+    # print("a33: ", a33)
                 
     # compute the tensor products
     m11 = TensorProduct(v1, v1.T)
@@ -142,13 +141,13 @@ def weight(k, l, m, rp, tp, pp, rq, tq, pq):
     hess = (a11*m11 + a22*m22 + a33*m33 + a12*(m12 + m21) + a13*(m13 + m31) + a23*(m23 + m32))
     # print(hess)
     hess = sp.simplify(hess)
-    print("hessian ", hess)
+    # print("hessian ", hess)
 
     # evaluate the hessian
     hessp = hess.subs(values_p)
-    print("hessian at p: ", hessp)
+    # print("hessian at p: ", hessp)
     hessq = hess.subs(values_q)
-    print("hessian at q: ", hessq)
+    # print("hessian at q: ", hessq)
 
     # hessian to be contracted
     sumhess = np.array(hessp + hessq).astype(np.float64)
@@ -156,20 +155,20 @@ def weight(k, l, m, rp, tp, pp, rq, tq, pq):
     proj = np.dot(u,u)*np.identity(3) - np.outer(u, u)
 
     # contraction
-    print("matrix to be contracted: ")
-    print(sumhess)
+    # print("matrix to be contracted: ")
+    # print(sumhess)
     contraction = np.trace(np.matmul(sumhess, proj))/2
-    print("Contraction: ", contraction)
+    # print("Contraction: ", contraction)
 
     # compute the weight
     weight = (par_result + contraction)*spher_const(l, m)
-    print("weight: ", weight)
+    # print("weight: ", weight)
 
     return(weight)
 
 def main():
-    k = 1
-    l = 0
+    k = 2
+    l = 2
     m = 0
 
     rp = 10
@@ -180,7 +179,7 @@ def main():
     tq = np.pi/5
     pq = np.pi/6
 
-    weight(k, l, m, rp, tp, pp, rq, tq, pq)
+    print(weight(k, l, m, rp, tp, pp, rq, tq, pq))
 
 if __name__ == '__main__':
     main()
