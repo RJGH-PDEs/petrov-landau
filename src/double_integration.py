@@ -27,7 +27,7 @@ def g(x, t, p):
 def ff(rp, tp, pp, rq, tq, pq):
     k = 2
     l = 2
-    m = 0
+    m = 1
     result = 1
     result = weight(k, l, m, rp, tp, pp, rq, tq, pq)
     return result
