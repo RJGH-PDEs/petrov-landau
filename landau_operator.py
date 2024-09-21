@@ -167,7 +167,7 @@ def weight(k, l, m, rp, tp, pp, rq, tq, pq):
     return(weight)
 
 # computes the weight symbolically
-def weight_new(k, l, m):
+def weight_new(k, l, m, r_p, t_p, p_p, r_q, t_q, p_q):
     '''
     Computes the Landau weight. 
     hopefully it will now compute it without evaluating at 
@@ -187,7 +187,7 @@ def weight_new(k, l, m):
     tq = sp.symbols('tq')
     pq = sp.symbols('pq')
     # some test values
-    values={"rp":1,"tp":0,"pp":0,"rq":2,"tq":0,"pq":0}
+    # values={"rp":r_p,"tp":t_p,"pp":p_p,"rq":r_q,"tq":t_q,"pq":p_q}
  
     '''
     compute the test function
@@ -240,24 +240,22 @@ def weight_new(k, l, m):
     # compute the gradient
     gradient = sp.simplify(fr*v1 + ft*v2 + fp*v3)
     # print it
-    # print("gradient: ")
-    # print(gradient)
+    print("gradient: ")
+    print(gradient)
 
     # evaluate the gradients
     values_p={"r":rp,"t":tp,"p":pp}
-    gradp = gradient.subs(values_p)
+    # gradp = gradient.subs(values_p)
     # print("grad at p: ", gradp)
     values_q={"r":rq,"t":tq,"p":pq}
-    gradq = gradient.subs(values_q)
+    # gradq = gradient.subs(values_q)
     # print("grad at q: ", gradq)
 
     # Difference in gradients
-    gradDiff = sp.simplify(gradp - gradq)
+    # gradDiff = sp.simplify(gradp - gradq)
     # print("difference in gradient: ", gradDiff)
     # evaluate at the points
-    print("grad diff: ", gradDiff.subs(values))
-
-
+    # print("grad diff: ", gradDiff.subs(values))
     '''
     now we compute the relative position
     '''
@@ -267,12 +265,15 @@ def weight_new(k, l, m):
     '''
     inner product
     '''
+
+    '''
     inner = sp.simplify((u.T * gradDiff)[0,0])
     inner = -2*inner
     print()
     print("partial result: ")
-    print(inner)
+    # print(inner)
     print("numerically: ", inner.subs(values))
+    '''
 
     '''
     start computing the hessian 
@@ -305,12 +306,12 @@ def weight_new(k, l, m):
     
     # compute the hessian
     hess = (a11*m11 + a22*m22 + a33*m33 + a12*(m12 + m21) + a13*(m13 + m31) + a23*(m23 + m32))
-    # print(hess)
     hess = sp.simplify(hess)
+
     print()
     print("hessian: ")
     print(hess)
-
+    '''
     # evaluate the hessian
     hessp = hess.subs(values_p)
     # print("hessian at p: ", hessp)
@@ -320,6 +321,7 @@ def weight_new(k, l, m):
     print()
     print("hessian to be contracted: ")
     print(sumhess.subs(values))
+    '''
 
     '''
     compute the projection matrix
@@ -335,32 +337,93 @@ def weight_new(k, l, m):
 
     '''
     now we take the contraction
+    this will no longer be done here
     '''
-    contraction = sp.simplify(sp.trace(proj*sumhess))/2
-    print()
-    print("contraction: ")
-    print(contraction)
+    # contraction = sp.simplify(sp.trace(proj*sumhess))/2
+    # print()
+    # print("contraction: ")
+    # print(contraction)
 
     '''
     weight
-    '''
     w = (inner + contraction)*spher_const(l, m)
+    print()
+    print("weight: ")
+    print(w)
+    '''
     # return f
-    return w
+    return u, gradient, proj, hess
+
+# evaluates the gradient
+def weight_evaluator(u, grad, projection, hessian, rp, tp, pp, rq, tq, pq):
+    # p, q values
+    values={"rp":rp,"tp":tp,"pp":pp,"rq":rq,"tq":tq,"pq":pq} 
+    values_p={"r":rp,"t":tp,"p":pp}
+    values_q={"r":rq,"t":tq,"p":pq}
+
+    '''
+    inner product
+    '''
+    # relative position
+    u_eval = u.subs(values)
+
+    # difference in gradient
+    gradDiff = grad.subs(values_p) - grad.subs(values_q)
+
+    # compute the inner product
+    inner = (u_eval.T * gradDiff)[0,0]
+    inner = -2*inner
+
+    # print partial result
+    print()
+    print("partial result: ")
+    print(inner)
+
+    '''
+    contraction
+    '''
+
+    # projection
+    projection_eval = projection.subs(values)
+
+    # sum of hessians
+    sumhess = hessian.subs(values_p) + hessian.subs(values_q)
+
+    # compute the inner porduct
+    contraction = sp.trace(projection_eval*sumhess)/2
+
+    # print contraction
+    print()
+    print("contraction result: ")
+    print(contraction)
+
+    '''
+    the weight
+    '''
+    # compute the weight
+    weight = inner + contraction
+
+    # print it
+    print()
+    print("weight: ")
+    print(weight) 
+
+    return weight
 
 # calls the weight and evaluates the expression at given points
-def weight_test():
+def weight_test(k, l, m, r_p, t_p, p_p, r_q, t_q, p_q):
     # compute the expression
-    k = 1
-    l = 0
-    m = 0
-    expression = weight_new(k, l, m)
+    u, g, p, h = weight_new(k, l, m, r_p, t_p, p_p, r_q, t_q, p_q)
+    weight_evaluator(u, g, p, h, r_p, t_p, p_p, r_q, t_q, p_q)
 
     # values
-    values={"rp":1,"tp":0,"pp":0,"rq":2,"tq":0,"pq":0}
+    values={"rp":r_p,"tp":t_p,"pp":p_p,"rq":r_q,"tq":t_q,"pq":p_q}
 
+    # Compute the weight
     # evaluate at the points
-    print(expression.subs(values))
+    # print()
+    # print("evaluation of the weight")
+    # print(expression.subs(values))
 
 def main():
     k = 1
@@ -368,18 +431,18 @@ def main():
     m = 0
 
     rp = 1
-    tp = 0
-    pp = 0
+    tp = np.pi/3
+    pp = np.pi/5
 
     rq = 2
-    tq = 0
-    pq = 0
+    tq = np.pi/7
+    pq = np.pi/4
 
-    print(weight(k, l, m, rp, tp, pp, rq, tq, pq))
+    # print("original weight: ", weight(k, l, m, rp, tp, pp, rq, tq, pq))
 
     print()
     print("new computation:")
-    weight_test()
+    weight_test(k, l, m, rp, tp, pp, rq, tq, pq)
 
 if __name__ == '__main__':
     main()
