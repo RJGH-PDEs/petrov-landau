@@ -1,3 +1,4 @@
+import time
 import sympy as sp
 import numpy as np
 from sympy.physics.quantum import TensorProduct
@@ -106,11 +107,11 @@ def weight(k, l, m, rp, tp, pp, rq, tq, pq):
     # Difference in gradients
     gradDiff = gradp - gradq
     gradDiff = (np.array(gradDiff).astype(np.float64)).ravel() # cast it to numpy 
-    print("Difference in gradient: ", gradDiff)
+    # print("Difference in gradient: ", gradDiff)
 
     # Partial result
     par_result = (-2)*np.dot(gradDiff, u)
-    print("partial result: ", par_result, "hola")
+    print("partial result: ", par_result)
 
     # Now we need to compute the hessian entries
     a11 = sp.simplify(sp.diff(f, r, 2))
@@ -155,10 +156,10 @@ def weight(k, l, m, rp, tp, pp, rq, tq, pq):
     proj = np.dot(u,u)*np.identity(3) - np.outer(u, u)
 
     # contraction
-    print("matrix to be contracted: ")
-    print(sumhess)
+    # print("matrix to be contracted: ")
+    # print(sumhess)
     contraction = np.trace(np.matmul(sumhess, proj))/2
-    # print("Contraction: ", contraction)
+    print("Contraction: ", contraction)
 
     # compute the weight
     weight = (par_result + contraction)*spher_const(l, m)
@@ -240,8 +241,8 @@ def weight_new(k, l, m, r_p, t_p, p_p, r_q, t_q, p_q):
     # compute the gradient
     gradient = sp.simplify(fr*v1 + ft*v2 + fp*v3)
     # print it
-    print("gradient: ")
-    print(gradient)
+    # print("gradient: ")
+    # print(gradient)
 
     # evaluate the gradients
     values_p={"r":rp,"t":tp,"p":pp}
@@ -308,10 +309,10 @@ def weight_new(k, l, m, r_p, t_p, p_p, r_q, t_q, p_q):
     hess = (a11*m11 + a22*m22 + a33*m33 + a12*(m12 + m21) + a13*(m13 + m31) + a23*(m23 + m32))
     hess = sp.simplify(hess)
 
+    '''
     print()
     print("hessian: ")
     print(hess)
-    '''
     # evaluate the hessian
     hessp = hess.subs(values_p)
     # print("hessian at p: ", hessp)
@@ -355,7 +356,7 @@ def weight_new(k, l, m, r_p, t_p, p_p, r_q, t_q, p_q):
     return u, gradient, proj, hess
 
 # evaluates the gradient
-def weight_evaluator(u, grad, projection, hessian, rp, tp, pp, rq, tq, pq):
+def weight_evaluator(l, m, u, grad, projection, hessian, rp, tp, pp, rq, tq, pq):
     # p, q values
     values={"rp":rp,"tp":tp,"pp":pp,"rq":rq,"tq":tq,"pq":pq} 
     values_p={"r":rp,"t":tp,"p":pp}
@@ -401,7 +402,7 @@ def weight_evaluator(u, grad, projection, hessian, rp, tp, pp, rq, tq, pq):
     the weight
     '''
     # compute the weight
-    weight = inner + contraction
+    weight = (inner + contraction)*spher_const(l, m)
 
     # print it
     print()
@@ -414,7 +415,12 @@ def weight_evaluator(u, grad, projection, hessian, rp, tp, pp, rq, tq, pq):
 def weight_test(k, l, m, r_p, t_p, p_p, r_q, t_q, p_q):
     # compute the expression
     u, g, p, h = weight_new(k, l, m, r_p, t_p, p_p, r_q, t_q, p_q)
-    weight_evaluator(u, g, p, h, r_p, t_p, p_p, r_q, t_q, p_q)
+
+    start_time = time.time()
+    weight_evaluator(l, m, u, g, p, h, r_p, t_p, p_p, r_q, t_q, p_q)
+    end_time = time.time()
+    execution_time = end_time - start_time
+    print("weight evaluation time: ", execution_time)
 
     # values
     values={"rp":r_p,"tp":t_p,"pp":p_p,"rq":r_q,"tq":t_q,"pq":p_q}
@@ -426,9 +432,9 @@ def weight_test(k, l, m, r_p, t_p, p_p, r_q, t_q, p_q):
     # print(expression.subs(values))
 
 def main():
-    k = 1
-    l = 0
-    m = 0
+    k = 2
+    l = 2
+    m = 2
 
     rp = 1
     tp = np.pi/3
@@ -438,7 +444,7 @@ def main():
     tq = np.pi/7
     pq = np.pi/4
 
-    # print("original weight: ", weight(k, l, m, rp, tp, pp, rq, tq, pq))
+    print("original weight: ", weight(k, l, m, rp, tp, pp, rq, tq, pq))
 
     print()
     print("new computation:")
