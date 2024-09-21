@@ -1,454 +1,119 @@
-import time
-import sympy as sp
 import numpy as np
-from sympy.physics.quantum import TensorProduct
-import math
-
-# x
-def x(r, t, p):
-    return r * np.cos(p) * np.sin(t)
-
-# y
-def y(r, t, p):
-    return r * np.sin(p) * np.sin(t)
-
-# z - no dependence on phi 
-def z(r,t,p):
-    return r * np.cos(t)
-
-# relative position vector
-def rel_pos(rp, tp, pp, rq, tq, pq):
-    u = np.array([x(rp,tp,pp) - x(rq, tq, pq),
-                  y(rp,tp,pp) - y(rq, tq, pq),
-                  z(rp,tp,pp) - z(rq, tq, pq)])
-
-    return u
-
-# The constant for the spherical harmonic
-def spher_const(l,m):
-    """
-    The constant that goes in front of the Legendre polynomial to produce a spherical harmonic.
-    """
-    result = 0
-
-    result = (2*l+1)/(2*np.pi)
-    if m == 0:
-        return np.sqrt(result/2)
-
-    result = result*math.factorial(l-np.abs(m))
-    # print(factorial(l-np.abs(m)))
-    result = result/math.factorial(l+np.abs(m))
-    # print(factorial(l+np.abs(m)))
-    return np.sqrt(result)
-
-# Computes the weight
-def weight(k, l, m, rp, tp, pp, rq, tq, pq):
-    # symbols
-    r = sp.symbols('r')
-    t = sp.symbols('t')
-    p = sp.symbols('p')
-
-    # alpha
-    a = 1 + 1/2
-
-    # Spherical harmonic
-    sphr = sp.simplify(sp.assoc_legendre(l,abs(m), sp.cos(t)))
-    sphr = sp.refine(sphr, sp.Q.positive(sp.sin(t)))
-
-    if m >= 0:
-        sphr = sphr*sp.cos(m*p)
-    else:
-        sphr = sphr*sp.sin(abs(m)*p)
-
-    # Radial part
-    radial = 1
-    if k > 0:
-        radial = sp.assoc_laguerre(k, a, r**2)
-    radial = radial*r**l
-
-    # the test function
-    f = sphr*radial
-
-    # print the test function
-    print("test function: ", f)
-    # compute and print relative position
-    u = rel_pos(rp, tp, pp, rq, tq, pq)
-
-    # compute first partials
-    fr = sp.simplify(sp.diff(f, r))
-    # print("fr: ", fr)
-    ft = sp.simplify(sp.diff(f,t)/r)
-    # print("ft: ", ft)
-    fp = sp.simplify(sp.diff(f,p)/(r*sp.sin(t)))
-    # print("fp: ", fp)
-
-    # basis vectors
-    v1 = sp.Matrix([sp.sin(t)*sp.cos(p), sp.sin(t)*sp.sin(p), sp.cos(t)])
-    v2 = sp.Matrix([sp.cos(t)*sp.cos(p), sp.cos(t)*sp.sin(p), -sp.sin(t)])
-    v3 = sp.Matrix([-sp.sin(p), sp.cos(p), 0 ]) 
-
-    # print("v1: ", v1)
-    # print("v2: ", v2)
-    # print("v3: ", v3)
-
-    # compute the gradient
-    gradient = sp.simplify(fr*v1 + ft*v2 + fp*v3)
-    # print it
-    # print("gradient: ")
-    # print(gradient)
-
-    # evaluate the gradients
-    values_p={"r":rp,"t":tp,"p":pp}
-    gradp = gradient.subs(values_p)
-
-    values_q={"r":rq,"t":tq,"p":pq}
-    gradq = gradient.subs(values_q)
-
-    # Difference in gradients
-    gradDiff = gradp - gradq
-    gradDiff = (np.array(gradDiff).astype(np.float64)).ravel() # cast it to numpy 
-    # print("Difference in gradient: ", gradDiff)
-
-    # Partial result
-    par_result = (-2)*np.dot(gradDiff, u)
-    print("partial result: ", par_result)
-
-    # Now we need to compute the hessian entries
-    a11 = sp.simplify(sp.diff(f, r, 2))
-    # print("a11: ", a11)
-    a12 = sp.simplify(sp.diff(f, t, r)/r - sp.diff(f, t)/(r**2))
-    # print("a12: ", a12)
-    a13 = sp.simplify(sp.diff(f, p, r)/(r*sp.sin(t)) - sp.diff(f,p)/(r*r*sp.sin(t)))
-    # print("a13: ", a13)
-    a22 = sp.simplify(sp.diff(f, t, 2)/(r*r) + sp.diff(f, r)/r)
-    # print("a22: ", a22)
-    a23 = sp.simplify(sp.diff(f, t, p)/(r*r*sp.sin(t)) - sp.cos(t)*sp.diff(f, p)/(r*r*sp.sin(t)*sp.sin(t)))
-    # print("a23: ", a23)
-    a33 = sp.simplify(sp.diff(f, p, 2)/(r*r*sp.sin(t)*sp.sin(t)) + sp.diff(f, r)/(r) + sp.cos(t)*sp.diff(f,t)/(r*r*sp.sin(t)))
-    # print("a33: ", a33)
-                
-    # compute the tensor products
-    m11 = TensorProduct(v1, v1.T)
-    m22 = TensorProduct(v2, v2.T)
-    m33 = TensorProduct(v3, v3.T)
-    m12 = TensorProduct(v1, v2.T)
-    m21 = TensorProduct(v2, v1.T)
-    m13 = TensorProduct(v1, v3.T)
-    m31 = TensorProduct(v3, v1.T)
-    m23 = TensorProduct(v2, v3.T)
-    m32 = TensorProduct(v3, v2.T)
-    
-    # compute the hessian
-    hess = (a11*m11 + a22*m22 + a33*m33 + a12*(m12 + m21) + a13*(m13 + m31) + a23*(m23 + m32))
-    # print(hess)
-    hess = sp.simplify(hess)
-    # print("hessian ", hess)
-
-    # evaluate the hessian
-    hessp = hess.subs(values_p)
-    # print("hessian at p: ", hessp)
-    hessq = hess.subs(values_q)
-    # print("hessian at q: ", hessq)
-
-    # hessian to be contracted
-    sumhess = np.array(hessp + hessq).astype(np.float64)
-    # projection matrix
-    proj = np.dot(u,u)*np.identity(3) - np.outer(u, u)
-
-    # contraction
-    # print("matrix to be contracted: ")
-    # print(sumhess)
-    contraction = np.trace(np.matmul(sumhess, proj))/2
-    print("Contraction: ", contraction)
-
-    # compute the weight
-    weight = (par_result + contraction)*spher_const(l, m)
-    # print("weight: ", weight)
-
-    return(weight)
-
-# computes the weight symbolically
-def weight_new(k, l, m, r_p, t_p, p_p, r_q, t_q, p_q):
-    '''
-    Computes the Landau weight. 
-    hopefully it will now compute it without evaluating at 
-    the points p and q
-    '''
-    # symbols
-    r = sp.symbols('r')
-    t = sp.symbols('t')
-    p = sp.symbols('p')
-
-    # more symbols
-    rp = sp.symbols('rp')
-    tp = sp.symbols('tp')
-    pp = sp.symbols('pp')
-
-    rq = sp.symbols('rq')
-    tq = sp.symbols('tq')
-    pq = sp.symbols('pq')
-    # some test values
-    # values={"rp":r_p,"tp":t_p,"pp":p_p,"rq":r_q,"tq":t_q,"pq":p_q}
- 
-    '''
-    compute the test function
-    '''
-    # alpha
-    a = 1 + 1/2
-
-    # Spherical harmonic
-    sphr = sp.simplify(sp.assoc_legendre(l,abs(m), sp.cos(t)))
-    sphr = sp.refine(sphr, sp.Q.positive(sp.sin(t)))
-
-    if m >= 0:
-        sphr = sphr*sp.cos(m*p)
-    else:
-        sphr = sphr*sp.sin(abs(m)*p)
-
-    # Radial part
-    radial = 1
-    if k > 0:
-        radial = sp.assoc_laguerre(k, a, r**2)
-    radial = radial*r**l
-
-    # the test function
-    f = sphr*radial
-
-    # print the test function
-    # print("test function: ", f)
-
-    '''
-    now we compute the gradient
-    '''
-    
-    # compute first partials
-    fr = sp.simplify(sp.diff(f, r))
-    # print("fr: ", fr)
-    ft = sp.simplify(sp.diff(f,t)/r)
-    # print("ft: ", ft)
-    fp = sp.simplify(sp.diff(f,p)/(r*sp.sin(t)))
-    # print("fp: ", fp)
-
-    # basis vectors
-    v1 = sp.Matrix([sp.sin(t)*sp.cos(p), sp.sin(t)*sp.sin(p), sp.cos(t)])
-    v2 = sp.Matrix([sp.cos(t)*sp.cos(p), sp.cos(t)*sp.sin(p), -sp.sin(t)])
-    v3 = sp.Matrix([-sp.sin(p), sp.cos(p), 0 ]) 
-
-    # print("v1: ", v1)
-    # print("v2: ", v2)
-    # print("v3: ", v3)
-
-    # compute the gradient
-    gradient = sp.simplify(fr*v1 + ft*v2 + fp*v3)
-    # print it
-    # print("gradient: ")
-    # print(gradient)
-
-    # evaluate the gradients
-    values_p={"r":rp,"t":tp,"p":pp}
-    # gradp = gradient.subs(values_p)
-    # print("grad at p: ", gradp)
-    values_q={"r":rq,"t":tq,"p":pq}
-    # gradq = gradient.subs(values_q)
-    # print("grad at q: ", gradq)
-
-    # Difference in gradients
-    # gradDiff = sp.simplify(gradp - gradq)
-    # print("difference in gradient: ", gradDiff)
-    # evaluate at the points
-    # print("grad diff: ", gradDiff.subs(values))
-    '''
-    now we compute the relative position
-    '''
-    position = r*v1
-    u = position.subs(values_p) - position.subs(values_q)
-
-    '''
-    inner product
-    '''
-
-    '''
-    inner = sp.simplify((u.T * gradDiff)[0,0])
-    inner = -2*inner
-    print()
-    print("partial result: ")
-    # print(inner)
-    print("numerically: ", inner.subs(values))
-    '''
-
-    '''
-    start computing the hessian 
-    '''
-
-    # Now we need to compute the hessian entries
-    a11 = sp.simplify(sp.diff(f, r, 2))
-    # print("a11: ", a11)
-    a12 = sp.simplify(sp.diff(f, t, r)/r - sp.diff(f, t)/(r**2))
-    # print("a12: ", a12)
-    a13 = sp.simplify(sp.diff(f, p, r)/(r*sp.sin(t)) - sp.diff(f,p)/(r*r*sp.sin(t)))
-    # print("a13: ", a13)
-    a22 = sp.simplify(sp.diff(f, t, 2)/(r*r) + sp.diff(f, r)/r)
-    # print("a22: ", a22)
-    a23 = sp.simplify(sp.diff(f, t, p)/(r*r*sp.sin(t)) - sp.cos(t)*sp.diff(f, p)/(r*r*sp.sin(t)*sp.sin(t)))
-    # print("a23: ", a23)
-    a33 = sp.simplify(sp.diff(f, p, 2)/(r*r*sp.sin(t)*sp.sin(t)) + sp.diff(f, r)/(r) + sp.cos(t)*sp.diff(f,t)/(r*r*sp.sin(t)))
-    # print("a33: ", a33)
-                
-    # compute the tensor products
-    m11 = TensorProduct(v1, v1.T)
-    m22 = TensorProduct(v2, v2.T)
-    m33 = TensorProduct(v3, v3.T)
-    m12 = TensorProduct(v1, v2.T)
-    m21 = TensorProduct(v2, v1.T)
-    m13 = TensorProduct(v1, v3.T)
-    m31 = TensorProduct(v3, v1.T)
-    m23 = TensorProduct(v2, v3.T)
-    m32 = TensorProduct(v3, v2.T)
-    
-    # compute the hessian
-    hess = (a11*m11 + a22*m22 + a33*m33 + a12*(m12 + m21) + a13*(m13 + m31) + a23*(m23 + m32))
-    hess = sp.simplify(hess)
-
-    '''
-    print()
-    print("hessian: ")
-    print(hess)
-    # evaluate the hessian
-    hessp = hess.subs(values_p)
-    # print("hessian at p: ", hessp)
-    hessq = hess.subs(values_q)
-    # print("hessian at q: ", hessq)
-    sumhess = sp.simplify(hessp + hessq)
-    print()
-    print("hessian to be contracted: ")
-    print(sumhess.subs(values))
-    '''
-
-    '''
-    compute the projection matrix
-    this matrix is constant
-    '''
-    u_norm = sp.simplify((u.T * u)[0,0])
-    proj = sp.eye(3)*u_norm
-    proj = proj - sp.simplify(u * u.T)
-
-    # print()
-    # print("projection matrix:")
-    # print(proj)
-
-    '''
-    now we take the contraction
-    this will no longer be done here
-    '''
-    # contraction = sp.simplify(sp.trace(proj*sumhess))/2
-    # print()
-    # print("contraction: ")
-    # print(contraction)
-
-    '''
-    weight
-    w = (inner + contraction)*spher_const(l, m)
-    print()
-    print("weight: ")
-    print(w)
-    '''
-    # return f
-    return u, gradient, proj, hess
-
-# evaluates the gradient
-def weight_evaluator(l, m, u, grad, projection, hessian, rp, tp, pp, rq, tq, pq):
-    # p, q values
-    values={"rp":rp,"tp":tp,"pp":pp,"rq":rq,"tq":tq,"pq":pq} 
-    values_p={"r":rp,"t":tp,"p":pp}
-    values_q={"r":rq,"t":tq,"p":pq}
-
-    '''
-    inner product
-    '''
-    # relative position
-    u_eval = u.subs(values)
-
-    # difference in gradient
-    gradDiff = grad.subs(values_p) - grad.subs(values_q)
-
-    # compute the inner product
-    inner = (u_eval.T * gradDiff)[0,0]
-    inner = -2*inner
-
-    # print partial result
-    print()
-    print("partial result: ")
-    print(inner)
-
-    '''
-    contraction
-    '''
-
-    # projection
-    projection_eval = projection.subs(values)
-
-    # sum of hessians
-    sumhess = hessian.subs(values_p) + hessian.subs(values_q)
-
-    # compute the inner porduct
-    contraction = sp.trace(projection_eval*sumhess)/2
-
-    # print contraction
-    print()
-    print("contraction result: ")
-    print(contraction)
-
-    '''
-    the weight
-    '''
-    # compute the weight
-    weight = (inner + contraction)*spher_const(l, m)
-
-    # print it
-    print()
-    print("weight: ")
-    print(weight) 
-
-    return weight
-
-# calls the weight and evaluates the expression at given points
-def weight_test(k, l, m, r_p, t_p, p_p, r_q, t_q, p_q):
-    # compute the expression
-    u, g, p, h = weight_new(k, l, m, r_p, t_p, p_p, r_q, t_q, p_q)
-
-    start_time = time.time()
-    weight_evaluator(l, m, u, g, p, h, r_p, t_p, p_p, r_q, t_q, p_q)
-    end_time = time.time()
-    execution_time = end_time - start_time
-    print("weight evaluation time: ", execution_time)
-
-    # values
-    values={"rp":r_p,"tp":t_p,"pp":p_p,"rq":r_q,"tq":t_q,"pq":p_q}
-
-    # Compute the weight
-    # evaluate at the points
-    # print()
-    # print("evaluation of the weight")
-    # print(expression.subs(values))
-
-def main():
+from scipy.special import roots_genlaguerre
+from scipy.special import genlaguerre
+from pylebedev import PyLebedev
+from landau_weight import weight_new
+from landau_weight import weight_evaluator
+
+# from cartesian to polar
+def theta(x, y, z):
+    return np.acos(z/np.sqrt(x**2+ y**2 + z**2))
+
+# from cartesian to polar
+def phi(x, y):
+    if x == 0 and y == 0: return 0
+    return (np.sign(y))*np.acos(x/np.sqrt(x**2 + y**2))
+
+# spherical function to be integrated against two Gaussians
+def ff(rp, tp, pp, rq, tq, pq):
     k = 2
     l = 2
-    m = 2
+    m = 1
+    result = 1
+    return result
 
-    rp = 1
-    tp = np.pi/3
-    pp = np.pi/5
+# spherical function that is actually sampled
+def gg(xp, tp, pp, xq, tq, pq):
+    rp = np.sqrt(2 * xp)
+    rq = np.sqrt(2 * xq)
+    return 2 * ff(rp, tp, pp, rq, tq, pq)
 
-    rq = 2
-    tq = np.pi/7
-    pq = np.pi/4
+# integration
+def operator(k, l, m):
+    # produce required pieces for the weight
+    u, g, p, h = weight_new(k, l, m)
 
-    print("original weight: ", weight(k, l, m, rp, tp, pp, rq, tq, pq))
+    # extract the coefficients
+    n_laguerre = 4
+    alpha = 1/2
+    x,w_r = roots_genlaguerre(n_laguerre, alpha, False)
+    print(w_r)
 
-    print()
-    print("new computation:")
-    weight_test(k, l, m, rp, tp, pp, rq, tq, pq)
+    # build library
+    n_lebedev = 3
+    leblib = PyLebedev()
+    s,w_spher = leblib.get_points_and_weights(n_lebedev)
+    print(w_spher)
 
-if __name__ == '__main__':
+    # Now we try to repeat for both variables
+    sum = 0
+    total_iter = 0
+
+    # radial p counter
+    i_p = 0
+    for rw_p in w_r:
+        # spherical p counter
+        j_p = 0
+        for sw_p in w_spher:
+            # radial q counter
+            i_q = 0
+            for rw_q in w_r:
+                # spherical q counter
+                j_q = 0
+                for sw_q in w_spher:
+
+                    '''
+                    Code here repeats for all points
+                    '''
+                    # print(i_p, j_p, i_q, j_q)
+
+                    # compute p radially
+                    print("iteration ", total_iter)
+                    print("partial sum: ", sum)
+                    x_p = x[i_p]
+                    t_p = theta(s[j_p, 0], s[j_p, 1], s[j_p, 2])
+                    p_p = phi(s[j_p, 0], s[j_p, 1])
+
+                    # compute q radially
+                    x_q = x[i_q]
+                    t_q = theta(s[j_q, 0], s[j_q, 1], s[j_q, 2])
+                    p_q = phi(s[j_q, 0], s[j_q, 1])  
+                    
+                    # compute the function value
+                    function = 2*weight_evaluator(l, m, u, g, p, h, np.sqrt(2 * x_p), t_p, p_p, np.sqrt(2 * x_q), t_q, p_q)
+
+                    # update the partial sum
+                    print("function: ", function)
+                    sum = sum + rw_p*sw_p*rw_q*sw_q*function
+                    total_iter = total_iter + 1
+                    '''
+                    Code here repeats for all points
+                    '''
+                    # increment j_q
+                    j_q = j_q + 1
+                # increment i_q
+                i_q = i_q + 1
+            # increment j_p
+            j_p = j_p + 1
+        # increment i_p
+        i_p = i_p + 1                    
+
+    print("result before final scaling: ", sum)
+    # out of the loop
+    result = sum*(4*np.pi)**2
+    
+    print("result: ", result)
+    print("total number of loops: ", total_iter)
+
+# The main function
+def main():
+    # choose a test function for the weight
+    k = 3
+    l = 3
+    m = 0
+
+    # evaluate the operator
+    operator(k, l, m)
+
+if __name__ == "__main__":
     main()
