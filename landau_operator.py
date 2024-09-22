@@ -31,13 +31,13 @@ def operator(k, l, m):
     u, g, p, h = weight_new(k, l, m)
 
     # extract the coefficients
-    n_laguerre = 4
+    n_laguerre = 5
     alpha = 1/2
     x,w_r = roots_genlaguerre(n_laguerre, alpha, False)
     print(w_r)
 
     # build library
-    n_lebedev = 3
+    n_lebedev = 5
     leblib = PyLebedev()
     s,w_spher = leblib.get_points_and_weights(n_lebedev)
     print(w_spher)
@@ -110,9 +110,9 @@ def operator(k, l, m):
 # The main function
 def main():
     # choose a test function for the weight
-    k = 1
-    l = 1
-    m = 0
+    k = 3
+    l = 3
+    m = -3
 
     # evaluate the operator
     operator(k, l, m)
