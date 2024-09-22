@@ -48,12 +48,13 @@ def weight(k, l, m, rp, tp, pp, rq, tq, pq):
     p = sp.symbols('p')
 
     # alpha
-    a = 1 + 1/2
+    a = l + 1/2
 
     # Spherical harmonic
     sphr = sp.simplify(sp.assoc_legendre(l,abs(m), sp.cos(t)))
     sphr = sp.refine(sphr, sp.Q.positive(sp.sin(t)))
 
+    print(sphr)
     if m >= 0:
         sphr = sphr*sp.cos(m*p)
     else:
@@ -66,10 +67,14 @@ def weight(k, l, m, rp, tp, pp, rq, tq, pq):
     radial = radial*r**l
 
     # the test function
+    # print("radial: ", radial)
     f = sphr*radial
 
     # print the test function
     print("test function: ", f)
+
+    # an evaluation of the test function
+    # print(f.subs({"r":1}))
     # compute and print relative position
     u = rel_pos(rp, tp, pp, rq, tq, pq)
 
@@ -169,17 +174,17 @@ def weight(k, l, m, rp, tp, pp, rq, tq, pq):
 def main():
     k = 2
     l = 2
-    m = 0
+    m = 1
 
-    rp = 10
-    tp = np.pi/4
-    pp = np.pi
+    rp = 1
+    tp = np.pi/3
+    pp = np.pi/5
 
-    rq = 4
-    tq = np.pi/5
-    pq = np.pi/6
+    rq = 2
+    tq = np.pi/7
+    pq = np.pi/4
 
-    print(weight(k, l, m, rp, tp, pp, rq, tq, pq))
+    print("weight: ", weight(k, l, m, rp, tp, pp, rq, tq, pq))
 
 if __name__ == '__main__':
     main()

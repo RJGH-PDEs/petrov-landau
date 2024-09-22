@@ -110,9 +110,9 @@ def operator(k, l, m):
 # The main function
 def main():
     # choose a test function for the weight
-    k = 3
-    l = 3
-    m = -3
+    k = 2
+    l = 1
+    m = 1
 
     # evaluate the operator
     operator(k, l, m)

@@ -148,17 +148,18 @@ def weight(k,l,m, r_p, theta_p, phi_p, r_q, theta_q, phi_q):
 
 # The main function
 def main():
-    k = 1
-    l = 1
-    m = 1
+    k = 2
+    l = 2
+    m = 2
+
     # First, we define the two points in spherical
-    r_p = 2
-    t_p = np.pi/4
-    p_p = np.pi
+    r_p = 1
+    t_p = np.pi/3
+    p_p = np.pi/5
     
-    r_q = 4
-    t_q = np.pi/5
-    p_q = np.pi/2
+    r_q = 2
+    t_q = np.pi/7
+    p_q = np.pi/4
 
     # Compute the weight
     print('weight: ', weight(k,l,m,r_p, t_p, p_p, r_q, t_q, p_q))

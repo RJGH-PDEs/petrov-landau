@@ -49,7 +49,7 @@ def weight(k, l, m, rp, tp, pp, rq, tq, pq):
     p = sp.symbols('p')
 
     # alpha
-    a = 1 + 1/2
+    a = l + 1/2
 
     # Spherical harmonic
     sphr = sp.simplify(sp.assoc_legendre(l,abs(m), sp.cos(t)))
@@ -194,7 +194,7 @@ def weight_new(k, l, m):
     compute the test function
     '''
     # alpha
-    a = 1 + 1/2
+    a = l + 1/2
 
     # Spherical harmonic
     sphr = sp.simplify(sp.assoc_legendre(l,abs(m), sp.cos(t)))
@@ -421,7 +421,7 @@ def weight_test(k, l, m, r_p, t_p, p_p, r_q, t_q, p_q):
     u, g, p, h = weight_new(k, l, m)
 
     start_time = time.time()
-    weight_evaluator(l, m, u, g, p, h, r_p, t_p, p_p, r_q, t_q, p_q)
+    print("weight: ", weight_evaluator(l, m, u, g, p, h, r_p, t_p, p_p, r_q, t_q, p_q))
     end_time = time.time()
     execution_time = end_time - start_time
     print("weight evaluation time: ", execution_time)
