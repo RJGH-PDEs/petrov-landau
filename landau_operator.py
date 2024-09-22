@@ -15,18 +15,15 @@ def phi(x, y):
     return (np.sign(y))*np.acos(x/np.sqrt(x**2 + y**2))
 
 # spherical function to be integrated against two Gaussians
-def ff(rp, tp, pp, rq, tq, pq):
-    k = 2
-    l = 2
-    m = 1
+def f(rp, tp, pp, rq, tq, pq):
     result = 1
     return result
 
 # spherical function that is actually sampled
-def gg(xp, tp, pp, xq, tq, pq):
+def g(xp, tp, pp, xq, tq, pq):
     rp = np.sqrt(2 * xp)
     rq = np.sqrt(2 * xq)
-    return 2 * ff(rp, tp, pp, rq, tq, pq)
+    return 2 * f(rp, tp, pp, rq, tq, pq)
 
 # integration
 def operator(k, l, m):
@@ -85,6 +82,8 @@ def operator(k, l, m):
                     # update the partial sum
                     print("function: ", function)
                     sum = sum + rw_p*sw_p*rw_q*sw_q*function
+
+                    # increment total number of iterations
                     total_iter = total_iter + 1
                     '''
                     Code here repeats for all points
@@ -98,22 +97,26 @@ def operator(k, l, m):
         # increment i_p
         i_p = i_p + 1                    
 
+    '''
+    out of the loop
+    '''
+
+    # compute and print result
     print("result before final scaling: ", sum)
-    # out of the loop
-    result = sum*(4*np.pi)**2
-    
+    result = sum*(4*np.pi)**2 
     print("result: ", result)
     print("total number of loops: ", total_iter)
 
 # The main function
 def main():
     # choose a test function for the weight
-    k = 3
-    l = 3
+    k = 1
+    l = 1
     m = 0
 
     # evaluate the operator
     operator(k, l, m)
 
+# Call to the main function
 if __name__ == "__main__":
     main()
