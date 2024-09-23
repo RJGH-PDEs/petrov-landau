@@ -125,20 +125,36 @@ def sym_test(k, l, m, rad, the, phi):
     point = {"r":rad,"t":the,"p":phi}
     result = f.subs(point)
 
+    # multiply by constant 
+    result = result*spher_const(l, m)
+    
     # return
     return result
+
+# function to be integrated
+def f_integrated(rp, tp, pp, rq, tq, pq):
+    # parameters for first function
+    k_1 = 0
+    l_1 = 0
+    m_1 = 0
+    # parameters for second function
+    k_2 = 0
+    l_2 = 0
+    m_2 = 0
+
+    return sym_test(k_1, l_1, m_1, rp, tp, pp)*sym_test(k_2, l_2, m_2, rq, tq, pq)
 
 # The main function
 def main():
     # Parameters
-    k = 0
-    l = 1
-    m = 0
+    k = 5
+    l = 2
+    m = 2
     
     # Coefficients
-    r = 3
-    theta = np.pi/4 
-    phi = np.pi/2
+    r = 5
+    theta = np.pi/5
+    phi = np.pi/3.4
 
     # printing
     print('test function: ', test(m, l, k, r, theta, phi))

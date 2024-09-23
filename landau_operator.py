@@ -1,9 +1,12 @@
 import numpy as np
+# integration 
 from scipy.special import roots_genlaguerre
-from scipy.special import genlaguerre
 from pylebedev import PyLebedev
+# weight
 from landau_weight import weight_new
 from landau_weight import weight_evaluator
+# function
+from test_func import f_integrated
 
 # from cartesian to polar
 def theta(x, y, z):
@@ -20,24 +23,29 @@ def f(rp, tp, pp, rq, tq, pq):
     return result
 
 # spherical function that is actually sampled
-def g(xp, tp, pp, xq, tq, pq):
+def f_samp(xp, tp, pp, xq, tq, pq):
     rp = np.sqrt(2 * xp)
     rq = np.sqrt(2 * xq)
-    return 2 * f(rp, tp, pp, rq, tq, pq)
+    return 2 * f_integrated(rp, tp, pp, rq, tq, pq)
 
 # integration
 def operator(k, l, m):
     # produce required pieces for the weight
     u, g, p, h = weight_new(k, l, m)
 
+    '''
+    choose the integration order here
+    '''
+    n_laguerre = 3
+    n_lebedev = 3
+    ''''''
+
     # extract the coefficients
-    n_laguerre = 5
     alpha = 1/2
     x,w_r = roots_genlaguerre(n_laguerre, alpha, False)
     print(w_r)
 
     # build library
-    n_lebedev = 5
     leblib = PyLebedev()
     s,w_spher = leblib.get_points_and_weights(n_lebedev)
     print(w_spher)
@@ -76,12 +84,15 @@ def operator(k, l, m):
                     t_q = theta(s[j_q, 0], s[j_q, 1], s[j_q, 2])
                     p_q = phi(s[j_q, 0], s[j_q, 1])  
                     
-                    # compute the function value
-                    function = 2*weight_evaluator(l, m, u, g, p, h, np.sqrt(2 * x_p), t_p, p_p, np.sqrt(2 * x_q), t_q, p_q)
+                    # compute the weight
+                    weight = weight_evaluator(l, m, u, g, p, h, np.sqrt(2 * x_p), t_p, p_p, np.sqrt(2 * x_q), t_q, p_q)
+                    func = f_samp(x_p, t_p, p_p, x_q, t_q, p_q)
 
                     # update the partial sum
-                    print("function: ", function)
-                    sum = sum + rw_p*sw_p*rw_q*sw_q*function
+                    print("Landau weight: ", weight)
+                    print("function: ", func)
+
+                    sum = sum + rw_p*sw_p*rw_q*sw_q*func*weight
 
                     # increment total number of iterations
                     total_iter = total_iter + 1

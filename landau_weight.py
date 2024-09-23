@@ -170,9 +170,9 @@ def weight(k, l, m, rp, tp, pp, rq, tq, pq):
 # computes the weight symbolically
 def weight_new(k, l, m):
     '''
-    Computes the Landau weight. 
-    hopefully it will now compute it without evaluating at 
-    the points p and q
+    Computes the gradient and hessian of the test functions.
+    Additionally computes the relative position and projection.
+    This is then used to compute the Landau weight 
     '''
     # symbols
     r = sp.symbols('r')
