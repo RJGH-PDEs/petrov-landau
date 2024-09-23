@@ -438,15 +438,15 @@ def weight_test(k, l, m, r_p, t_p, p_p, r_q, t_q, p_q):
 def main():
     k = 2
     l = 2
-    m = 2
+    m = -2
 
-    rp = 1
-    tp = np.pi/3
-    pp = np.pi/5
+    rp = 4
+    tp = np.pi/6
+    pp = np.pi/3
 
-    rq = 2
-    tq = np.pi/7
-    pq = np.pi/4
+    rq = 1
+    tq = np.pi/3
+    pq = np.pi/6
 
     print("original weight: ", weight(k, l, m, rp, tp, pp, rq, tq, pq))
 
