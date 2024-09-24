@@ -121,7 +121,7 @@ def operator(k, l, m):
 # The main function
 def main():
     # choose a test function for the weight
-    k = 2
+    k = 4
     l = 1
     m = 1
 
