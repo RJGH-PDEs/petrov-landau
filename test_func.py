@@ -66,25 +66,25 @@ def azimuth(m, p):
         return np.sin(np.abs(m)*p)
 
 # Test function (without the exponential weight)
-def test(m, l, k, r, theta ,phi):
+def test(k, l, m, r, theta ,phi):
     """
     The test function
     """
     result = 0
 
     result = azimuth(m, phi)            # azimunth:     phi
-    print('azimuth (phi): ', azimuth(m, phi))
+    # print('azimuth (phi): ', azimuth(m, phi))
 
     result = result*Leg(m, l, theta)    # Legendre:     theta
-    print('Legendre (theta): ', Leg(m, l, theta))
+    # print('Legendre (theta): ', Leg(m, l, theta))
 
     result = result*Phi(l, k, r)        # Phi:          r
-    print('radial: ', Phi(l, k, r))
+    # print('radial: ', Phi(l, k, r))
 
-    print(' -> without constant: ', result) # before multiplying by constant
+    # print(' -> without constant: ', result) # before multiplying by constant
     
     result = result*spher_const(l, m)   # Constant      
-    print('constant: ', spher_const(l,m))
+    # print('constant: ', spher_const(l,m))
 
     return result
 
@@ -134,20 +134,21 @@ def sym_test(k, l, m, rad, the, phi):
 # function to be integrated
 def f_integrated(rp, tp, pp, rq, tq, pq):
     # parameters for first function
-    k_1 = 0
-    l_1 = 0
-    m_1 = 0
+    k_1 = 2
+    l_1 = 2
+    m_1 = 2
     # parameters for second function
     k_2 = 0
-    l_2 = 0
-    m_2 = 0
+    l_2 = 1
+    m_2 = -1
 
-    return sym_test(k_1, l_1, m_1, rp, tp, pp)*sym_test(k_2, l_2, m_2, rq, tq, pq)
+    # return sym_test(k_1, l_1, m_1, rp, tp, pp)*sym_test(k_2, l_2, m_2, rq, tq, pq)
+    return test(k_1, l_1, m_1, rp, tp, pp)*test(k_2, l_2, m_2, rq, tq, pq)
 
 # The main function
 def main():
     # Parameters
-    k = 5
+    k = 2
     l = 2
     m = 2
     
@@ -157,7 +158,7 @@ def main():
     phi = np.pi/3.4
 
     # printing
-    print('test function: ', test(m, l, k, r, theta, phi))
+    print('test function: ', test(k, l, m, r, theta, phi))
     print()
     print('symbolic test function: ', sym_test(k, l, m, r, theta, phi))
 

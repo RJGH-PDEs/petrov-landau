@@ -36,8 +36,8 @@ def operator(k, l, m):
     '''
     choose the integration order here
     '''
-    n_laguerre = 3
-    n_lebedev = 3
+    n_laguerre = 5
+    n_lebedev = 9
     ''''''
 
     # extract the coefficients
@@ -73,8 +73,8 @@ def operator(k, l, m):
                     # print(i_p, j_p, i_q, j_q)
 
                     # compute p radially
-                    print("iteration ", total_iter)
-                    print("partial sum: ", sum)
+                    # print("iteration ", total_iter)
+                    # print("partial sum: ", sum)
                     x_p = x[i_p]
                     t_p = theta(s[j_p, 0], s[j_p, 1], s[j_p, 2])
                     p_p = phi(s[j_p, 0], s[j_p, 1])
@@ -89,8 +89,8 @@ def operator(k, l, m):
                     func = f_samp(x_p, t_p, p_p, x_q, t_q, p_q)
 
                     # update the partial sum
-                    print("Landau weight: ", weight)
-                    print("function: ", func)
+                    # print("Landau weight: ", weight)
+                    # print("function: ", func)
 
                     sum = sum + rw_p*sw_p*rw_q*sw_q*func*weight
 
@@ -121,9 +121,9 @@ def operator(k, l, m):
 # The main function
 def main():
     # choose a test function for the weight
-    k = 4
+    k = 2
     l = 1
-    m = 1
+    m = -1 
 
     # evaluate the operator
     operator(k, l, m)
