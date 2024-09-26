@@ -122,8 +122,8 @@ def operator(u, g, p, h, select, k, l, m):
 # iterates over different test functions
 def iteration_selector(u, g, p, h, k, l, m, n):
     # p iteration
-    for kp in range(1, n):
-        for lp in range(1,n):
+    for kp in range(0, n):
+        for lp in range(0,n):
             for mp in range(-lp, lp+1):
                 select = [kp, lp, mp, 0, 0, 0]
                 print("integrating against", select)
@@ -132,8 +132,8 @@ def iteration_selector(u, g, p, h, k, l, m, n):
 
 # collision matrix
 def collision_matrix(n):
-    for k in range(1, n):
-        for l in range(1, n):
+    for k in range(0, n):
+        for l in range(0, n):
             for m in range(-l, l+1):
                 print("weight on: ", k, l, m)
                 # produce required pieces for the weight
@@ -165,7 +165,7 @@ def main():
 
     # number of basis functions
     n = 3
-    collision_matrix(n+1)
+    collision_matrix(n)
 
     return 0
     # evaluate the operator

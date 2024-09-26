@@ -1,0 +1,1511 @@
+weight on:  0 0 0
+integrating against [0, 0, 0, 0, 0, 0]
+result:  0
+integrating against [0, 1, -1, 0, 0, 0]
+result:  0
+integrating against [0, 1, 0, 0, 0, 0]
+result:  0
+integrating against [0, 1, 1, 0, 0, 0]
+result:  0
+integrating against [0, 2, -2, 0, 0, 0]
+result:  0
+integrating against [0, 2, -1, 0, 0, 0]
+result:  0
+integrating against [0, 2, 0, 0, 0, 0]
+result:  0
+integrating against [0, 2, 1, 0, 0, 0]
+result:  0
+integrating against [0, 2, 2, 0, 0, 0]
+result:  0
+integrating against [1, 0, 0, 0, 0, 0]
+result:  0
+integrating against [1, 1, -1, 0, 0, 0]
+result:  0
+integrating against [1, 1, 0, 0, 0, 0]
+result:  0
+integrating against [1, 1, 1, 0, 0, 0]
+result:  0
+integrating against [1, 2, -2, 0, 0, 0]
+result:  0
+integrating against [1, 2, -1, 0, 0, 0]
+result:  0
+integrating against [1, 2, 0, 0, 0, 0]
+result:  0
+integrating against [1, 2, 1, 0, 0, 0]
+result:  0
+integrating against [1, 2, 2, 0, 0, 0]
+result:  0
+integrating against [2, 0, 0, 0, 0, 0]
+result:  0
+integrating against [2, 1, -1, 0, 0, 0]
+result:  0
+integrating against [2, 1, 0, 0, 0, 0]
+result:  0
+integrating against [2, 1, 1, 0, 0, 0]
+result:  0
+integrating against [2, 2, -2, 0, 0, 0]
+result:  0
+integrating against [2, 2, -1, 0, 0, 0]
+result:  0
+integrating against [2, 2, 0, 0, 0, 0]
+result:  0
+integrating against [2, 2, 1, 0, 0, 0]
+result:  0
+integrating against [2, 2, 2, 0, 0, 0]
+result:  0
+
+weight on:  0 1 -1
+integrating against [0, 0, 0, 0, 0, 0]
+result:  0
+integrating against [0, 1, -1, 0, 0, 0]
+result:  0
+integrating against [0, 1, 0, 0, 0, 0]
+result:  0
+integrating against [0, 1, 1, 0, 0, 0]
+result:  0
+integrating against [0, 2, -2, 0, 0, 0]
+result:  0
+integrating against [0, 2, -1, 0, 0, 0]
+result:  0
+integrating against [0, 2, 0, 0, 0, 0]
+result:  0
+integrating against [0, 2, 1, 0, 0, 0]
+result:  0
+integrating against [0, 2, 2, 0, 0, 0]
+result:  0
+integrating against [1, 0, 0, 0, 0, 0]
+result:  0
+integrating against [1, 1, -1, 0, 0, 0]
+result:  0
+integrating against [1, 1, 0, 0, 0, 0]
+result:  0
+integrating against [1, 1, 1, 0, 0, 0]
+result:  0
+integrating against [1, 2, -2, 0, 0, 0]
+result:  0
+integrating against [1, 2, -1, 0, 0, 0]
+result:  0
+integrating against [1, 2, 0, 0, 0, 0]
+result:  0
+integrating against [1, 2, 1, 0, 0, 0]
+result:  0
+integrating against [1, 2, 2, 0, 0, 0]
+result:  0
+integrating against [2, 0, 0, 0, 0, 0]
+result:  0
+integrating against [2, 1, -1, 0, 0, 0]
+result:  0
+integrating against [2, 1, 0, 0, 0, 0]
+result:  0
+integrating against [2, 1, 1, 0, 0, 0]
+result:  0
+integrating against [2, 2, -2, 0, 0, 0]
+result:  0
+integrating against [2, 2, -1, 0, 0, 0]
+result:  0
+integrating against [2, 2, 0, 0, 0, 0]
+result:  0
+integrating against [2, 2, 1, 0, 0, 0]
+result:  0
+integrating against [2, 2, 2, 0, 0, 0]
+result:  0
+
+weight on:  0 1 0
+integrating against [0, 0, 0, 0, 0, 0]
+result:  0
+integrating against [0, 1, -1, 0, 0, 0]
+result:  0
+integrating against [0, 1, 0, 0, 0, 0]
+result:  0
+integrating against [0, 1, 1, 0, 0, 0]
+result:  0
+integrating against [0, 2, -2, 0, 0, 0]
+result:  0
+integrating against [0, 2, -1, 0, 0, 0]
+result:  0
+integrating against [0, 2, 0, 0, 0, 0]
+result:  0
+integrating against [0, 2, 1, 0, 0, 0]
+result:  0
+integrating against [0, 2, 2, 0, 0, 0]
+result:  0
+integrating against [1, 0, 0, 0, 0, 0]
+result:  0
+integrating against [1, 1, -1, 0, 0, 0]
+result:  0
+integrating against [1, 1, 0, 0, 0, 0]
+result:  0
+integrating against [1, 1, 1, 0, 0, 0]
+result:  0
+integrating against [1, 2, -2, 0, 0, 0]
+result:  0
+integrating against [1, 2, -1, 0, 0, 0]
+result:  0
+integrating against [1, 2, 0, 0, 0, 0]
+result:  0
+integrating against [1, 2, 1, 0, 0, 0]
+result:  0
+integrating against [1, 2, 2, 0, 0, 0]
+result:  0
+integrating against [2, 0, 0, 0, 0, 0]
+result:  0
+integrating against [2, 1, -1, 0, 0, 0]
+result:  0
+integrating against [2, 1, 0, 0, 0, 0]
+result:  0
+integrating against [2, 1, 1, 0, 0, 0]
+result:  0
+integrating against [2, 2, -2, 0, 0, 0]
+result:  0
+integrating against [2, 2, -1, 0, 0, 0]
+result:  0
+integrating against [2, 2, 0, 0, 0, 0]
+result:  0
+integrating against [2, 2, 1, 0, 0, 0]
+result:  0
+integrating against [2, 2, 2, 0, 0, 0]
+result:  0
+
+weight on:  0 1 1
+integrating against [0, 0, 0, 0, 0, 0]
+result:  0
+integrating against [0, 1, -1, 0, 0, 0]
+result:  0
+integrating against [0, 1, 0, 0, 0, 0]
+result:  0
+integrating against [0, 1, 1, 0, 0, 0]
+result:  0
+integrating against [0, 2, -2, 0, 0, 0]
+result:  0
+integrating against [0, 2, -1, 0, 0, 0]
+result:  0
+integrating against [0, 2, 0, 0, 0, 0]
+result:  0
+integrating against [0, 2, 1, 0, 0, 0]
+result:  0
+integrating against [0, 2, 2, 0, 0, 0]
+result:  0
+integrating against [1, 0, 0, 0, 0, 0]
+result:  0
+integrating against [1, 1, -1, 0, 0, 0]
+result:  0
+integrating against [1, 1, 0, 0, 0, 0]
+result:  0
+integrating against [1, 1, 1, 0, 0, 0]
+result:  0
+integrating against [1, 2, -2, 0, 0, 0]
+result:  0
+integrating against [1, 2, -1, 0, 0, 0]
+result:  0
+integrating against [1, 2, 0, 0, 0, 0]
+result:  0
+integrating against [1, 2, 1, 0, 0, 0]
+result:  0
+integrating against [1, 2, 2, 0, 0, 0]
+result:  0
+integrating against [2, 0, 0, 0, 0, 0]
+result:  0
+integrating against [2, 1, -1, 0, 0, 0]
+result:  0
+integrating against [2, 1, 0, 0, 0, 0]
+result:  0
+integrating against [2, 1, 1, 0, 0, 0]
+result:  0
+integrating against [2, 2, -2, 0, 0, 0]
+result:  0
+integrating against [2, 2, -1, 0, 0, 0]
+result:  0
+integrating against [2, 2, 0, 0, 0, 0]
+result:  0
+integrating against [2, 2, 1, 0, 0, 0]
+result:  0
+integrating against [2, 2, 2, 0, 0, 0]
+result:  0
+
+weight on:  0 2 -2
+integrating against [0, 0, 0, 0, 0, 0]
+result:  2.50321129275880e-15
+integrating against [0, 1, -1, 0, 0, 0]
+result:  -2.55002758698453e-14
+integrating against [0, 1, 0, 0, 0, 0]
+result:  -2.83931640877052e-15
+integrating against [0, 1, 1, 0, 0, 0]
+result:  -2.63941461624507e-15
+integrating against [0, 2, -2, 0, 0, 0]
+result:  -501.149519714857
+integrating against [0, 2, -1, 0, 0, 0]
+result:  -8.59844284050483e-15
+integrating against [0, 2, 0, 0, 0, 0]
+result:  -2.02028206547450e-14
+integrating against [0, 2, 1, 0, 0, 0]
+result:  6.89609333961740e-15
+integrating against [0, 2, 2, 0, 0, 0]
+result:  3.74865049352239e-14
+integrating against [1, 0, 0, 0, 0, 0]
+result:  -3.01922061348608e-14
+integrating against [1, 1, -1, 0, 0, 0]
+result:  2.10894759005624e-13
+integrating against [1, 1, 0, 0, 0, 0]
+result:  1.60616737056465e-14
+integrating against [1, 1, 1, 0, 0, 0]
+result:  -1.12487339745921e-13
+integrating against [1, 2, -2, 0, 0, 0]
+result:  1754.02331900199
+integrating against [1, 2, -1, 0, 0, 0]
+result:  6.86160965638538e-14
+integrating against [1, 2, 0, 0, 0, 0]
+result:  7.18398605655170e-14
+integrating against [1, 2, 1, 0, 0, 0]
+result:  -5.41074783964954e-14
+integrating against [1, 2, 2, 0, 0, 0]
+result:  -1.12279743943913e-13
+integrating against [2, 0, 0, 0, 0, 0]
+result:  5.69302338780233e-14
+integrating against [2, 1, -1, 0, 0, 0]
+result:  -8.01395285744660e-14
+integrating against [2, 1, 0, 0, 0, 0]
+result:  -3.92968077708739e-14
+integrating against [2, 1, 1, 0, 0, 0]
+result:  -3.08309493493257e-14
+integrating against [2, 2, -2, 0, 0, 0]
+result:  -3946.55246775447
+integrating against [2, 2, -1, 0, 0, 0]
+result:  8.60527649671721e-14
+integrating against [2, 2, 0, 0, 0, 0]
+result:  -1.42720943201656e-13
+integrating against [2, 2, 1, 0, 0, 0]
+result:  1.01393211837216e-13
+integrating against [2, 2, 2, 0, 0, 0]
+result:  2.44351403715695e-13
+
+weight on:  0 2 -1
+integrating against [0, 0, 0, 0, 0, 0]
+result:  -7.61351000839569e-15
+integrating against [0, 1, -1, 0, 0, 0]
+result:  -7.51613412494327e-15
+integrating against [0, 1, 0, 0, 0, 0]
+result:  -5.90247662773164e-15
+integrating against [0, 1, 1, 0, 0, 0]
+result:  1.51949180771917e-15
+integrating against [0, 2, -2, 0, 0, 0]
+result:  -3.46700947676768e-15
+integrating against [0, 2, -1, 0, 0, 0]
+result:  -501.149519714857
+integrating against [0, 2, 0, 0, 0, 0]
+result:  -3.48391649829019e-14
+integrating against [0, 2, 1, 0, 0, 0]
+result:  -1.39450825621100e-14
+integrating against [0, 2, 2, 0, 0, 0]
+result:  -1.61365749721163e-15
+integrating against [1, 0, 0, 0, 0, 0]
+result:  2.14612166870533e-14
+integrating against [1, 1, -1, 0, 0, 0]
+result:  -1.88331378984911e-15
+integrating against [1, 1, 0, 0, 0, 0]
+result:  -7.69076867636564e-14
+integrating against [1, 1, 1, 0, 0, 0]
+result:  1.11629144634693e-14
+integrating against [1, 2, -2, 0, 0, 0]
+result:  -4.93085792251403e-15
+integrating against [1, 2, -1, 0, 0, 0]
+result:  1754.02331900199
+integrating against [1, 2, 0, 0, 0, 0]
+result:  1.30770461153341e-13
+integrating against [1, 2, 1, 0, 0, 0]
+result:  -8.27288384777354e-14
+integrating against [1, 2, 2, 0, 0, 0]
+result:  2.91057585703952e-16
+integrating against [2, 0, 0, 0, 0, 0]
+result:  -4.41037847513755e-14
+integrating against [2, 1, -1, 0, 0, 0]
+result:  2.73936551250780e-16
+integrating against [2, 1, 0, 0, 0, 0]
+result:  -1.15053351525327e-14
+integrating against [2, 1, 1, 0, 0, 0]
+result:  -2.35585434075670e-14
+integrating against [2, 2, -2, 0, 0, 0]
+result:  -2.35585434075670e-14
+integrating against [2, 2, -1, 0, 0, 0]
+result:  -3946.55246775447
+integrating against [2, 2, 0, 0, 0, 0]
+result:  -2.92016363633331e-13
+integrating against [2, 2, 1, 0, 0, 0]
+result:  2.64622708508253e-13
+integrating against [2, 2, 2, 0, 0, 0]
+result:  1.17792717037835e-14
+
+weight on:  0 2 0
+integrating against [0, 0, 0, 0, 0, 0]
+result:  8.63863194627947e-15
+integrating against [0, 1, -1, 0, 0, 0]
+result:  2.86456307694663e-15
+integrating against [0, 1, 0, 0, 0, 0]
+result:  1.57470714383065e-14
+integrating against [0, 1, 1, 0, 0, 0]
+result:  5.34604300800350e-15
+integrating against [0, 2, -2, 0, 0, 0]
+result:  -1.97747947934157e-14
+integrating against [0, 2, -1, 0, 0, 0]
+result:  -1.59225620414516e-15
+integrating against [0, 2, 0, 0, 0, 0]
+result:  -501.149519714858
+integrating against [0, 2, 1, 0, 0, 0]
+result:  -2.28137784088540e-15
+integrating against [0, 2, 2, 0, 0, 0]
+result:  5.57915659272999e-14
+integrating against [1, 0, 0, 0, 0, 0]
+result:  -8.21980864096871e-14
+integrating against [1, 1, -1, 0, 0, 0]
+result:  -3.76662757969822e-15
+integrating against [1, 1, 0, 0, 0, 0]
+result:  -6.26801071330690e-14
+integrating against [1, 1, 1, 0, 0, 0]
+result:  2.22573447891258e-16
+integrating against [1, 2, -2, 0, 0, 0]
+result:  5.55406357660956e-14
+integrating against [1, 2, -1, 0, 0, 0]
+result:  3.62965930407283e-15
+integrating against [1, 2, 0, 0, 0, 0]
+result:  1754.02331900200
+integrating against [1, 2, 1, 0, 0, 0]
+result:  -5.13631033595212e-15
+integrating against [1, 2, 2, 0, 0, 0]
+result:  1.25497182541763e-13
+integrating against [2, 0, 0, 0, 0, 0]
+result:  3.27011758055618e-14
+integrating against [2, 1, -1, 0, 0, 0]
+result:  -6.87580743639457e-14
+integrating against [2, 1, 0, 0, 0, 0]
+result:  -1.33544068734755e-14
+integrating against [2, 1, 1, 0, 0, 0]
+result:  -9.18372288068239e-14
+integrating against [2, 2, -2, 0, 0, 0]
+result:  -1.47925737675421e-13
+integrating against [2, 2, -1, 0, 0, 0]
+result:  -1.09574620500312e-15
+integrating against [2, 2, 0, 0, 0, 0]
+result:  -3946.55246775450
+integrating against [2, 2, 1, 0, 0, 0]
+result:  -5.20479447376481e-15
+integrating against [2, 2, 2, 0, 0, 0]
+result:  1.83657336579195e-13
+
+weight on:  0 2 1
+integrating against [0, 0, 0, 0, 0, 0]
+result:  -1.49702044999938e-15
+integrating against [0, 1, -1, 0, 0, 0]
+result:  1.24127499785509e-15
+integrating against [0, 1, 0, 0, 0, 0]
+result:  -1.21730554962065e-14
+integrating against [0, 1, 1, 0, 0, 0]
+result:  -1.41248534238683e-14
+integrating against [0, 2, -2, 0, 0, 0]
+result:  -6.02660412751715e-15
+integrating against [0, 2, -1, 0, 0, 0]
+result:  1.91755585875546e-14
+integrating against [0, 2, 0, 0, 0, 0]
+result:  -1.10002646361641e-15
+integrating against [0, 2, 1, 0, 0, 0]
+result:  -501.149519714857
+integrating against [0, 2, 2, 0, 0, 0]
+result:  -6.76280860900360e-16
+integrating against [1, 0, 0, 0, 0, 0]
+result:  2.10417513429505e-14
+integrating against [1, 1, -1, 0, 0, 0]
+result:  -2.29421861672528e-15
+integrating against [1, 1, 0, 0, 0, 0]
+result:  5.13288612906148e-14
+integrating against [1, 1, 1, 0, 0, 0]
+result:  1.87988958295848e-14
+integrating against [1, 2, -2, 0, 0, 0]
+result:  -6.84841378126949e-15
+integrating against [1, 2, -1, 0, 0, 0]
+result:  -6.32793433389301e-14
+integrating against [1, 2, 0, 0, 0, 0]
+result:  7.39628688377104e-15
+integrating against [1, 2, 1, 0, 0, 0]
+result:  1754.02331900199
+integrating against [1, 2, 2, 0, 0, 0]
+result:  2.87633378813320e-15
+integrating against [2, 0, 0, 0, 0, 0]
+result:  -2.47912578881956e-14
+integrating against [2, 1, -1, 0, 0, 0]
+result:  -1.36968275625390e-15
+integrating against [2, 1, 0, 0, 0, 0]
+result:  -6.54708357489363e-14
+integrating against [2, 1, 1, 0, 0, 0]
+result:  1.28750179087866e-14
+integrating against [2, 2, -2, 0, 0, 0]
+result:  2.19149241000624e-15
+integrating against [2, 2, -1, 0, 0, 0]
+result:  1.38064021830393e-13
+integrating against [2, 2, 0, 0, 0, 0]
+result:  -2.32846068563164e-15
+integrating against [2, 2, 1, 0, 0, 0]
+result:  -3946.55246775447
+integrating against [2, 2, 2, 0, 0, 0]
+result:  -6.02660412751709e-15
+
+weight on:  0 2 2
+integrating against [0, 0, 0, 0, 0, 0]
+result:  -5.62104962390760e-15
+integrating against [0, 1, -1, 0, 0, 0]
+result:  7.16729304795985e-15
+integrating against [0, 1, 0, 0, 0, 0]
+result:  1.63077853166480e-15
+integrating against [0, 1, 1, 0, 0, 0]
+result:  1.55587400593216e-14
+integrating against [0, 2, -2, 0, 0, 0]
+result:  3.15540664971992e-14
+integrating against [0, 2, -1, 0, 0, 0]
+result:  1.86619275539594e-15
+integrating against [0, 2, 0, 0, 0, 0]
+result:  3.34754056593244e-14
+integrating against [0, 2, 1, 0, 0, 0]
+result:  -2.37982378899115e-15
+integrating against [0, 2, 2, 0, 0, 0]
+result:  -501.149519714859
+integrating against [1, 0, 0, 0, 0, 0]
+result:  -7.10522929806710e-16
+integrating against [1, 1, -1, 0, 0, 0]
+result:  -8.61530453683702e-14
+integrating against [1, 1, 0, 0, 0, 0]
+result:  -4.53707413009104e-15
+integrating against [1, 1, 1, 0, 0, 0]
+result:  -1.35427382524604e-14
+integrating against [1, 2, -2, 0, 0, 0]
+result:  -1.08067969468433e-13
+integrating against [1, 2, -1, 0, 0, 0]
+result:  -1.50665103187929e-15
+integrating against [1, 2, 0, 0, 0, 0]
+result:  2.22897859519488e-13
+integrating against [1, 2, 1, 0, 0, 0]
+result:  -5.88963585189176e-15
+integrating against [1, 2, 2, 0, 0, 0]
+result:  1754.02331900200
+integrating against [2, 0, 0, 0, 0, 0]
+result:  5.77321281761018e-14
+integrating against [2, 1, -1, 0, 0, 0]
+result:  -8.08112826189800e-15
+integrating against [2, 1, 0, 0, 0, 0]
+result:  1.50665103187929e-15
+integrating against [2, 1, 1, 0, 0, 0]
+result:  2.52706468528844e-13
+integrating against [2, 2, -2, 0, 0, 0]
+result:  2.60787596790742e-13
+integrating against [2, 2, -1, 0, 0, 0]
+result:  -1.53404468700437e-14
+integrating against [2, 2, 0, 0, 0, 0]
+result:  8.60821941096030e-14
+integrating against [2, 2, 1, 0, 0, 0]
+result:  2.84894013300811e-14
+integrating against [2, 2, 2, 0, 0, 0]
+result:  -3946.55246775450
+
+weight on:  1 0 0
+integrating against [0, 0, 0, 0, 0, 0]
+result:  -2.22940469564888e-14
+integrating against [0, 1, -1, 0, 0, 0]
+result:  -2.25346728943353e-16
+integrating against [0, 1, 0, 0, 0, 0]
+result:  -4.46803023512070e-15
+integrating against [0, 1, 1, 0, 0, 0]
+result:  8.90857972520536e-16
+integrating against [0, 2, -2, 0, 0, 0]
+result:  1.49205258689814e-16
+integrating against [0, 2, -1, 0, 0, 0]
+result:  1.77426975540157e-15
+integrating against [0, 2, 0, 0, 0, 0]
+result:  3.22936017370120e-15
+integrating against [0, 2, 1, 0, 0, 0]
+result:  6.76534066157080e-16
+integrating against [0, 2, 2, 0, 0, 0]
+result:  3.68900973592583e-16
+integrating against [1, 0, 0, 0, 0, 0]
+result:  4.90279278300916e-14
+integrating against [1, 1, -1, 0, 0, 0]
+result:  3.04057341130535e-16
+integrating against [1, 1, 0, 0, 0, 0]
+result:  1.14719322706076e-14
+integrating against [1, 1, 1, 0, 0, 0]
+result:  7.43586366038711e-16
+integrating against [1, 2, -2, 0, 0, 0]
+result:  8.64840898069700e-16
+integrating against [1, 2, -1, 0, 0, 0]
+result:  -3.61612597708539e-15
+integrating against [1, 2, 0, 0, 0, 0]
+result:  -1.04913872648018e-14
+integrating against [1, 2, 1, 0, 0, 0]
+result:  -1.18996412638826e-15
+integrating against [1, 2, 2, 0, 0, 0]
+result:  1.61031579645336e-15
+integrating against [2, 0, 0, 0, 0, 0]
+result:  -4.53068018189774e-14
+integrating against [2, 1, -1, 0, 0, 0]
+result:  -1.41098455471586e-16
+integrating against [2, 1, 0, 0, 0, 0]
+result:  -1.67154205755579e-14
+integrating against [2, 1, 1, 0, 0, 0]
+result:  2.02033382083947e-15
+integrating against [2, 2, -2, 0, 0, 0]
+result:  -6.28140491457215e-16
+integrating against [2, 2, -1, 0, 0, 0]
+result:  8.55417247525320e-16
+integrating against [2, 2, 0, 0, 0, 0]
+result:  -1.77836172565370e-14
+integrating against [2, 2, 1, 0, 0, 0]
+result:  -7.83600068513733e-15
+integrating against [2, 2, 2, 0, 0, 0]
+result:  6.31090360128990e-15
+
+weight on:  1 1 -1
+integrating against [0, 0, 0, 0, 0, 0]
+result:  5.65082117385124e-15
+integrating against [0, 1, -1, 0, 0, 0]
+result:  -2.05884162769117e-13
+integrating against [0, 1, 0, 0, 0, 0]
+result:  7.38857886536544e-16
+integrating against [0, 1, 1, 0, 0, 0]
+result:  -8.40908132155837e-15
+integrating against [0, 2, -2, 0, 0, 0]
+result:  -3.59379585666614e-14
+integrating against [0, 2, -1, 0, 0, 0]
+result:  8.74080006561641e-16
+integrating against [0, 2, 0, 0, 0, 0]
+result:  2.94224977077790e-14
+integrating against [0, 2, 1, 0, 0, 0]
+result:  1.34066772262848e-14
+integrating against [0, 2, 2, 0, 0, 0]
+result:  2.92256058115675e-14
+integrating against [1, 0, 0, 0, 0, 0]
+result:  -9.03171101448475e-15
+integrating against [1, 1, -1, 0, 0, 0]
+result:  -668.199359619810
+integrating against [1, 1, 0, 0, 0, 0]
+result:  -1.44076128049454e-14
+integrating against [1, 1, 1, 0, 0, 0]
+result:  1.44076128049454e-14
+integrating against [1, 2, -2, 0, 0, 0]
+result:  7.17013953692858e-13
+integrating against [1, 2, -1, 0, 0, 0]
+result:  2.64774645989936e-13
+integrating against [1, 2, 0, 0, 0, 0]
+result:  -1.23956289440978e-13
+integrating against [1, 2, 1, 0, 0, 0]
+result:  -1.32709535296055e-14
+integrating against [1, 2, 2, 0, 0, 0]
+result:  3.81045742789834e-13
+integrating against [2, 0, 0, 0, 0, 0]
+result:  1.40943677897271e-13
+integrating against [2, 1, -1, 0, 0, 0]
+result:  2338.69775866932
+integrating against [2, 1, 0, 0, 0, 0]
+result:  9.10797716030434e-14
+integrating against [2, 1, 1, 0, 0, 0]
+result:  4.91757426373558e-14
+integrating against [2, 2, -2, 0, 0, 0]
+result:  3.87383822273511e-13
+integrating against [2, 2, -1, 0, 0, 0]
+result:  -9.48405879235107e-13
+integrating against [2, 2, 0, 0, 0, 0]
+result:  -2.52295563701968e-13
+integrating against [2, 2, 1, 0, 0, 0]
+result:  3.45670388873576e-13
+integrating against [2, 2, 2, 0, 0, 0]
+result:  -2.58048231278235e-13
+
+weight on:  1 1 0
+integrating against [0, 0, 0, 0, 0, 0]
+result:  1.28560542515409e-15
+integrating against [0, 1, -1, 0, 0, 0]
+result:  2.42099952156086e-15
+integrating against [0, 1, 0, 0, 0, 0]
+result:  -1.43583928587978e-13
+integrating against [0, 1, 1, 0, 0, 0]
+result:  5.51990675758531e-15
+integrating against [0, 2, -2, 0, 0, 0]
+result:  9.50729389422368e-17
+integrating against [0, 2, -1, 0, 0, 0]
+result:  8.67089670108271e-15
+integrating against [0, 2, 0, 0, 0, 0]
+result:  -2.33870264400591e-16
+integrating against [0, 2, 1, 0, 0, 0]
+result:  -1.65141449795358e-14
+integrating against [0, 2, 2, 0, 0, 0]
+result:  -1.05080348956354e-15
+integrating against [1, 0, 0, 0, 0, 0]
+result:  5.81295653728809e-15
+integrating against [1, 1, -1, 0, 0, 0]
+result:  -1.34426351717389e-15
+integrating against [1, 1, 0, 0, 0, 0]
+result:  -668.199359619809
+integrating against [1, 1, 1, 0, 0, 0]
+result:  4.26910370963889e-14
+integrating against [1, 2, -2, 0, 0, 0]
+result:  -8.45629409926209e-14
+integrating against [1, 2, -1, 0, 0, 0]
+result:  -2.66075844608377e-13
+integrating against [1, 2, 0, 0, 0, 0]
+result:  -4.85066028804439e-13
+integrating against [1, 2, 1, 0, 0, 0]
+result:  5.27244407813881e-13
+integrating against [1, 2, 2, 0, 0, 0]
+result:  -4.14329033766806e-15
+integrating against [2, 0, 0, 0, 0, 0]
+result:  -4.13334994487059e-14
+integrating against [2, 1, -1, 0, 0, 0]
+result:  -9.29371066996678e-14
+integrating against [2, 1, 0, 0, 0, 0]
+result:  2338.69775866932
+integrating against [2, 1, 1, 0, 0, 0]
+result:  -1.99017168440898e-15
+integrating against [2, 2, -2, 0, 0, 0]
+result:  3.11912280376806e-14
+integrating against [2, 2, -1, 0, 0, 0]
+result:  -8.72724313480075e-13
+integrating against [2, 2, 0, 0, 0, 0]
+result:  5.17348019180061e-13
+integrating against [2, 2, 1, 0, 0, 0]
+result:  1.02812141564908e-12
+integrating against [2, 2, 2, 0, 0, 0]
+result:  4.30080385463725e-14
+
+weight on:  1 1 1
+integrating against [0, 0, 0, 0, 0, 0]
+result:  1.77428192725685e-14
+integrating against [0, 1, -1, 0, 0, 0]
+result:  1.98445665617140e-15
+integrating against [0, 1, 0, 0, 0, 0]
+result:  -3.71796139455524e-15
+integrating against [0, 1, 1, 0, 0, 0]
+result:  -1.79271654840966e-13
+integrating against [0, 2, -2, 0, 0, 0]
+result:  5.38365808607336e-15
+integrating against [0, 2, -1, 0, 0, 0]
+result:  -9.76664290608583e-15
+integrating against [0, 2, 0, 0, 0, 0]
+result:  3.92799332941938e-14
+integrating against [0, 2, 1, 0, 0, 0]
+result:  2.23866597969744e-14
+integrating against [0, 2, 2, 0, 0, 0]
+result:  -6.73484880898853e-14
+integrating against [1, 0, 0, 0, 0, 0]
+result:  -2.09522312525070e-14
+integrating against [1, 1, -1, 0, 0, 0]
+result:  3.00733593295994e-14
+integrating against [1, 1, 0, 0, 0, 0]
+result:  4.15610488224795e-14
+integrating against [1, 1, 1, 0, 0, 0]
+result:  -668.199359619810
+integrating against [1, 2, -2, 0, 0, 0]
+result:  -2.74704845972777e-13
+integrating against [1, 2, -1, 0, 0, 0]
+result:  2.92576960520781e-14
+integrating against [1, 2, 0, 0, 0, 0]
+result:  -2.16649569970460e-13
+integrating against [1, 2, 1, 0, 0, 0]
+result:  2.83470815612802e-13
+integrating against [1, 2, 2, 0, 0, 0]
+result:  -1.08992744025408e-13
+integrating against [2, 0, 0, 0, 0, 0]
+result:  1.32896791704279e-13
+integrating against [2, 1, -1, 0, 0, 0]
+result:  -2.58934393381959e-13
+integrating against [2, 1, 0, 0, 0, 0]
+result:  7.67665868001902e-14
+integrating against [2, 1, 1, 0, 0, 0]
+result:  2338.69775866932
+integrating against [2, 2, -2, 0, 0, 0]
+result:  -1.22308916252982e-12
+integrating against [2, 2, -1, 0, 0, 0]
+result:  -3.19721494114568e-13
+integrating against [2, 2, 0, 0, 0, 0]
+result:  3.96660126211129e-13
+integrating against [2, 2, 1, 0, 0, 0]
+result:  -4.24913129794867e-13
+integrating against [2, 2, 2, 0, 0, 0]
+result:  -7.85236524574186e-13
+
+weight on:  1 2 -2
+integrating against [0, 0, 0, 0, 0, 0]
+result:  -1.55397882778458e-14
+integrating against [0, 1, -1, 0, 0, 0]
+result:  2.31652015693597e-14
+integrating against [0, 1, 0, 0, 0, 0]
+result:  9.53597423620214e-15
+integrating against [0, 1, 1, 0, 0, 0]
+result:  -7.70004596177194e-16
+integrating against [0, 2, -2, 0, 0, 0]
+result:  1754.02331900199
+integrating against [0, 2, -1, 0, 0, 0]
+result:  -2.40257118718913e-13
+integrating against [0, 2, 0, 0, 0, 0]
+result:  6.70802129875347e-14
+integrating against [0, 2, 1, 0, 0, 0]
+result:  7.79886696966802e-14
+integrating against [0, 2, 2, 0, 0, 0]
+result:  -1.00808650860287e-13
+integrating against [1, 0, 0, 0, 0, 0]
+result:  7.02123220536825e-14
+integrating against [1, 1, -1, 0, 0, 0]
+result:  -3.26377421278758e-13
+integrating against [1, 1, 0, 0, 0, 0]
+result:  -1.76159181990798e-13
+integrating against [1, 1, 1, 0, 0, 0]
+result:  3.59036677503985e-14
+integrating against [1, 2, -2, 0, 0, 0]
+result:  -14324.5237718496
+integrating against [1, 2, -1, 0, 0, 0]
+result:  6.77408175227589e-14
+integrating against [1, 2, 0, 0, 0, 0]
+result:  -5.71705582460377e-13
+integrating against [1, 2, 1, 0, 0, 0]
+result:  2.80315581293364e-13
+integrating against [1, 2, 2, 0, 0, 0]
+result:  8.42628831647398e-13
+integrating against [2, 0, 0, 0, 0, 0]
+result:  -7.85136177845773e-14
+integrating against [2, 1, -1, 0, 0, 0]
+result:  3.50502320033126e-12
+integrating against [2, 1, 0, 0, 0, 0]
+result:  -1.86007945376819e-13
+integrating against [2, 1, 1, 0, 0, 0]
+result:  -2.61910233943116e-12
+integrating against [2, 2, -2, 0, 0, 0]
+result:  50647.4233361825
+integrating against [2, 2, -1, 0, 0, 0]
+result:  -3.44977745787272e-15
+integrating against [2, 2, 0, 0, 0, 0]
+result:  2.13670509975608e-12
+integrating against [2, 2, 1, 0, 0, 0]
+result:  -1.64926057737256e-12
+integrating against [2, 2, 2, 0, 0, 0]
+result:  -2.87962102674819e-12
+
+weight on:  1 2 -1
+integrating against [0, 0, 0, 0, 0, 0]
+result:  2.50314790906438e-14
+integrating against [0, 1, -1, 0, 0, 0]
+result:  2.20699206595907e-14
+integrating against [0, 1, 0, 0, 0, 0]
+result:  -1.29957723994086e-14
+integrating against [0, 1, 1, 0, 0, 0]
+result:  -8.91915170065373e-15
+integrating against [0, 2, -2, 0, 0, 0]
+result:  -4.97929360885599e-13
+integrating against [0, 2, -1, 0, 0, 0]
+result:  1754.02331900199
+integrating against [0, 2, 0, 0, 0, 0]
+result:  1.43200332166345e-13
+integrating against [0, 2, 1, 0, 0, 0]
+result:  1.31539223587681e-13
+integrating against [0, 2, 2, 0, 0, 0]
+result:  -1.92440427253673e-14
+integrating against [1, 0, 0, 0, 0, 0]
+result:  -6.64900172022305e-14
+integrating against [1, 1, -1, 0, 0, 0]
+result:  -9.77299237365612e-14
+integrating against [1, 1, 0, 0, 0, 0]
+result:  5.29179991956539e-13
+integrating against [1, 1, 1, 0, 0, 0]
+result:  3.18420650050575e-14
+integrating against [1, 2, -2, 0, 0, 0]
+result:  7.67195808712588e-13
+integrating against [1, 2, -1, 0, 0, 0]
+result:  -14324.5237718496
+integrating against [1, 2, 0, 0, 0, 0]
+result:  -1.02452270167792e-12
+integrating against [1, 2, 1, 0, 0, 0]
+result:  1.12406214112279e-12
+integrating against [1, 2, 2, 0, 0, 0]
+result:  2.46542896125701e-14
+integrating against [2, 0, 0, 0, 0, 0]
+result:  2.39736046277542e-13
+integrating against [2, 1, -1, 0, 0, 0]
+result:  -1.42678255106284e-12
+integrating against [2, 1, 0, 0, 0, 0]
+result:  -1.81443472333639e-12
+integrating against [2, 1, 1, 0, 0, 0]
+result:  1.31368552451596e-13
+integrating against [2, 2, -2, 0, 0, 0]
+result:  -9.69225349912660e-13
+integrating against [2, 2, -1, 0, 0, 0]
+result:  50647.4233361825
+integrating against [2, 2, 0, 0, 0, 0]
+result:  3.65102635507039e-12
+integrating against [2, 2, 1, 0, 0, 0]
+result:  5.30926867911413e-13
+integrating against [2, 2, 2, 0, 0, 0]
+result:  -2.84894013300811e-14
+
+weight on:  1 2 0
+integrating against [0, 0, 0, 0, 0, 0]
+result:  -2.79509447965288e-13
+integrating against [0, 1, -1, 0, 0, 0]
+result:  3.75464285558100e-14
+integrating against [0, 1, 0, 0, 0, 0]
+result:  6.51626571287792e-14
+integrating against [0, 1, 1, 0, 0, 0]
+result:  4.60555826790373e-14
+integrating against [0, 2, -2, 0, 0, 0]
+result:  6.54023516111236e-14
+integrating against [0, 2, -1, 0, 0, 0]
+result:  9.10839032908842e-15
+integrating against [0, 2, 0, 0, 0, 0]
+result:  1754.02331900200
+integrating against [0, 2, 1, 0, 0, 0]
+result:  -4.86237378470134e-15
+integrating against [0, 2, 2, 0, 0, 0]
+result:  2.24080098923138e-13
+integrating against [1, 0, 0, 0, 0, 0]
+result:  8.48860888188353e-13
+integrating against [1, 1, -1, 0, 0, 0]
+result:  -1.72306090736740e-13
+integrating against [1, 1, 0, 0, 0, 0]
+result:  1.78606631415508e-13
+integrating against [1, 1, 1, 0, 0, 0]
+result:  -3.14479160835895e-13
+integrating against [1, 2, -2, 0, 0, 0]
+result:  -5.30341163221509e-13
+integrating against [1, 2, -1, 0, 0, 0]
+result:  -3.06808937400873e-14
+integrating against [1, 2, 0, 0, 0, 0]
+result:  -14324.5237718497
+integrating against [1, 2, 1, 0, 0, 0]
+result:  -1.31489544600374e-14
+integrating against [1, 2, 2, 0, 0, 0]
+result:  1.80058495137138e-12
+integrating against [2, 0, 0, 0, 0, 0]
+result:  -1.29024115639117e-12
+integrating against [2, 1, -1, 0, 0, 0]
+result:  1.02013971685790e-12
+integrating against [2, 1, 0, 0, 0, 0]
+result:  6.44298768541834e-13
+integrating against [2, 1, 1, 0, 0, 0]
+result:  8.63448009542457e-13
+integrating against [2, 2, -2, 0, 0, 0]
+result:  1.84085362440524e-12
+integrating against [2, 2, -1, 0, 0, 0]
+result:  2.62979089200748e-13
+integrating against [2, 2, 0, 0, 0, 0]
+result:  50647.4233361828
+integrating against [2, 2, 1, 0, 0, 0]
+result:  1.22723574960349e-13
+integrating against [2, 2, 2, 0, 0, 0]
+result:  1.07799511648206e-11
+
+weight on:  1 2 1
+integrating against [0, 0, 0, 0, 0, 0]
+result:  4.32761845572351e-14
+integrating against [0, 1, -1, 0, 0, 0]
+result:  -1.06399629812696e-14
+integrating against [0, 1, 0, 0, 0, 0]
+result:  -2.27546147196458e-14
+integrating against [0, 1, 1, 0, 0, 0]
+result:  4.02865539996957e-14
+integrating against [0, 2, -2, 0, 0, 0]
+result:  -1.30209301705034e-14
+integrating against [0, 2, -1, 0, 0, 0]
+result:  1.88340322971002e-13
+integrating against [0, 2, 0, 0, 0, 0]
+result:  -1.43131848028532e-14
+integrating against [0, 2, 1, 0, 0, 0]
+result:  1754.02331900199
+integrating against [0, 2, 2, 0, 0, 0]
+result:  -5.37600481829653e-15
+integrating against [1, 0, 0, 0, 0, 0]
+result:  -6.56963958596391e-14
+integrating against [1, 1, -1, 0, 0, 0]
+result:  -2.00292485439389e-14
+integrating against [1, 1, 0, 0, 0, 0]
+result:  7.21169851470309e-13
+integrating against [1, 1, 1, 0, 0, 0]
+result:  -5.10786580109710e-13
+integrating against [1, 2, -2, 0, 0, 0]
+result:  1.64652871265895e-13
+integrating against [1, 2, -1, 0, 0, 0]
+result:  -1.28669698518909e-12
+integrating against [1, 2, 0, 0, 0, 0]
+result:  2.73936551250781e-14
+integrating against [1, 2, 1, 0, 0, 0]
+result:  -14324.5237718496
+integrating against [1, 2, 2, 0, 0, 0]
+result:  -2.60239723688240e-14
+integrating against [2, 0, 0, 0, 0, 0]
+result:  4.44513883621243e-13
+integrating against [2, 1, -1, 0, 0, 0]
+result:  6.13951767879206e-13
+integrating against [2, 1, 0, 0, 0, 0]
+result:  1.50960437741684e-12
+integrating against [2, 1, 1, 0, 0, 0]
+result:  1.57601693587194e-12
+integrating against [2, 2, -2, 0, 0, 0]
+result:  -1.10990029250235e-12
+integrating against [2, 2, -1, 0, 0, 0]
+result:  -1.13418793534404e-12
+integrating against [2, 2, 0, 0, 0, 0]
+result:  5.69788026601614e-14
+integrating against [2, 2, 1, 0, 0, 0]
+result:  50647.4233361825
+integrating against [2, 2, 2, 0, 0, 0]
+result:  8.54682039902436e-14
+
+weight on:  1 2 2
+integrating against [0, 0, 0, 0, 0, 0]
+result:  4.05404139708809e-15
+integrating against [0, 1, -1, 0, 0, 0]
+result:  -4.04909957283532e-14
+integrating against [0, 1, 0, 0, 0, 0]
+result:  -2.07189592223664e-15
+integrating against [0, 1, 1, 0, 0, 0]
+result:  1.45614648777645e-13
+integrating against [0, 2, -2, 0, 0, 0]
+result:  -9.70804684554200e-14
+integrating against [0, 2, -1, 0, 0, 0]
+result:  -1.68771368649043e-14
+integrating against [0, 2, 0, 0, 0, 0]
+result:  -5.76645702749551e-14
+integrating against [0, 2, 1, 0, 0, 0]
+result:  -1.78568186240677e-13
+integrating against [0, 2, 2, 0, 0, 0]
+result:  1754.02331900200
+integrating against [1, 0, 0, 0, 0, 0]
+result:  1.39249652709359e-13
+integrating against [1, 1, -1, 0, 0, 0]
+result:  2.02177142632044e-13
+integrating against [1, 1, 0, 0, 0, 0]
+result:  2.10811466373409e-14
+integrating against [1, 1, 1, 0, 0, 0]
+result:  -6.21550066979050e-13
+integrating against [1, 2, -2, 0, 0, 0]
+result:  8.26619566221959e-13
+integrating against [1, 2, -1, 0, 0, 0]
+result:  1.02573215620686e-13
+integrating against [1, 2, 0, 0, 0, 0]
+result:  -1.35281945013526e-12
+integrating against [1, 2, 1, 0, 0, 0]
+result:  8.76170036352887e-13
+integrating against [1, 2, 2, 0, 0, 0]
+result:  -14324.5237718497
+integrating against [2, 0, 0, 0, 0, 0]
+result:  -7.48338896175561e-13
+integrating against [2, 1, -1, 0, 0, 0]
+result:  -7.09274327595681e-13
+integrating against [2, 1, 0, 0, 0, 0]
+result:  -1.22397042001686e-13
+integrating against [2, 1, 1, 0, 0, 0]
+result:  1.34963279160518e-12
+integrating against [2, 2, -2, 0, 0, 0]
+result:  -3.20107969820163e-12
+integrating against [2, 2, -1, 0, 0, 0]
+result:  -1.65052643567947e-13
+integrating against [2, 2, 0, 0, 0, 0]
+result:  5.41189693059993e-12
+integrating against [2, 2, 1, 0, 0, 0]
+result:  -2.76854562665536e-12
+integrating against [2, 2, 2, 0, 0, 0]
+result:  50647.4233361827
+
+weight on:  2 0 0
+integrating against [0, 0, 0, 0, 0, 0]
+result:  1.72629366460812e-13
+integrating against [0, 1, -1, 0, 0, 0]
+result:  -3.84071258775176e-14
+integrating against [0, 1, 0, 0, 0, 0]
+result:  2.18639263371385e-14
+integrating against [0, 1, 1, 0, 0, 0]
+result:  1.97744294529800e-14
+integrating against [0, 2, -2, 0, 0, 0]
+result:  1.45790407402077e-14
+integrating against [0, 2, -1, 0, 0, 0]
+result:  -1.01960559201952e-14
+integrating against [0, 2, 0, 0, 0, 0]
+result:  -5.87021435730549e-14
+integrating against [0, 2, 1, 0, 0, 0]
+result:  9.95540163119023e-15
+integrating against [0, 2, 2, 0, 0, 0]
+result:  9.38529160137320e-15
+integrating against [1, 0, 0, 0, 0, 0]
+result:  6.18678618033323e-14
+integrating against [1, 1, -1, 0, 0, 0]
+result:  -1.53069368102547e-13
+integrating against [1, 1, 0, 0, 0, 0]
+result:  -2.62697832558323e-13
+integrating against [1, 1, 1, 0, 0, 0]
+result:  -9.67069226826994e-14
+integrating against [1, 2, -2, 0, 0, 0]
+result:  -5.21382830719438e-14
+integrating against [1, 2, -1, 0, 0, 0]
+result:  -5.30533526083555e-14
+integrating against [1, 2, 0, 0, 0, 0]
+result:  1.94904685818521e-13
+integrating against [1, 2, 1, 0, 0, 0]
+result:  -9.68832008084802e-14
+integrating against [1, 2, 2, 0, 0, 0]
+result:  2.69671529145957e-13
+integrating against [2, 0, 0, 0, 0, 0]
+result:  -668.199359619807
+integrating against [2, 1, -1, 0, 0, 0]
+result:  7.90296631376899e-13
+integrating against [2, 1, 0, 0, 0, 0]
+result:  3.23666354284397e-13
+integrating against [2, 1, 1, 0, 0, 0]
+result:  2.72419581237300e-13
+integrating against [2, 2, -2, 0, 0, 0]
+result:  5.80085939018583e-13
+integrating against [2, 2, -1, 0, 0, 0]
+result:  -1.90638820569868e-14
+integrating against [2, 2, 0, 0, 0, 0]
+result:  -8.83337502514499e-13
+integrating against [2, 2, 1, 0, 0, 0]
+result:  3.89649452409176e-13
+integrating against [2, 2, 2, 0, 0, 0]
+result:  -1.85812567023339e-13
+
+weight on:  2 1 -1
+integrating against [0, 0, 0, 0, 0, 0]
+result:  -1.16347882681939e-14
+integrating against [0, 1, -1, 0, 0, 0]
+result:  9.17371074790368e-13
+integrating against [0, 1, 0, 0, 0, 0]
+result:  -9.78503842762844e-15
+integrating against [0, 1, 1, 0, 0, 0]
+result:  1.41680232476409e-14
+integrating against [0, 2, -2, 0, 0, 0]
+result:  1.19342195159553e-14
+integrating against [0, 2, -1, 0, 0, 0]
+result:  1.98449051844643e-13
+integrating against [0, 2, 0, 0, 0, 0]
+result:  3.73238551079187e-14
+integrating against [0, 2, 1, 0, 0, 0]
+result:  -3.34382387891415e-14
+integrating against [0, 2, 2, 0, 0, 0]
+result:  -1.13272763942197e-13
+integrating against [1, 0, 0, 0, 0, 0]
+result:  1.70559990152796e-14
+integrating against [1, 1, -1, 0, 0, 0]
+result:  2338.69775866933
+integrating against [1, 1, 0, 0, 0, 0]
+result:  -6.42503844043452e-15
+integrating against [1, 1, 1, 0, 0, 0]
+result:  -1.33830475799965e-13
+integrating against [1, 2, -2, 0, 0, 0]
+result:  -2.26908747838534e-12
+integrating against [1, 2, -1, 0, 0, 0]
+result:  1.14704336446214e-12
+integrating against [1, 2, 0, 0, 0, 0]
+result:  -1.15601224627829e-13
+integrating against [1, 2, 1, 0, 0, 0]
+result:  3.49340127219872e-13
+integrating against [1, 2, 2, 0, 0, 0]
+result:  2.01617301720573e-13
+integrating against [2, 0, 0, 0, 0, 0]
+result:  8.90253153825992e-13
+integrating against [2, 1, -1, 0, 0, 0]
+result:  -15201.5354313506
+integrating against [2, 1, 0, 0, 0, 0]
+result:  -4.48132768036430e-13
+integrating against [2, 1, 1, 0, 0, 0]
+result:  4.48132768036430e-13
+integrating against [2, 2, -2, 0, 0, 0]
+result:  -2.31904891866184e-12
+integrating against [2, 2, -1, 0, 0, 0]
+result:  7.92926948827781e-12
+integrating against [2, 2, 0, 0, 0, 0]
+result:  -1.21189530273345e-12
+integrating against [2, 2, 1, 0, 0, 0]
+result:  1.59147343853977e-12
+integrating against [2, 2, 2, 0, 0, 0]
+result:  -3.40119622032968e-12
+
+weight on:  2 1 0
+integrating against [0, 0, 0, 0, 0, 0]
+result:  4.38403017727483e-15
+integrating against [0, 1, -1, 0, 0, 0]
+result:  -6.08689498574292e-15
+integrating against [0, 1, 0, 0, 0, 0]
+result:  9.30759723732749e-13
+integrating against [0, 1, 1, 0, 0, 0]
+result:  -2.78648508101799e-14
+integrating against [0, 2, -2, 0, 0, 0]
+result:  5.33996479573556e-14
+integrating against [0, 2, -1, 0, 0, 0]
+result:  -8.84635265174554e-14
+integrating against [0, 2, 0, 0, 0, 0]
+result:  1.77087511103197e-13
+integrating against [0, 2, 1, 0, 0, 0]
+result:  3.28741841037482e-13
+integrating against [0, 2, 2, 0, 0, 0]
+result:  1.28065337709739e-14
+integrating against [1, 0, 0, 0, 0, 0]
+result:  -2.11140045576457e-13
+integrating against [1, 1, -1, 0, 0, 0]
+result:  7.73995462423040e-14
+integrating against [1, 1, 0, 0, 0, 0]
+result:  2338.69775866933
+integrating against [1, 1, 1, 0, 0, 0]
+result:  -6.83346990231107e-14
+integrating against [1, 2, -2, 0, 0, 0]
+result:  -5.49171760882685e-13
+integrating against [1, 2, -1, 0, 0, 0]
+result:  -2.92361324559710e-13
+integrating against [1, 2, 0, 0, 0, 0]
+result:  -9.88571606964230e-13
+integrating against [1, 2, 1, 0, 0, 0]
+result:  -1.72998034552380e-12
+integrating against [1, 2, 2, 0, 0, 0]
+result:  -4.93085792251402e-14
+integrating against [2, 0, 0, 0, 0, 0]
+result:  7.59392757806203e-13
+integrating against [2, 1, -1, 0, 0, 0]
+result:  5.44613293696396e-13
+integrating against [2, 1, 0, 0, 0, 0]
+result:  -15201.5354313506
+integrating against [2, 1, 1, 0, 0, 0]
+result:  1.87400030865379e-13
+integrating against [2, 2, -2, 0, 0, 0]
+result:  2.52943219002244e-12
+integrating against [2, 2, -1, 0, 0, 0]
+result:  4.20283249351672e-12
+integrating against [2, 2, 0, 0, 0, 0]
+result:  -6.77172655322972e-12
+integrating against [2, 2, 1, 0, 0, 0]
+result:  2.44963856551173e-12
+integrating against [2, 2, 2, 0, 0, 0]
+result:  1.20532082550343e-13
+
+weight on:  2 1 1
+integrating against [0, 0, 0, 0, 0, 0]
+result:  2.27528094310055e-14
+integrating against [0, 1, -1, 0, 0, 0]
+result:  -2.33665396521855e-15
+integrating against [0, 1, 0, 0, 0, 0]
+result:  -2.44748859884515e-14
+integrating against [0, 1, 1, 0, 0, 0]
+result:  9.14220804450984e-13
+integrating against [0, 2, -2, 0, 0, 0]
+result:  -2.16665832502820e-13
+integrating against [0, 2, -1, 0, 0, 0]
+result:  -8.13771352580279e-14
+integrating against [0, 2, 0, 0, 0, 0]
+result:  -1.10670366705315e-13
+integrating against [0, 2, 1, 0, 0, 0]
+result:  2.18446420085950e-13
+integrating against [0, 2, 2, 0, 0, 0]
+result:  9.85398162558247e-14
+integrating against [1, 0, 0, 0, 0, 0]
+result:  8.72522402732919e-14
+integrating against [1, 1, -1, 0, 0, 0]
+result:  -7.32904979735423e-14
+integrating against [1, 1, 0, 0, 0, 0]
+result:  -7.40873665993771e-14
+integrating against [1, 1, 1, 0, 0, 0]
+result:  2338.69775866933
+integrating against [1, 2, -2, 0, 0, 0]
+result:  -1.67628878147865e-12
+integrating against [1, 2, -1, 0, 0, 0]
+result:  2.73733639074657e-13
+integrating against [1, 2, 0, 0, 0, 0]
+result:  4.99112396378920e-13
+integrating against [1, 2, 1, 0, 0, 0]
+result:  9.00500468336441e-13
+integrating against [1, 2, 2, 0, 0, 0]
+result:  -1.45529162234581e-12
+integrating against [2, 0, 0, 0, 0, 0]
+result:  -8.56914170051481e-13
+integrating against [2, 1, -1, 0, 0, 0]
+result:  6.22356414631925e-13
+integrating against [2, 1, 0, 0, 0, 0]
+result:  3.00261889980700e-13
+integrating against [2, 1, 1, 0, 0, 0]
+result:  -15201.5354313506
+integrating against [2, 2, -2, 0, 0, 0]
+result:  8.61649820726928e-12
+integrating against [2, 2, -1, 0, 0, 0]
+result:  1.48189881803946e-12
+integrating against [2, 2, 0, 0, 0, 0]
+result:  -1.05191635680299e-13
+integrating against [2, 2, 1, 0, 0, 0]
+result:  6.53109733069383e-12
+integrating against [2, 2, 2, 0, 0, 0]
+result:  1.31977961275138e-11
+
+weight on:  2 2 -2
+integrating against [0, 0, 0, 0, 0, 0]
+result:  -4.49701601378268e-15
+integrating against [0, 1, -1, 0, 0, 0]
+result:  -3.11122988998851e-13
+integrating against [0, 1, 0, 0, 0, 0]
+result:  -3.00649855839949e-14
+integrating against [0, 1, 1, 0, 0, 0]
+result:  -3.20573800017003e-13
+integrating against [0, 2, -2, 0, 0, 0]
+result:  -3946.55246775447
+integrating against [0, 2, -1, 0, 0, 0]
+result:  -6.18565219207032e-13
+integrating against [0, 2, 0, 0, 0, 0]
+result:  -1.57650485244824e-13
+integrating against [0, 2, 1, 0, 0, 0]
+result:  -3.65447845851312e-13
+integrating against [0, 2, 2, 0, 0, 0]
+result:  1.81893870030518e-13
+integrating against [1, 0, 0, 0, 0, 0]
+result:  -1.61127726516690e-13
+integrating against [1, 1, -1, 0, 0, 0]
+result:  2.37380370229248e-12
+integrating against [1, 1, 0, 0, 0, 0]
+result:  -5.08217476858728e-14
+integrating against [1, 1, 1, 0, 0, 0]
+result:  -5.10200309275724e-13
+integrating against [1, 2, -2, 0, 0, 0]
+result:  50647.4233361824
+integrating against [1, 2, -1, 0, 0, 0]
+result:  -2.72620815476246e-12
+integrating against [1, 2, 0, 0, 0, 0]
+result:  2.15752427765114e-12
+integrating against [1, 2, 1, 0, 0, 0]
+result:  1.77073427057034e-12
+integrating against [1, 2, 2, 0, 0, 0]
+result:  -3.11630220702887e-12
+integrating against [2, 0, 0, 0, 0, 0]
+result:  1.59404794639749e-13
+integrating against [2, 1, -1, 0, 0, 0]
+result:  5.52356723209348e-12
+integrating against [2, 1, 0, 0, 0, 0]
+result:  2.70767825988994e-12
+integrating against [2, 1, 1, 0, 0, 0]
+result:  -4.63590032043556e-13
+integrating against [2, 2, -2, 0, 0, 0]
+result:  -228406.724071290
+integrating against [2, 2, -1, 0, 0, 0]
+result:  9.04439009445700e-12
+integrating against [2, 2, 0, 0, 0, 0]
+result:  -8.26192638572352e-12
+integrating against [2, 2, 1, 0, 0, 0]
+result:  2.27706153235775e-12
+integrating against [2, 2, 2, 0, 0, 0]
+result:  1.58664050484452e-11
+
+weight on:  2 2 -1
+integrating against [0, 0, 0, 0, 0, 0]
+result:  -8.00397859694659e-14
+integrating against [0, 1, -1, 0, 0, 0]
+result:  -3.97597093545779e-14
+integrating against [0, 1, 0, 0, 0, 0]
+result:  -2.06475008150967e-13
+integrating against [0, 1, 1, 0, 0, 0]
+result:  -3.90826320963209e-15
+integrating against [0, 2, -2, 0, 0, 0]
+result:  -2.34418454950602e-13
+integrating against [0, 2, -1, 0, 0, 0]
+result:  -3946.55246775447
+integrating against [0, 2, 0, 0, 0, 0]
+result:  -2.27915210640649e-13
+integrating against [0, 2, 1, 0, 0, 0]
+result:  2.18667103253682e-13
+integrating against [0, 2, 2, 0, 0, 0]
+result:  2.19149241000624e-14
+integrating against [1, 0, 0, 0, 0, 0]
+result:  2.81720185780242e-13
+integrating against [1, 1, -1, 0, 0, 0]
+result:  9.68393110930515e-13
+integrating against [1, 1, 0, 0, 0, 0]
+result:  6.24547934592768e-13
+integrating against [1, 1, 1, 0, 0, 0]
+result:  7.78007207811223e-13
+integrating against [1, 2, -2, 0, 0, 0]
+result:  -3.39702879184589e-12
+integrating against [1, 2, -1, 0, 0, 0]
+result:  50647.4233361824
+integrating against [1, 2, 0, 0, 0, 0]
+result:  2.55966313488728e-12
+integrating against [1, 2, 1, 0, 0, 0]
+result:  -6.98187926194364e-12
+integrating against [1, 2, 2, 0, 0, 0]
+result:  -1.92851332080549e-13
+integrating against [2, 0, 0, 0, 0, 0]
+result:  -1.01421202913965e-12
+integrating against [2, 1, -1, 0, 0, 0]
+result:  1.74901234760227e-12
+integrating against [2, 1, 0, 0, 0, 0]
+result:  6.56222261734638e-12
+integrating against [2, 1, 1, 0, 0, 0]
+result:  1.70042066192780e-13
+integrating against [2, 2, -2, 0, 0, 0]
+result:  1.12233986553657e-11
+integrating against [2, 2, -1, 0, 0, 0]
+result:  -228406.724071290
+integrating against [2, 2, 0, 0, 0, 0]
+result:  -1.10451217464314e-11
+integrating against [2, 2, 1, 0, 0, 0]
+result:  -1.27881242361101e-11
+integrating against [2, 2, 2, 0, 0, 0]
+result:  1.01685247824290e-12
+
+weight on:  2 2 0
+integrating against [0, 0, 0, 0, 0, 0]
+result:  8.22802673750623e-13
+integrating against [0, 1, -1, 0, 0, 0]
+result:  -1.36831307349764e-13
+integrating against [0, 1, 0, 0, 0, 0]
+result:  -4.05563064126779e-13
+integrating against [0, 1, 1, 0, 0, 0]
+result:  -6.43750895439332e-15
+integrating against [0, 2, -2, 0, 0, 0]
+result:  -1.67649169365477e-13
+integrating against [0, 2, -1, 0, 0, 0]
+result:  -4.27341019951216e-14
+integrating against [0, 2, 0, 0, 0, 0]
+result:  -3946.55246775450
+integrating against [0, 2, 1, 0, 0, 0]
+result:  -1.64361930750468e-14
+integrating against [0, 2, 2, 0, 0, 0]
+result:  -1.42173070099154e-13
+integrating against [1, 0, 0, 0, 0, 0]
+result:  1.78716206036009e-12
+integrating against [1, 1, -1, 0, 0, 0]
+result:  1.68744915570480e-13
+integrating against [1, 1, 0, 0, 0, 0]
+result:  -9.83980092092800e-13
+integrating against [1, 1, 1, 0, 0, 0]
+result:  -9.62065167992738e-13
+integrating against [1, 2, -2, 0, 0, 0]
+result:  2.26162016712644e-12
+integrating against [1, 2, -1, 0, 0, 0]
+result:  2.62979089200748e-13
+integrating against [1, 2, 0, 0, 0, 0]
+result:  50647.4233361827
+integrating against [1, 2, 1, 0, 0, 0]
+result:  -8.76596964002495e-15
+integrating against [1, 2, 2, 0, 0, 0]
+result:  1.38327000919594e-11
+integrating against [2, 0, 0, 0, 0, 0]
+result:  -1.53514043320937e-11
+integrating against [2, 1, -1, 0, 0, 0]
+result:  -9.59873675582732e-13
+integrating against [2, 1, 0, 0, 0, 0]
+result:  1.32366141564377e-11
+integrating against [2, 1, 1, 0, 0, 0]
+result:  9.29192781842644e-13
+integrating against [2, 2, -2, 0, 0, 0]
+result:  -7.60886164754165e-12
+integrating against [2, 2, -1, 0, 0, 0]
+result:  3.15574907040898e-13
+integrating against [2, 2, 0, 0, 0, 0]
+result:  -228406.724071291
+integrating against [2, 2, 1, 0, 0, 0]
+result:  8.76596964002495e-13
+integrating against [2, 2, 2, 0, 0, 0]
+result:  2.15642853144615e-12
+
+weight on:  2 2 1
+integrating against [0, 0, 0, 0, 0, 0]
+result:  -4.76194128616781e-14
+integrating against [0, 1, -1, 0, 0, 0]
+result:  -9.41661385766773e-14
+integrating against [0, 1, 0, 0, 0, 0]
+result:  3.86182502210008e-13
+integrating against [0, 1, 1, 0, 0, 0]
+result:  1.04711797631389e-13
+integrating against [0, 2, -2, 0, 0, 0]
+result:  1.44074139475138e-13
+integrating against [0, 2, -1, 0, 0, 0]
+result:  2.76692403246060e-13
+integrating against [0, 2, 0, 0, 0, 0]
+result:  1.86276854850530e-14
+integrating against [0, 2, 1, 0, 0, 0]
+result:  -3946.55246775448
+integrating against [0, 2, 2, 0, 0, 0]
+result:  -5.17740081863974e-14
+integrating against [1, 0, 0, 0, 0, 0]
+result:  5.70318370413941e-14
+integrating against [1, 1, -1, 0, 0, 0]
+result:  4.40072552155524e-13
+integrating against [1, 1, 0, 0, 0, 0]
+result:  -1.64539337765895e-12
+integrating against [1, 1, 1, 0, 0, 0]
+result:  1.08437132069736e-12
+integrating against [1, 2, -2, 0, 0, 0]
+result:  2.34052229717196e-12
+integrating against [1, 2, -1, 0, 0, 0]
+result:  -9.07278698071112e-12
+integrating against [1, 2, 0, 0, 0, 0]
+result:  9.64256660402735e-14
+integrating against [1, 2, 1, 0, 0, 0]
+result:  50647.4233361824
+integrating against [1, 2, 2, 0, 0, 0]
+result:  1.87372601055533e-13
+integrating against [2, 0, 0, 0, 0, 0]
+result:  1.24315034776424e-12
+integrating against [2, 1, -1, 0, 0, 0]
+result:  -1.40356150128176e-12
+integrating against [2, 1, 0, 0, 0, 0]
+result:  1.71560089444066e-11
+integrating against [2, 1, 1, 0, 0, 0]
+result:  4.16282922013408e-12
+integrating against [2, 2, -2, 0, 0, 0]
+result:  -1.08718929276797e-11
+integrating against [2, 2, -1, 0, 0, 0]
+result:  2.88245987504508e-11
+integrating against [2, 2, 0, 0, 0, 0]
+result:  1.29736350672370e-12
+integrating against [2, 2, 1, 0, 0, 0]
+result:  -228406.724071290
+integrating against [2, 2, 2, 0, 0, 0]
+result:  -1.53404468700438e-13
+
+weight on:  2 2 2
+integrating against [0, 0, 0, 0, 0, 0]
+result:  2.99045708252586e-14
+integrating against [0, 1, -1, 0, 0, 0]
+result:  -5.14408082573372e-14
+integrating against [0, 1, 0, 0, 0, 0]
+result:  5.41946764720626e-15
+integrating against [0, 1, 1, 0, 0, 0]
+result:  -2.94696465768030e-13
+integrating against [0, 2, -2, 0, 0, 0]
+result:  2.98647183172138e-13
+integrating against [0, 2, -1, 0, 0, 0]
+result:  5.19916024288604e-14
+integrating against [0, 2, 0, 0, 0, 0]
+result:  -3.71294729435908e-13
+integrating against [0, 2, 1, 0, 0, 0]
+result:  -2.79978705363673e-14
+integrating against [0, 2, 2, 0, 0, 0]
+result:  -3946.55246775451
+integrating against [1, 0, 0, 0, 0, 0]
+result:  -4.17581854165629e-13
+integrating against [1, 1, -1, 0, 0, 0]
+result:  1.31080383535014e-12
+integrating against [1, 1, 0, 0, 0, 0]
+result:  -5.61744306215740e-14
+integrating against [1, 1, 1, 0, 0, 0]
+result:  -8.40810836188251e-14
+integrating against [1, 2, -2, 0, 0, 0]
+result:  -3.73208690460353e-12
+integrating against [1, 2, -1, 0, 0, 0]
+result:  -3.35323008368049e-13
+integrating against [1, 2, 0, 0, 0, 0]
+result:  -8.49212289696223e-13
+integrating against [1, 2, 1, 0, 0, 0]
+result:  -1.24939737007450e-13
+integrating against [1, 2, 2, 0, 0, 0]
+result:  50647.4233361828
+integrating against [2, 0, 0, 0, 0, 0]
+result:  -3.22086770410728e-12
+integrating against [2, 1, -1, 0, 0, 0]
+result:  -1.76918387151841e-12
+integrating against [2, 1, 0, 0, 0, 0]
+result:  -5.49415098268185e-13
+integrating against [2, 1, 1, 0, 0, 0]
+result:  1.26113893229425e-11
+integrating against [2, 2, -2, 0, 0, 0]
+result:  1.66451897901863e-11
+integrating against [2, 2, -1, 0, 0, 0]
+result:  7.46493975623217e-13
+integrating against [2, 2, 0, 0, 0, 0]
+result:  6.44625116050503e-12
+integrating against [2, 2, 1, 0, 0, 0]
+result:  2.76844651411709e-14
+integrating against [2, 2, 2, 0, 0, 0]
+result:  -228406.724071291

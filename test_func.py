@@ -151,8 +151,8 @@ def f_integrated(select, rp, tp, pp, rq, tq, pq):
 def main():
     # Parameters
     k = 2
-    l = 2
-    m = 2
+    l = 1
+    m = 0
     
     # Coefficients
     r = 5
