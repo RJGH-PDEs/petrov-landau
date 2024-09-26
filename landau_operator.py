@@ -23,32 +23,32 @@ def f(rp, tp, pp, rq, tq, pq):
     return result
 
 # spherical function that is actually sampled
-def f_samp(xp, tp, pp, xq, tq, pq):
+def f_samp(select, xp, tp, pp, xq, tq, pq):
     rp = np.sqrt(2 * xp)
     rq = np.sqrt(2 * xq)
-    return 2 * f_integrated(rp, tp, pp, rq, tq, pq)
+    return 2 * f_integrated(select, rp, tp, pp, rq, tq, pq)
 
 # integration
-def operator(k, l, m):
+def operator(u, g, p, h, select, k, l, m):
     # produce required pieces for the weight
     u, g, p, h = weight_new(k, l, m)
 
     '''
     choose the integration order here
     '''
-    n_laguerre = 5
-    n_lebedev = 9
+    n_laguerre = 3
+    n_lebedev = 5
     ''''''
 
     # extract the coefficients
     alpha = 1/2
     x,w_r = roots_genlaguerre(n_laguerre, alpha, False)
-    print(w_r)
+    # print(w_r)
 
     # build library
     leblib = PyLebedev()
     s,w_spher = leblib.get_points_and_weights(n_lebedev)
-    print(w_spher)
+    # print(w_spher)
 
     # Now we try to repeat for both variables
     sum = 0
@@ -86,7 +86,7 @@ def operator(k, l, m):
                     
                     # compute the weight
                     weight = weight_evaluator(l, m, u, g, p, h, np.sqrt(2 * x_p), t_p, p_p, np.sqrt(2 * x_q), t_q, p_q)
-                    func = f_samp(x_p, t_p, p_p, x_q, t_q, p_q)
+                    func = f_samp(select, x_p, t_p, p_p, x_q, t_q, p_q)
 
                     # update the partial sum
                     # print("Landau weight: ", weight)
@@ -113,20 +113,70 @@ def operator(k, l, m):
     '''
 
     # compute and print result
-    print("result before final scaling: ", sum)
+    # print("result before final scaling: ", sum)
     result = sum*(4*np.pi)**2 
     print("result: ", result)
-    print("total number of loops: ", total_iter)
+    # print("total number of loops: ", total_iter)
+
+
+# iterates over different test functions
+def iteration_selector(u, g, p, h, k, l, m, n):
+    # p iteration
+    for kp in range(1, n):
+        for lp in range(1,n):
+            for mp in range(-lp, lp+1):
+                select = [kp, lp, mp, 0, 0, 0]
+                print("integrating against", select)
+                operator(u, g, p, h, select, k, l, m)
+
+
+# collision matrix
+def collision_matrix(n):
+    for k in range(1, n):
+        for l in range(1, n):
+            for m in range(-l, l+1):
+                print("weight on: ", k, l, m)
+                # produce required pieces for the weight
+                u, g, p, h = weight_new(k, l, m)
+                # compute for all combinations of basis functions
+                iteration_selector(u, g, p, h, k, l, m, n)
+                # operator(select, k, l, m)
+                print()
+
 
 # The main function
 def main():
-    # choose a test function for the weight
+    # choose a trial function for the weight
     k = 2
     l = 1
     m = -1 
 
+    # chose test functions
+    kp = 2
+    lp = 2
+    mp = 2
+
+    kq = 0
+    lq = 1
+    mq = -1
+
+    # package on a vector
+    select = [kp, lp, mp, kq, lq, mq]
+
+    # number of basis functions
+    n = 3
+    collision_matrix(n+1)
+
+    return 0
     # evaluate the operator
-    operator(k, l, m)
+    # operator(select, k, l, m)
+    for k in range(0, 3):
+        for l in range(0, 3):
+            for m in range(-l, l+1):
+                print("weight on: ", k, l, m)
+                operator(select, k, l, m)
+                print()
+
 
 # Call to the main function
 if __name__ == "__main__":

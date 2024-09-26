@@ -132,15 +132,17 @@ def sym_test(k, l, m, rad, the, phi):
     return result
 
 # function to be integrated
-def f_integrated(rp, tp, pp, rq, tq, pq):
+def f_integrated(select, rp, tp, pp, rq, tq, pq):
     # parameters for first function
-    k_1 = 2
-    l_1 = 2
-    m_1 = 2
+    k_1 = select[0]
+    l_1 = select[1]
+    m_1 = select[2]
     # parameters for second function
-    k_2 = 0
-    l_2 = 1
-    m_2 = -1
+    k_2 = select[3]
+    l_2 = select[4]
+    m_2 = select[5]
+
+    # print(k_1, l_1, m_1, k_2, l_2, m_2)
 
     # return sym_test(k_1, l_1, m_1, rp, tp, pp)*sym_test(k_2, l_2, m_2, rq, tq, pq)
     return test(k_1, l_1, m_1, rp, tp, pp)*test(k_2, l_2, m_2, rq, tq, pq)
