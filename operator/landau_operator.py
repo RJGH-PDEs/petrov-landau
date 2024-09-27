@@ -7,6 +7,8 @@ from landau_weight import weight_new
 from landau_weight import weight_evaluator
 # function
 from test_func import f_integrated
+# time
+import time
 
 # from cartesian to polar
 def theta(x, y, z):
@@ -30,9 +32,6 @@ def f_samp(select, xp, tp, pp, xq, tq, pq):
 
 # integration
 def operator(u, g, p, h, select, k, l, m):
-    # produce required pieces for the weight
-    u, g, p, h = weight_new(k, l, m)
-
     '''
     choose the integration order here
     '''
@@ -112,10 +111,12 @@ def operator(u, g, p, h, select, k, l, m):
     out of the loop
     '''
 
-    # compute and print result
-    # print("result before final scaling: ", sum)
-    result = sum*(4*np.pi)**2 
-    print("result: ", result)
+    # print result
+    print("integrating against", select)
+    print("result: (4*Pi)^2 times ", sum)
+
+    # result = sum*(4*np.pi)**2 
+    # print("result: ", result)
     # print("total number of loops: ", total_iter)
 
 
@@ -126,7 +127,6 @@ def iteration_selector(u, g, p, h, k, l, m, n):
         for lp in range(0,n):
             for mp in range(-lp, lp+1):
                 select = [kp, lp, mp, 0, 0, 0]
-                print("integrating against", select)
                 operator(u, g, p, h, select, k, l, m)
 
 
@@ -135,11 +135,21 @@ def collision_matrix(n):
     for k in range(0, n):
         for l in range(0, n):
             for m in range(-l, l+1):
+                # print the weight
                 print("weight on: ", k, l, m)
+
                 # produce required pieces for the weight
                 u, g, p, h = weight_new(k, l, m)
-                # compute for all combinations of basis functions
+
+                # compute for all combinations of basis functions (and time it)
+                start = time.time()
                 iteration_selector(u, g, p, h, k, l, m, n)
+                end = time.time()
+                
+                # Calculate elapsed time
+                elapsed_time = end - start
+                print(f"Elapsed time: {elapsed_time:.6f} seconds")
+
                 # operator(select, k, l, m)
                 print()
 
@@ -164,20 +174,11 @@ def main():
     select = [kp, lp, mp, kq, lq, mq]
 
     # number of basis functions
-    n = 3
+    n = 2
     collision_matrix(n)
 
     return 0
-    # evaluate the operator
-    # operator(select, k, l, m)
-    for k in range(0, 3):
-        for l in range(0, 3):
-            for m in range(-l, l+1):
-                print("weight on: ", k, l, m)
-                operator(select, k, l, m)
-                print()
-
-
+    
 # Call to the main function
 if __name__ == "__main__":
     main()
