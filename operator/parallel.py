@@ -34,53 +34,7 @@ def individual_test():
     u, g, p, h = weight_new(k, l, m)
     # compute the operator
     operator(u, g, p, h, select, k, l, m)
-
-# create arguments list
-def arguments_creator(u, g, p, h, k, l, m, n):
-    # empty list
-    args = []
-
-    # p iteration
-    for kp in range(0, n):
-        for lp in range(0,n):
-            for mp in range(-lp, lp+1):
-                
-                # choose selection
-                select = [kp, lp, mp, 0, 0, 0]
-
-                # compute the 
-                args.append((u, g, p, h, select, k, l, m))
-
- 
-    # print(args)
-    return args
-
-
-# iterates over different test functions
-def iteration_selector(args):
-    '''
-    iterates over all possible test functions for 
-    the operator
-    '''
-
-    # processes
-    processes = []
- 
-    # create and start processes
-    for argument in args:
-        # operator(u, g, p, h, select, k, l, m)
-        # operator(argument[0], argument[1], argument[2], argument[3], argument[4], argument[5], argument[6], argument[7])
-        process = multiprocessing.Process(target= operator, args=argument)
-        processes. append(process)
-        process.start()
-    
-    # wait for all the processes to complete 
-    for pro in processes:
-        pro.join()
-
-    print("All processes complete. ")
-        
-# another implementation of the previous
+       
 # iterates over different test functions
 def test_iterator(u, g, p, h, k, l, m, n):
     '''
@@ -120,11 +74,8 @@ def weight_iteration(n):
 
                 # produce required pieces for the weight
                 u, g, p, h = weight_new(k, l, m)
-
-                # args = arguments_creator(u, g, p, h, k, l, m, n)
-                # compute for all combinations of basis functions
-                # iteration_selector(args)
-
+                
+                # compute it and time it
                 start = time.time()
                 test_iterator(u, g, p, h, k, l, m, n)
                 end = time.time()
@@ -139,8 +90,8 @@ def weight_iteration(n):
 def main():
     # individual_test()
 
-    # compute
-    n = 2
+    # number of degrees of freedom 
+    n = 3
 
     start_time = time.time()
     weight_iteration(n)
