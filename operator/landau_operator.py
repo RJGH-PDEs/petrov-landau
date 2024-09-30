@@ -115,6 +115,8 @@ def operator(u, g, p, h, select, k, l, m):
     print("integrating against", select)
     print("result: (4*Pi)^2 times ", sum)
 
+    return (select, [k,l, m], sum)
+
     # result = sum*(4*np.pi)**2 
     # print("result: ", result)
     # print("total number of loops: ", total_iter)

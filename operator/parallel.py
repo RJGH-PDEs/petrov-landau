@@ -1,4 +1,6 @@
 import multiprocessing
+import os
+import pickle
 
 # Landau weight
 from landau_operator import operator 
@@ -36,14 +38,14 @@ def individual_test():
     operator(u, g, p, h, select, k, l, m)
        
 # iterates over different test functions
-def test_iterator(u, g, p, h, k, l, m, n):
+def test_iterator(u, g, p, h, k, l, m, n, r):
     '''
     iterates over all possible test functions for 
     the operator
     '''
 
-    # processes
-    processes = []
+    # iterable for the parallel process
+    iter = []
 
     # p iteration
     for kp in range(0, n):
@@ -54,17 +56,21 @@ def test_iterator(u, g, p, h, k, l, m, n):
                 select = [kp, lp, mp, 0, 0, 0]
                 argument = (u, g, p, h, select, k, l, m)
 
-                # start processes
-                pro = multiprocessing.Process(target=operator, args=argument)
-                processes.append(pro)
-                pro.start()
+                iter.append(argument) 
 
-    # wait for all the processes to complete
-    for pro in processes:
-        pro.join()
+    # iterable now contains the argument values, we compute
+    with multiprocessing.Pool(processes= os.cpu_count()) as pool:
+        output = pool.starmap(operator, iter)
+
+    print(output)
+
+    # pick the non-zero ones
+    for o in output:
+        if abs(o[2]) > 0.01:
+            r.append(o)
 
 # produce collision matrix
-def weight_iteration(n):
+def weight_iteration(n, r):
     # iterate over all possible weights
     for k in range(0, n):
         for l in range(0, n):
@@ -77,7 +83,7 @@ def weight_iteration(n):
                 
                 # compute it and time it
                 start = time.time()
-                test_iterator(u, g, p, h, k, l, m, n)
+                test_iterator(u, g, p, h, k, l, m, n, r)
                 end = time.time()
 
                 # Calculate elapsed time
@@ -93,13 +99,20 @@ def main():
     # number of degrees of freedom 
     n = 3
 
+    # results
+    results = []
+
     start_time = time.time()
-    weight_iteration(n)
+    weight_iteration(n, results)
     end_time = time.time()
 
     # Calculate elapsed time
     elapsed_time = end_time - start_time
     print(f"Total ellapsed time: {elapsed_time:.6f} seconds")
+
+    # pickle that guy
+    with open('results.pkl', 'wb') as f:
+        pickle.dump(results, f)
 
 # Call to the main function
 if __name__ == "__main__":
