@@ -12,12 +12,12 @@ import time
 
 # from cartesian to polar
 def theta(x, y, z):
-    return np.acos(z/np.sqrt(x**2+ y**2 + z**2))
+    return np.arccos(z/np.sqrt(x**2+ y**2 + z**2))
 
 # from cartesian to polar
 def phi(x, y):
     if x == 0 and y == 0: return 0
-    return (np.sign(y))*np.acos(x/np.sqrt(x**2 + y**2))
+    return (np.sign(y))*np.arccos(x/np.sqrt(x**2 + y**2))
 
 # spherical function to be integrated against two Gaussians
 def f(rp, tp, pp, rq, tq, pq):

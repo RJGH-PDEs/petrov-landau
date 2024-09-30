@@ -59,10 +59,10 @@ def test_iterator(u, g, p, h, k, l, m, n, r):
                 iter.append(argument) 
 
     # iterable now contains the argument values, we compute
-    with multiprocessing.Pool(processes= os.cpu_count()) as pool:
+    with multiprocessing.Pool(processes=os.cpu_count()) as pool:
         output = pool.starmap(operator, iter)
 
-    print(output)
+    # print(output)
 
     # pick the non-zero ones
     for o in output:
