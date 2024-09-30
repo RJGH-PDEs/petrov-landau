@@ -1,9 +1,24 @@
 # Import
 import numpy as np
 import sympy as sp
+
 from scipy.special import genlaguerre
 from scipy.special import lpmv
 from scipy.special import factorial
+from scipy.special import gamma
+
+# the mu_kl constant that makes the basis functions be an orthonormal system (see p. 348 of paper)
+def mu_const(k, l):
+    '''
+    Goes in front of only the basis functions, not the test functions
+    '''
+    # compute the constant    
+    result = 2 * factorial(k)
+    result = result/gamma(k + l + 3/2)
+    result = np.sqrt(result)
+    
+    # return result
+    return result 
 
 # The constant for the spherical harmonic
 def spher_const(l,m):
@@ -85,6 +100,8 @@ def test(k, l, m, r, theta ,phi):
     
     result = result*spher_const(l, m)   # Constant      
     # print('constant: ', spher_const(l,m))
+
+    result = result*mu_const(k, l) # the other constant
 
     return result
 
