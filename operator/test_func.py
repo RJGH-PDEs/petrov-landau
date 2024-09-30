@@ -100,7 +100,7 @@ def test(k, l, m, r, theta ,phi):
     
     result = result*spher_const(l, m)   # Constant      
     # print('constant: ', spher_const(l,m))
-
+    
     result = result*mu_const(k, l) # the other constant
 
     return result

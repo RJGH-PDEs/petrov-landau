@@ -12,14 +12,14 @@ import time
 # test with an individual 
 def individual_test():
     # choose a trial function for the weight
-    k = 1
-    l = 1
-    m = 0 
+    k = 2
+    l = 2
+    m = 2 
 
     # chose test functions
-    kp = 1
-    lp = 1
-    mp = 1
+    kp = 2
+    lp = 2
+    mp = 2
 
     kq = 0
     lq = 0
@@ -51,12 +51,14 @@ def test_iterator(u, g, p, h, k, l, m, n, r):
     for kp in range(0, n):
         for lp in range(0,n):
             for mp in range(-lp, lp+1):
-
-                # form the argument
-                select = [kp, lp, mp, 0, 0, 0]
-                argument = (u, g, p, h, select, k, l, m)
-
-                iter.append(argument) 
+                # q iteration
+                for kq in range(0,n):
+                    for lq in range(0,n):
+                        for mq in range(-lq, lq + 1):
+                            # form the argument
+                            select = [kp, lp, mp, kq, lq, mq]
+                            argument = (u, g, p, h, select, k, l, m)
+                            iter.append(argument) 
 
     # iterable now contains the argument values, we compute
     with multiprocessing.Pool(processes=os.cpu_count()) as pool:
@@ -66,7 +68,7 @@ def test_iterator(u, g, p, h, k, l, m, n, r):
 
     # pick the non-zero ones
     for o in output:
-        if abs(o[2]) > 0.01:
+        if abs(o[2]) > 0.001:
             r.append(o)
 
 # produce collision matrix
@@ -96,6 +98,7 @@ def weight_iteration(n, r):
 def main():
     # individual_test()
 
+
     # number of degrees of freedom 
     n = 3
 
@@ -111,7 +114,7 @@ def main():
     print(f"Total ellapsed time: {elapsed_time:.6f} seconds")
 
     # pickle that guy
-    with open('results.pkl', 'wb') as f:
+    with open('operator.pkl', 'wb') as f:
         pickle.dump(results, f)
 
 # Call to the main function
